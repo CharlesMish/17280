@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+*.local
+playwright-report
+test-results
+screenshots
+release
+captures
+review-packets/*.zip
+handoff
+watch_src.zip
+*.png
+*:Zone.Identifier
+.env
+.vite

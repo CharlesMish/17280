@@ -1,0 +1,208 @@
+html,
+body,
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0b0d10;
+  color: #eef1f4;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+canvas:focus-visible {
+  outline: 2px solid #c9d8e8;
+  outline-offset: -4px;
+}
+
+.webgl-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgb(41 47 55 / 58%), transparent 34rem),
+    #0b0d10;
+}
+
+.webgl-fallback h1,
+.webgl-fallback p {
+  max-width: 34rem;
+  margin: 0;
+}
+
+.webgl-ready .webgl-fallback {
+  display: none;
+}
+
+.release-shell {
+  position: fixed;
+  z-index: 10;
+  inset: 1rem auto auto 1rem;
+  width: min(20rem, calc(100vw - 2rem));
+  box-sizing: border-box;
+  padding: 0.85rem;
+  border: 1px solid rgb(230 236 244 / 20%);
+  border-radius: 0.85rem;
+  background: rgb(10 12 15 / 78%);
+  box-shadow: 0 0.6rem 2rem rgb(0 0 0 / 28%);
+  color: #eef1f4;
+  backdrop-filter: blur(14px);
+}
+
+.release-shell__title,
+.release-shell__eyebrow,
+.release-shell__instructions,
+.release-shell__status,
+.release-shell__layers-summary {
+  margin: 0;
+}
+
+.release-shell__title {
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
+.release-shell__eyebrow {
+  margin-top: 0.65rem;
+  color: #aeb8c4;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.release-shell__segment,
+.release-shell__actions,
+.release-shell__views {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.release-shell__views {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.release-shell__views button {
+  padding: 0.45rem 0.25rem;
+  font-size: 0.72rem;
+}
+
+.release-shell button {
+  min-height: 44px;
+  border: 1px solid rgb(224 232 241 / 24%);
+  border-radius: 0.55rem;
+  padding: 0.55rem 0.7rem;
+  background: rgb(33 38 44 / 82%);
+  color: inherit;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.release-shell button:hover {
+  background: rgb(48 55 64 / 90%);
+}
+
+.release-shell button[aria-pressed="true"] {
+  border-color: #b9c8d8;
+  background: #d9e1e9;
+  color: #101318;
+}
+
+.release-shell button:focus-visible {
+  outline: 2px solid #f4f7fa;
+  outline-offset: 2px;
+}
+
+.release-shell__layers {
+  margin-top: 0.75rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgb(230 236 244 / 16%);
+}
+
+.release-shell__layers-summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.release-shell__layers-summary:focus-visible {
+  outline: 2px solid #f4f7fa;
+  outline-offset: 2px;
+}
+
+.release-shell__layers ol {
+  margin: 0.45rem 0 0;
+  padding-left: 1.25rem;
+  color: #c7d0da;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.release-shell__instructions,
+.release-shell__status {
+  margin-top: 0.7rem;
+  color: #9da8b5;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+.release-shell__status:empty {
+  display: none;
+}
+
+.noscript-message {
+  position: fixed;
+  inset: auto 1rem 1rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #20242a;
+  color: #eef1f4;
+}
+
+@media (max-width: 700px) {
+  .release-shell {
+    inset: auto 0.65rem 0.65rem;
+    width: calc(100vw - 1.3rem);
+    max-height: 42vh;
+    overflow: auto;
+  }
+
+  .release-shell__title {
+    display: none;
+  }
+
+  .release-shell__instructions {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

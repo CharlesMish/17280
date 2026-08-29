@@ -1,0 +1,14 @@
+WATCH PROJECT — RIGHTS NOTICE
+
+Copyright (c) 2026 the project owner. All rights reserved.
+
+No open-source license is granted for the watch design, product source,
+rendered assets, or project documentation. Permission to view or evaluate a
+copy does not grant permission to reproduce, redistribute, publish, modify,
+sell, sublicense, or create derivative works.
+
+Third-party software remains governed by its own licenses. See
+THIRD_PARTY_NOTICES.txt and the dependency inventory supplied with a release.
+
+The project owner may replace this notice with a different license in a later
+release.

@@ -1,0 +1,29 @@
+{
+  "name": "watch-movement",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5173",
+    "package": "node scripts/package-release.mjs",
+    "package:train-core": "node scripts/package-going-train-core.mjs",
+    "package:review": "node scripts/package-review-packets.mjs",
+    "sbom": "node scripts/generate-sbom.mjs",
+    "audit:runtime": "node scripts/audit-public-runtime.mjs",
+    "verify:authority": "node scripts/verify-rc1-authority.mjs"
+  },
+  "dependencies": {
+    "three": "^0.181.2"
+  },
+  "devDependencies": {
+    "@types/three": "^0.185.4",
+    "playwright": "^1.62.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}
