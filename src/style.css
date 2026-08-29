@@ -61,6 +61,7 @@ canvas:focus-visible {
 }
 
 .release-shell__title,
+.release-shell__identity,
 .release-shell__eyebrow,
 .release-shell__instructions,
 .release-shell__status,
@@ -72,6 +73,13 @@ canvas:focus-visible {
   font-size: 0.95rem;
   font-weight: 650;
   letter-spacing: 0.01em;
+}
+
+.release-shell__identity {
+  margin-top: 0.18rem;
+  color: #aeb8c4;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
 }
 
 .release-shell__eyebrow {
@@ -187,7 +195,8 @@ canvas:focus-visible {
     overflow: auto;
   }
 
-  .release-shell__title {
+  .release-shell__title,
+  .release-shell__identity {
     display: none;
   }
 
