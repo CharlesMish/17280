@@ -59,6 +59,10 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
   heading.className = "release-shell__title";
   heading.textContent = "17280";
 
+  const identity = document.createElement("p");
+  identity.className = "release-shell__identity";
+  identity.textContent = "2.4 Hz · 17,280 vph · two hands";
+
   const viewLabel = document.createElement("p");
   viewLabel.className = "release-shell__eyebrow";
   viewLabel.textContent = "Camera";
@@ -116,7 +120,7 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
   instructions.id = "watch-instructions";
   instructions.className = "release-shell__instructions";
   instructions.textContent =
-    "Drag to orbit, scroll or pinch to zoom. Camera buttons choose a proof view. E changes assembly; Space pauses; Home resets.";
+    "Drag to orbit, scroll or pinch to zoom. Camera buttons choose a preset view. E changes assembly; Space pauses; Home resets.";
   options.canvas.setAttribute("aria-describedby", instructions.id);
 
   const status = document.createElement("p");
@@ -126,6 +130,7 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
 
   shell.append(
     heading,
+    identity,
     viewLabel,
     viewGroup,
     modeLabel,
