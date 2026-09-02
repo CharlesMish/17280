@@ -284,7 +284,7 @@ export function createExteriorMaterials(): ExteriorMaterials {
       ior: 1.46,
       attenuationColor: 0xf7fafb,
       attenuationDistance: 15,
-      specularIntensity: 0,
+      specularIntensity: 0.20,
       specularColor: 0xd5e0e7,
       envMapIntensity: 0.82,
       transparent: true,
