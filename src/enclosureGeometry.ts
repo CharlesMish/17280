@@ -34,7 +34,7 @@ export function createEncMaterials(): EncMaterials {
       ior: 1.46,
       attenuationColor: 0xf7fafb,
       attenuationDistance: 15,
-      specularIntensity: 0.20,
+      specularIntensity: 0.40,
       specularColor: 0xd7e1e7,
       envMapIntensity: 0.78,
       transparent: true,
