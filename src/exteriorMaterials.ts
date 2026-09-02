@@ -288,7 +288,7 @@ export function createExteriorMaterials(): ExteriorMaterials {
       specularColor: 0xd5e0e7,
       envMapIntensity: 0.82,
       transparent: true,
-      opacity: 0.14,
+      opacity: 1,
       depthWrite: false,
       depthTest: true,
       alphaToCoverage: false,
