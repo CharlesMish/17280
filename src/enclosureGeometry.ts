@@ -31,7 +31,7 @@ export function createEncMaterials(): EncMaterials {
       roughness: 0.025,
       transmission: 0.97,
       thickness: 0,
-      ior: 1.0,
+      ior: 1.77,
       attenuationColor: 0xf7fafb,
       attenuationDistance: 15,
       specularIntensity: 0.20,

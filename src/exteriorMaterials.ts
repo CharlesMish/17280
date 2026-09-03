@@ -281,7 +281,7 @@ export function createExteriorMaterials(): ExteriorMaterials {
       roughness: 0.018,
       transmission: 0.98,
       thickness: 0,
-      ior: 1.0,
+      ior: 1.77,
       attenuationColor: 0xf7fafb,
       attenuationDistance: 15,
       specularIntensity: 0.20,
