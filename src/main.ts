@@ -27,6 +27,8 @@ import {
   type ExtViewName,
   type ExteriorFinishDiagnosticMode,
   type SapphirePresentationMode,
+  type SapphireStackDiagnosticMode,
+  type SapphireStackDiagnosticState,
 } from "./exterior";
 import {
   applyReadoutView,
@@ -4651,6 +4653,7 @@ declare global {
       surfaceArtifactReport: () => ReturnType<typeof surfaceArtifactReport>;
       phase5dPresentationReport: () => ReturnType<typeof phase5dPresentationReport>;
       setPhase5dB2Diagnostic: (mode: Phase5dB2DiagnosticMode) => void;
+      setSapphireStackDiagnostic: (mode: SapphireStackDiagnosticMode) => SapphireStackDiagnosticState | null;
       setPhase5dB2Profile: (profile: Phase5dB2Profile, camera: Phase5dB2Camera) => void;
       setPhase5dB2FamilyId: (on: boolean) => void;
       setPhase5dCProfile: (profile: Phase5dCProfile) => void;
@@ -4750,6 +4753,9 @@ window.__WATCH__ = {
   surfaceArtifactReport,
   phase5dPresentationReport,
   setPhase5dB2Diagnostic,
+  setSapphireStackDiagnostic: (mode) => (
+    exterior ? exterior.setSapphireStackDiagnostic(mode) : null
+  ),
   setPhase5dB2Profile,
   setPhase5dB2FamilyId,
   setPhase5dCProfile,

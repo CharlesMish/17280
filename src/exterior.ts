@@ -37,6 +37,19 @@ import { bindIdentity, type IdentityBinding } from "./identity";
 export type { ExtViewName };
 
 export type SapphirePresentationMode = "corrected" | "legacy" | "flat" | "id";
+export type SapphireStackDiagnosticMode =
+  | "full"
+  | "front-only"
+  | "rear-only"
+  | "front-inner"
+  | "front-outer"
+  | "rear-inner"
+  | "rear-outer";
+export type SapphireStackDiagnosticState = {
+  mode: SapphireStackDiagnosticMode;
+  front: { visible: boolean; originalGeometry: boolean; materialGroups: number[] };
+  rear: { visible: boolean; originalGeometry: boolean; materialGroups: number[] };
+};
 export type ExteriorFinishDiagnosticMode = "finished" | "roughnessFlat";
 
 export type ExteriorLayer = {
@@ -52,6 +65,7 @@ export type ExteriorLayer = {
   setCrownKeepout: (on: boolean) => void;
   setFinishId: (on: boolean) => void;
   setSapphirePresentation: (mode: SapphirePresentationMode) => void;
+  setSapphireStackDiagnostic: (mode: SapphireStackDiagnosticMode) => SapphireStackDiagnosticState;
   setFinishDiagnostic: (mode: ExteriorFinishDiagnosticMode) => void;
 };
 
@@ -97,6 +111,83 @@ export function createExterior(opts: {
   root.add(body, overlay, lugDiag);
   const frontOptical = optical.group.getObjectByName("ext:frontSapphireOpticalBody") as THREE.Mesh;
   const rearOptical = optical.group.getObjectByName("ext:rearSapphireOpticalBody") as THREE.Mesh;
+  const sapphireStackOriginals = {
+    front: { geometry: frontOptical.geometry, visible: frontOptical.visible },
+    rear: { geometry: rearOptical.geometry, visible: rearOptical.visible },
+  };
+  const sapphireStackGeometry = new Map<string, THREE.BufferGeometry>();
+  const isolatedSapphireGeometry = (
+    side: "front" | "rear",
+    mesh: THREE.Mesh,
+    materialIndex: 0 | 1,
+  ): THREE.BufferGeometry => {
+    const key = `${side}:${materialIndex}`;
+    const existing = sapphireStackGeometry.get(key);
+    if (existing) return existing;
+    const geometry = mesh.geometry.clone();
+    geometry.clearGroups();
+    for (const group of mesh.geometry.groups) {
+      if (group.materialIndex === materialIndex) {
+        geometry.addGroup(group.start, group.count, group.materialIndex);
+      }
+    }
+    sapphireStackGeometry.set(key, geometry);
+    return geometry;
+  };
+  const sapphireStackState = (mode: SapphireStackDiagnosticMode): SapphireStackDiagnosticState => {
+    const row = (
+      mesh: THREE.Mesh,
+      originalGeometry: THREE.BufferGeometry,
+    ): SapphireStackDiagnosticState["front"] => ({
+      visible: mesh.visible,
+      originalGeometry: mesh.geometry === originalGeometry,
+      materialGroups: [
+        ...new Set(mesh.geometry.groups.flatMap((group) => (
+          group.materialIndex === undefined ? [] : [group.materialIndex]
+        ))),
+      ],
+    });
+    return {
+      mode,
+      front: row(frontOptical, sapphireStackOriginals.front.geometry),
+      rear: row(rearOptical, sapphireStackOriginals.rear.geometry),
+    };
+  };
+  const setSapphireStackDiagnostic = (
+    mode: SapphireStackDiagnosticMode,
+  ): SapphireStackDiagnosticState => {
+    frontOptical.geometry = sapphireStackOriginals.front.geometry;
+    frontOptical.visible = sapphireStackOriginals.front.visible;
+    rearOptical.geometry = sapphireStackOriginals.rear.geometry;
+    rearOptical.visible = sapphireStackOriginals.rear.visible;
+    switch (mode) {
+      case "full":
+        break;
+      case "front-only":
+        rearOptical.visible = false;
+        break;
+      case "rear-only":
+        frontOptical.visible = false;
+        break;
+      case "front-inner":
+        rearOptical.visible = false;
+        frontOptical.geometry = isolatedSapphireGeometry("front", frontOptical, 0);
+        break;
+      case "front-outer":
+        rearOptical.visible = false;
+        frontOptical.geometry = isolatedSapphireGeometry("front", frontOptical, 1);
+        break;
+      case "rear-inner":
+        frontOptical.visible = false;
+        rearOptical.geometry = isolatedSapphireGeometry("rear", rearOptical, 0);
+        break;
+      case "rear-outer":
+        frontOptical.visible = false;
+        rearOptical.geometry = isolatedSapphireGeometry("rear", rearOptical, 1);
+        break;
+    }
+    return sapphireStackState(mode);
+  };
   const sapphireFlat = new THREE.MeshBasicMaterial({
     color: 0xdde7ee,
     transparent: true,
@@ -406,6 +497,7 @@ export function createExterior(opts: {
       });
     },
     setSapphirePresentation,
+    setSapphireStackDiagnostic,
     setFinishDiagnostic,
   };
 }
