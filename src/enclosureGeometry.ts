@@ -28,7 +28,7 @@ export function createEncMaterials(): EncMaterials {
       // transmission/ior/thickness remain unchanged.
       color: 0xf6f9fa,
       metalness: 0.0,
-      roughness: 0.025,
+      roughness: 0,
       transmission: 0.97,
       thickness: 0,
       ior: 1.46,

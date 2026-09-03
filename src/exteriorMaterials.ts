@@ -278,7 +278,7 @@ export function createExteriorMaterials(): ExteriorMaterials {
     sapphire: new THREE.MeshPhysicalMaterial({
       color: 0xf7fafb,
       metalness: 0,
-      roughness: 0.018,
+      roughness: 0,
       transmission: 0.98,
       thickness: 0,
       ior: 1.46,
