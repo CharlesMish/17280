@@ -32,7 +32,14 @@ type CarrierRecord = {
 export type ExplodedStudy = {
   set: (value: number) => void;
   value: () => number;
-  report: () => ReturnType<typeof makeReport>;
+  select: (id: string | null) => void;
+  selection: () => string | null;
+  report: () => ReturnType<typeof makeReport> & { selection: {
+    id: string | null;
+    highlightedMeshes: number;
+    temporaryMaterials: number;
+    originalMaterialsRestored: boolean;
+  } };
 };
 
 const objectPath = (object: THREE.Object3D): string => {
@@ -198,6 +205,42 @@ export function createExplodedStudy(layers: ExplodedLayerSpec[]): ExplodedStudy 
   const revealState = new Map<THREE.Object3D, boolean>();
   let installed = false;
   let current = 0;
+  let selected: string | null = null;
+  const selectedMaterials = new Map<THREE.Mesh, THREE.Material | THREE.Material[]>();
+  const highlights = new Set<THREE.Material>();
+  const select = (id: string | null): void => {
+    if (id !== null && !layers.some(layer => layer.id === id)) throw new Error(`Unknown exploded layer: ${id}`);
+    for (const [mesh, material] of selectedMaterials) mesh.material = material;
+    selectedMaterials.clear();
+    for (const material of highlights) material.dispose();
+    highlights.clear();
+    selected = current > 0 ? id : null;
+    const layer = layers.find(layer => layer.id === selected);
+    if (!layer) return;
+    const clones = new Map<THREE.Material, THREE.Material>();
+    const highlight = (source: THREE.Material): THREE.Material => {
+      const prior = clones.get(source);
+      if (prior) return prior;
+      let material: THREE.Material;
+      if (source instanceof THREE.MeshPhysicalMaterial && source.transmission > 0.9) {
+        material = new THREE.MeshBasicMaterial({ color: 0x83dce8, transparent: true, opacity: 0.28, depthWrite: false, side: source.side });
+      } else {
+        material = source.clone();
+        if (material instanceof THREE.MeshStandardMaterial) {
+          material.emissive.setHex(0x398b9b);
+          material.emissiveIntensity = 0.55;
+        }
+      }
+      clones.set(source, material);
+      highlights.add(material);
+      return material;
+    };
+    for (const object of layer.objects) object.traverse(child => {
+      if (!(child instanceof THREE.Mesh) || selectedMaterials.has(child)) return;
+      selectedMaterials.set(child, child.material);
+      child.material = Array.isArray(child.material) ? child.material.map(highlight) : highlight(child.material);
+    });
+  };
 
   const install = (): void => {
     if (installed) return;
@@ -241,6 +284,7 @@ export function createExplodedStudy(layers: ExplodedLayerSpec[]): ExplodedStudy 
     const value = THREE.MathUtils.clamp(Number.isFinite(input) ? input : 0, 0, 1);
     current = value;
     if (value === 0) {
+      select(null);
       restore();
       return;
     }
@@ -252,6 +296,13 @@ export function createExplodedStudy(layers: ExplodedLayerSpec[]): ExplodedStudy 
   return {
     set,
     value: () => current,
-    report: () => makeReport(current, records, layers, installed),
+    select,
+    selection: () => selected,
+    report: () => {
+      const report = makeReport(current, records, layers, installed);
+      return { ...report, assembledEquivalence: { ...report.assembledEquivalence, materialMutated: selected !== null },
+        selection: { id: selected, highlightedMeshes: selectedMaterials.size, temporaryMaterials: highlights.size,
+          originalMaterialsRestored: selectedMaterials.size === 0 } };
+    },
   };
 }

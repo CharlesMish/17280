@@ -1,0 +1,195 @@
+{
+  "geometry": {
+    "passed": true,
+    "model": "17280",
+    "scope": "Crown-body lathe only; baseline removes only the marked meridian-normal repair from the same source.",
+    "excluded": "Cap, flutes, sockets, and materials are outside this construction; visual close-up/orbit review is separate.",
+    "inputs": {
+      "caseX": 13.196762287513566,
+      "crown": {
+        "bodyR": 2.62,
+        "neckR": 1.18,
+        "neckX0": 12.316762287513566,
+        "bodyX0": 13.016762287513567,
+        "bodyX1": 15.576762287513567
+      },
+      "dimensionsFrom": [
+        "src/exteriorPlan.ts",
+        "src/exteriorSpec.ts"
+      ]
+    },
+    "source": {
+      "file": "src/exteriorGeometry.ts",
+      "sha256": "ca82e155a550df0199a2e7503008cd29d36562b3b147e2820ecb3d2bf873962d",
+      "constructionSha256": "35ed42ce09b1d5e5abc29c9ae5f68428a38d2ec9a382fe67cdd23721e0b23893"
+    },
+    "geometry": {
+      "radialSegments": 36,
+      "profileRows": 9,
+      "vertices": 333,
+      "triangles": 576,
+      "bounds": {
+        "min": [
+          -5.635825035296113e-17,
+          -2.619999885559082,
+          -2.619999885559082
+        ],
+        "max": [
+          3.259999990463257,
+          2.619999885559082,
+          2.619999885559082
+        ]
+      },
+      "unchanged": [
+        "positions",
+        "UVs including U=0/1 seam",
+        "indices",
+        "material groups",
+        "draw range",
+        "lathe parameters",
+        "bounds",
+        "all non-seam normals"
+      ]
+    },
+    "seam": {
+      "beforeMaxAngleDegrees": 22.527602246336958,
+      "afterMaxAngleDegrees": 0,
+      "changedNormalVertices": 16,
+      "pairs": [
+        {
+          "row": 0,
+          "vertices": [
+            0,
+            324
+          ],
+          "beforeAngleDegrees": 0,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 1,
+          "vertices": [
+            1,
+            325
+          ],
+          "beforeAngleDegrees": 17.391633637952726,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 2,
+          "vertices": [
+            2,
+            326
+          ],
+          "beforeAngleDegrees": 22.527602246336958,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 3,
+          "vertices": [
+            3,
+            327
+          ],
+          "beforeAngleDegrees": 9.332342630720511,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 4,
+          "vertices": [
+            4,
+            328
+          ],
+          "beforeAngleDegrees": 11.875893123692036,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 5,
+          "vertices": [
+            5,
+            329
+          ],
+          "beforeAngleDegrees": 12.485023631486476,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 6,
+          "vertices": [
+            6,
+            330
+          ],
+          "beforeAngleDegrees": 10.011387474571698,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 7,
+          "vertices": [
+            7,
+            331
+          ],
+          "beforeAngleDegrees": 1.2789015369524548,
+          "afterAngleDegrees": 0
+        },
+        {
+          "row": 8,
+          "vertices": [
+            8,
+            332
+          ],
+          "beforeAngleDegrees": 0,
+          "afterAngleDegrees": 0
+        }
+      ]
+    },
+    "basis": {
+      "maxNormalLengthError": 3.19416098015779e-8,
+      "maxTangentLengthError": 3.775207990663887e-8,
+      "maxTangentNormalDot": 3.3017696354775694e-8,
+      "finite": true,
+      "handednessValid": true
+    }
+  },
+  "matchedViews": {
+    "viewport": {
+      "width": 640,
+      "height": 360
+    },
+    "browser": "151.0.7922.34",
+    "checks": [
+      {
+        "name": "start: identical camera, lighting and materials",
+        "passed": true
+      },
+      {
+        "name": "quarter: identical camera, lighting and materials",
+        "passed": true
+      },
+      {
+        "name": "middle: identical camera, lighting and materials",
+        "passed": true
+      },
+      {
+        "name": "three-quarter: identical camera, lighting and materials",
+        "passed": true
+      },
+      {
+        "name": "end: identical camera, lighting and materials",
+        "passed": true
+      },
+      {
+        "name": "Same scene mesh count",
+        "passed": true
+      },
+      {
+        "name": "Only crown-body normals/tangents change; scene geometry, transforms and material assignments preserved",
+        "passed": true
+      },
+      {
+        "name": "No unexpected browser errors",
+        "passed": true
+      }
+    ],
+    "changedMeshes": [
+      "Scene/ExteriorRoot/ext:visible/CrownExteriorPose/ext:crown-body"
+    ],
+    "errors": []
+  }
+}

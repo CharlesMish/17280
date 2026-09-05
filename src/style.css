@@ -58,6 +58,8 @@ canvas:focus-visible {
   box-shadow: 0 0.6rem 2rem rgb(0 0 0 / 28%);
   color: #eef1f4;
   backdrop-filter: blur(14px);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
 }
 
 .release-shell__title,
@@ -164,6 +166,22 @@ canvas:focus-visible {
   font-size: 0.72rem;
   line-height: 1.45;
 }
+
+.release-shell .release-shell__layer-button {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.release-shell .release-shell__layer-button:hover { background: rgb(131 220 232 / 8%); }
+.release-shell .release-shell__layer-button[aria-pressed="true"] { color: #b8f3fa; border-color: #83dce8; background: rgb(131 220 232 / 12%); }
+.release-shell__layer-button:focus-visible { outline: 2px solid #f4f7fa; outline-offset: 2px; }
 
 .release-shell__instructions,
 .release-shell__status {

@@ -8,6 +8,10 @@ import { chromium } from "playwright";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const siteRoot = path.resolve(process.argv[2] || path.join(root, "dist"));
 const output = path.resolve(process.argv[3] || path.join(root, "captures/rc1/public-runtime-quality.json"));
+// Timing is informational on software WebGL. Allow a shorter timing sample
+// without changing any functional, resource, resize, or context-loss checks.
+const timingSamples = Number(process.argv[4] ?? 180);
+if (!Number.isInteger(timingSamples) || timingSamples < 24) throw new Error("Timing samples must be an integer >= 24");
 const knownTangent = "THREE.BufferGeometry: .computeTangents() failed. Missing required attributes (index, position, normal or uv)";
 
 if (!fs.existsSync(path.join(siteRoot, "index.html"))) {
@@ -78,6 +82,7 @@ const scenarios = [
 const results = [];
 
 for (const scenario of scenarios) {
+  console.log(`Runtime audit: ${scenario.id}`);
   const diagnostics = { pageErrors: [], consoleErrors: [], requestFailures: [], httpErrors: [], requests: [] };
   const context = await browser.newContext({
     viewport: scenario.viewport,
@@ -165,15 +170,16 @@ for (const scenario of scenarios) {
   const firstStableCaptureMs = performance.now() - stableStarted;
   await page.waitForTimeout(250);
 
-  const frameIntervals = await page.evaluate(() => new Promise((resolve) => {
+  const frameIntervals = await page.evaluate((timingSamples) => new Promise((resolve) => {
     const times = [];
     const sample = (stamp) => {
       times.push(stamp);
-      if (times.length >= 181) resolve(times.slice(1).map((value, index) => value - times[index]));
+      if (times.length >= timingSamples + 1) resolve(times.slice(1).map((value, index) => value - times[index]));
       else requestAnimationFrame(sample);
     };
     requestAnimationFrame(sample);
-  }));
+  }), timingSamples);
+  console.log(`Runtime audit: ${scenario.id} timing sampled`);
 
   const cdp = await context.newCDPSession(page);
   await cdp.send("Performance.enable");
@@ -235,7 +241,9 @@ for (const scenario of scenarios) {
     return rows;
   });
   const afterPerformance = await cdpMetrics();
+  console.log(`Runtime audit: ${scenario.id} assembly cycles checked`);
 
+  await page.setViewportSize({ width: Math.max(360, scenario.viewport.width - 120), height: Math.max(640, scenario.viewport.height - 80) });
   const gestureCameraBefore = await page.evaluate(() => {
     globalThis.__WATCH__.setExplode(0);
     globalThis.__WATCH__.setView("r1FinalHero");
@@ -243,10 +251,13 @@ for (const scenario of scenarios) {
     return globalThis.__WATCH__.releasePresentationReport().current.camera;
   });
 
-  await page.setViewportSize({ width: Math.max(360, scenario.viewport.width - 120), height: Math.max(640, scenario.viewport.height - 80) });
-  await page.mouse.move(180, 280);
+  const canvasBounds = await page.locator("canvas").boundingBox();
+  if (!canvasBounds) throw new Error("Missing canvas bounds");
+  const gestureX = canvasBounds.x + canvasBounds.width * 0.55;
+  const gestureY = canvasBounds.y + canvasBounds.height * 0.4;
+  await page.mouse.move(gestureX, gestureY);
   await page.mouse.down();
-  await page.mouse.move(230, 320, { steps: 5 });
+  await page.mouse.move(gestureX + 50, gestureY + 40, { steps: 5 });
   await page.mouse.up();
   await page.mouse.wheel(0, -160);
   await page.waitForTimeout(150);
@@ -308,6 +319,10 @@ for (const scenario of scenarios) {
     cssWidth: Math.max(360, scenario.viewport.width - 120),
     cssHeight: Math.max(640, scenario.viewport.height - 80),
   };
+  if (beforeCycles.release.refinement && beforeCycles.release.refinement.stage !== "baseline") {
+    if (expectedResize.cssWidth <= 700) expectedResize.cssHeight = Math.floor(expectedResize.cssHeight * 0.56);
+    else expectedResize.cssWidth -= 352;
+  }
   expectedResize.pixelWidth = expectedResize.cssWidth * scenario.deviceScaleFactor;
   expectedResize.pixelHeight = expectedResize.cssHeight * scenario.deviceScaleFactor;
   const resizeExact =

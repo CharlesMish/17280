@@ -23,6 +23,7 @@ export type ReleaseShellOptions = {
   onSetPaused: (paused: boolean) => void;
   onResetView: () => void;
   onReducedMotionChange: (reducedMotion: boolean) => void;
+  onSelectLayer: (id: string | null) => void;
 };
 
 export type ReleaseShell = {
@@ -30,6 +31,7 @@ export type ReleaseShell = {
   setPaused: (paused: boolean) => void;
   setView: (view: ReleaseViewId) => void;
   reducedMotion: () => boolean;
+  setSelectedLayer: (id: string | null) => void;
 };
 
 const button = (label: string, className: string): HTMLButtonElement => {
@@ -50,6 +52,7 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
   let exploded = options.initialExploded;
   let paused = options.initialPaused;
   let view = options.initialView;
+  let selectedLayer: string | null = null;
 
   const shell = document.createElement("aside");
   shell.className = "release-shell";
@@ -108,10 +111,18 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
   layerTitle.className = "release-shell__layers-summary";
   layerTitle.textContent = "Exploded layers";
   const layerList = document.createElement("ol");
+  const layerButtons = new Map<string, HTMLButtonElement>();
+  const labels: Record<string, string> = { "front-sapphire": "Front sapphire", "upper-exterior": "Bezel and carrier",
+    display: "Hands and dial", "upper-works": "Upper bridges and bearings", "lower-structure": "Mainplate and lower bearings",
+    "holder-carrier": "Movement holder", "rear-exterior": "Caseback", "rear-sapphire": "Rear sapphire" };
   for (const layer of options.layers) {
     const item = document.createElement("li");
     item.dataset.layer = layer.id;
-    item.textContent = layer.label;
+    const layerButton = button(labels[layer.id] ?? layer.label, "release-shell__layer-button");
+    layerButton.setAttribute("aria-pressed", "false");
+    layerButton.addEventListener("click", () => options.onSelectLayer(selectedLayer === layer.id ? null : layer.id));
+    layerButtons.set(layer.id, layerButton);
+    item.append(layerButton);
     layerList.append(item);
   }
   layerPanel.append(layerTitle, layerList);
@@ -211,7 +222,9 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
     if (isTextField(event.target)) return;
     if (event.key === "e" || event.key === "E") {
       chooseAssembly(!exploded);
-    } else if (event.code === "Space") {
+    } else if (event.key === "Escape") {
+      options.onSelectLayer(null);
+    } else if (event.code === "Space" && !(event.target instanceof HTMLButtonElement) && !(event.target instanceof HTMLElement && event.target.closest("summary"))) {
       event.preventDefault();
       choosePaused(!paused);
     } else if (event.key === "Home") {
@@ -230,6 +243,11 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
 
   sync(false);
   return {
+    setSelectedLayer: (id) => {
+      selectedLayer = id;
+      for (const [layerId, layerButton] of layerButtons) layerButton.setAttribute("aria-pressed", String(layerId === id));
+      status.textContent = id ? `${layerButtons.get(id)?.textContent} highlighted. Select again or press Escape to clear.` : "Layer highlight cleared.";
+    },
     setExploded: (next) => {
       exploded = next;
       sync(false);

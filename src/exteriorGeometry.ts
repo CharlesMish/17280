@@ -1185,6 +1185,22 @@ export function buildCrown(plan: ExteriorPlan, mats: ExteriorMaterials): THREE.G
   lathe.rotateZ(-Math.PI / 2);
   assignCrownBodyGroups(lathe);
   lathe.computeVertexNormals();
+  // Reconcile the duplicated UV meridian after normal recomputation. These
+  // coincident vertices share a smooth surface, but retain separate UVs.
+  // Crown seam repair start.
+  const normals = lathe.getAttribute("normal");
+  const seamNormal = new THREE.Vector3();
+  for (let row = 0; row < pts.length; row++) {
+    const last = bodySegments * pts.length + row;
+    seamNormal.set(
+      normals.getX(row) + normals.getX(last),
+      normals.getY(row) + normals.getY(last),
+      normals.getZ(row) + normals.getZ(last),
+    ).normalize();
+    normals.setXYZ(row, seamNormal.x, seamNormal.y, seamNormal.z);
+    normals.setXYZ(last, seamNormal.x, seamNormal.y, seamNormal.z);
+  }
+  // Crown seam repair end.
   ensureTangents(lathe);
   const body = new THREE.Mesh(lathe, [mats.crown, mats.crownShoulder]);
   body.position.set(c.neckX0, c.axis.y, c.axis.z);

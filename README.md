@@ -6,6 +6,9 @@ The name is the movement rate: **2.4 Hz / 17,280 vph**, echoed on the caseback a
 
 [Open the live watch →](https://charlesmish.github.io/17280/)
 
+[Close-up studio →](https://charlesmish.github.io/17280/?film=balance) ·
+[Crown before/after →](https://charlesmish.github.io/17280/films/crown/)
+
 This began as a first watch-design prototype: a small workshop object for exploring
 how far a mechanically informed watch could be modeled, reviewed, repaired, and
 presented directly in Three.js.
@@ -30,8 +33,31 @@ The public view supports:
 - pause/resume and view reset
 - keyboard controls and reduced-motion behavior
 
+In Exploded view, open **Exploded layers** and select a layer to highlight its
+parts. Select it again or press Escape to clear the highlight. The current
+presentation uses `graphite-finish`, based on the preserved `graphite-materials`
+treatment: cool graphite casework, near-black rubber, warm gold, readable blue
+hands, and restrained sapphire reflections. See the
+[finishing acceptance notes](GRAPHITE_FINISHING.md) for this local finishing pass.
+This finish remains the default. The [crown shading repair](CROWN_REFINEMENT.md)
+closes its wraparound highlight seam while preserving its profile and finish.
+An opt-in `?refinement=graphite-sapphire` candidate adds
+stronger grazing reflection; see [sapphire comparison notes](SAPPHIRE_REFINEMENT.md).
+Dedicated space keeps the watch beside or above the controls. See
+[the graphite refinement notes](GRAPHITE_REFINEMENT.md) for parameter changes,
+comparisons and trade-offs; the [earlier refinement](WATCH_REFINEMENT.md) remains
+available with `?refinement=final`.
+
 The site is a fully static Three.js build with no account, database, server
 application, or external asset service required at runtime.
+
+For filming, open `?film=balance` to use the optional **Close-up studio**: six
+camera moves covering the balance, blue hands, crown, sapphire, lug and strap,
+and caseback. Play or scrub each six-second take, or drag to compose a shot.
+See [FILMING.md](FILMING.md) for controls and deterministic MP4 export.
+The saved crown comparison is served at `films/crown/`, with matched close-ups
+and original/repaired orbits. Its [page and media](public/films/crown/) are included
+in the static build for GitHub Pages.
 
 ## Run locally
 

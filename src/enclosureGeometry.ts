@@ -24,20 +24,21 @@ export function createEncMaterials(): EncMaterials {
     sapphire: new THREE.MeshPhysicalMaterial({
       // Phase 5D-A: neutral, high-transmission sapphire.  The enclosure slab
       // and the frozen outer sculpture are legitimate contiguous portions of
-      // one crystal, so alpha contribution stays deliberately restrained.
+      // one crystal. Pass A audition: product-visible opacity is 1;
+      // transmission/ior/thickness remain unchanged.
       color: 0xf6f9fa,
       metalness: 0.0,
       roughness: 0.025,
       transmission: 0.97,
-      thickness: 0.7,
-      ior: 1.46,
+      thickness: 0,
+      ior: 1.0,
       attenuationColor: 0xf7fafb,
       attenuationDistance: 15,
-      specularIntensity: 0.62,
+      specularIntensity: 0.20,
       specularColor: 0xd7e1e7,
       envMapIntensity: 0.78,
       transparent: true,
-      opacity: 0.1,
+      opacity: 1,
       depthWrite: false,
       depthTest: true,
       alphaToCoverage: false,

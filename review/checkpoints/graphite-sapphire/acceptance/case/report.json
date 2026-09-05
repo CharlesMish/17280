@@ -1,0 +1,5782 @@
+{
+  "browser": "151.0.7922.34",
+  "softwareRendering": true,
+  "diagnosticCamerasOnly": true,
+  "captures": [
+    {
+      "part": "crown",
+      "exterior": {
+        "concept": "tensioned-cushion",
+        "rejected": [
+          {
+            "id": "stepped-flank",
+            "reason": "Heavier bezel and vertical mid-flank read as a packaging block; weaker movement visibility and less cushion kinship."
+          },
+          {
+            "id": "soft-pillow",
+            "reason": "Near-uniform offsets soften the movement-derived cushion into a generic rounded tablet."
+          }
+        ],
+        "hornMesh": [
+          {
+            "name": "ext:lug-north-east",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.6747776279953062,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-north-west",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.2493405224539273,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-south-east",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.1750838338035732,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-south-west",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 2.093865850026967,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          }
+        ],
+        "crownJoin": {
+          "socketX0": 11.34427255893076,
+          "socketX1": 12.216762287513566,
+          "socketMaxR": 1.3,
+          "socketMouthR": 1.22,
+          "operatingGap": 0.1,
+          "caseEmbedWaist": 0.33999999999999986,
+          "caseEmbedMid": 1.0932675595137447,
+          "caseAirGap": 0,
+          "crownPenetration": 0,
+          "axisDrift": 0,
+          "bodyR": 2.62,
+          "projection": 2.38
+        },
+        "crownRootCollar": {
+          "mesh": "ext:crown-root-collar",
+          "fixed": true,
+          "worldBounds": {
+            "min": [
+              11.10427255893076,
+              -1.2999999523162842,
+              -1.5099999523162841
+            ],
+            "max": [
+              11.56427256727541,
+              1.2999999523162842,
+              1.0899999523162842
+            ]
+          },
+          "radialMax": 1.3,
+          "socketAxialOverlap": 0.22000000000000064,
+          "waistAxialEmbed": 0.5800000000000001,
+          "midAxialEmbed": 1.3332675595137449,
+          "bandZOverlap": {
+            "mid": 0.13999995231628426,
+            "waist": 1.9,
+            "caseback": 0.5599999523162842,
+            "waistBevel": 0.21999995231628422
+          },
+          "reserveToSocketMouth": 0.6524897285828057,
+          "reserveToRotatingNeck": 0.7524897285828054,
+          "operatingGapUnchanged": 0.09999999999999964,
+          "socketSegments": 32,
+          "collarSegments": 32
+        },
+        "crownCapClosure": {
+          "bodyMesh": "ext:crown-body",
+          "capMesh": "ext:crown-cap",
+          "capIsSoleEndClosure": true,
+          "bodySegments": 36,
+          "capSegments": 36,
+          "segmentMatch": true,
+          "capRadius": 1.5196,
+          "bodyBoundaryRadius": 1.5196,
+          "boundaryRadialDelta": 0,
+          "boundaryAxialDelta": 0,
+          "projectedFaceOverlapArea": 0,
+          "polishedShoulderOuterRadius": 1.6244,
+          "polishedShoulderAnnulusWidth": 0.1048,
+          "bodyX1": 15.576762287513567,
+          "crownBodyRadius": 2.62
+        },
+        "crownKeepout": {
+          "hits": [
+            {
+              "mesh": "ext:crown-socket",
+              "minClearance": 0.0999999781975216,
+              "intersects": false,
+              "at": {
+                "x": 12.216762309316044,
+                "y": 5.3424588136092815e-17,
+                "z": -0.1900000004470348
+              }
+            },
+            {
+              "mesh": "ext:caseback",
+              "minClearance": 0.12000020255262811,
+              "intersects": false,
+              "at": {
+                "x": 12.196762084960938,
+                "y": 0.517840564250946,
+                "z": -0.9660000212192537
+              }
+            },
+            {
+              "mesh": "ext:waist-bevel",
+              "minClearance": 0.12002393317511882,
+              "intersects": false,
+              "at": {
+                "x": 12.225526173909506,
+                "y": 0.3519578774770101,
+                "z": 0.7242906272411348
+              }
+            },
+            {
+              "mesh": "ext:caseback-step",
+              "minClearance": 0.12399991263563592,
+              "intersects": false,
+              "at": {
+                "x": 12.19276237487793,
+                "y": -0.4563661515712738,
+                "z": -0.991999997496605
+              }
+            },
+            {
+              "mesh": "ext:mid",
+              "minClearance": 0.14248573335726622,
+              "intersects": false,
+              "at": {
+                "x": 13.44674301147461,
+                "y": 2.4682116508483887,
+                "z": 0.9424574955567717
+              }
+            },
+            {
+              "mesh": "ext:waist",
+              "minClearance": 0.5958023062310129,
+              "intersects": false,
+              "at": {
+                "x": 11.720959981282553,
+                "y": 0.8514979084332784,
+                "z": -0.32733331123987836
+              }
+            },
+            {
+              "mesh": "ext:crown-root-collar",
+              "minClearance": 0.752489720238156,
+              "intersects": false,
+              "at": {
+                "x": 11.56427256727541,
+                "y": 2.816687628596988e-17,
+                "z": -0.1900000004470348
+              }
+            },
+            {
+              "mesh": "ext:bezel-chamfer",
+              "minClearance": 3.5268747366793116,
+              "intersects": false,
+              "at": {
+                "x": 13.509102821350098,
+                "y": 0.12517890334129333,
+                "z": 5.935599992725253
+              }
+            },
+            {
+              "mesh": "ext:bezel-lip",
+              "minClearance": 4.125616434167276,
+              "intersects": false,
+              "at": {
+                "x": 13.872770309448242,
+                "y": 0.014891971834003925,
+                "z": 6.5355999960035085
+              }
+            }
+          ],
+          "minClearance": 0.0999999781975216,
+          "minPair": "ext:crown-body ↔ ext:crown-socket",
+          "anyIntersection": false,
+          "envelopeR": 2.62,
+          "bodyX0": 13.016762287513567,
+          "bodyX1": 15.576762287513567
+        },
+        "crownBodyMesh": {
+          "components": 1,
+          "boundaryEdges": 76,
+          "nonManifoldEdges": 0,
+          "triangles": 576,
+          "weldedVertices": 326,
+          "outwardOk": true,
+          "fluteRhoMax": 2.6031395759082425,
+          "fluteProud": false
+        },
+        "fluteNote": "Flutes are applied box grooves seated inside the cylindrical band. Crown body is a 36-segment lathe. Remaining edge ragging is low-segment lathe faceting plus square groove ends; boxes stay inside bodyR. Not a topology defect.",
+        "thesis": "Tensioned cushion: restrained bezel-proud lip, re-entrant mid→waist shadow break, local-root case-grown horns, localized crown pocket. Subtle raised/inset outer sapphire caps — not a boxed crystal.",
+        "audit": {
+          "accepted": true,
+          "residual": {
+            "before": 0.23,
+            "after": 0.2299999999999999,
+            "rearAfter": 0.569999999999999,
+            "ok": true
+          },
+          "fasteners": {
+            "before": 0.385,
+            "after": 0.38559999999999806,
+            "axes": [
+              {
+                "id": "enc:fastener:north",
+                "xy": {
+                  "x": 0.21705676094303178,
+                  "y": 12.537830465116448
+                },
+                "minMaterialMargin": 0.38559999999999817
+              },
+              {
+                "id": "enc:fastener:south",
+                "xy": {
+                  "x": -0.6267486078506656,
+                  "y": -10.273969919786628
+                },
+                "minMaterialMargin": 0.3855999999999989
+              },
+              {
+                "id": "enc:fastener:west",
+                "xy": {
+                  "x": -13.190253238612861,
+                  "y": 2.61964921614047
+                },
+                "minMaterialMargin": 0.38559999999999933
+              },
+              {
+                "id": "enc:fastener:northeast",
+                "xy": {
+                  "x": 6.055075826166161,
+                  "y": 10.131354959957049
+                },
+                "minMaterialMargin": 0.38559999999999806
+              }
+            ],
+            "ok": true
+          },
+          "identity": {
+            "carrierGasket": true,
+            "frontInnerDrift": 0,
+            "rearInnerDrift": 0,
+            "crownAxisDrift": 0
+          },
+          "package": {
+            "top": 7.4616000001162295,
+            "bottom": -2.596000005245209,
+            "metalTop": 6.741600000116229,
+            "metalBottom": -2.596000005245209,
+            "metalTopOk": true,
+            "metalBotOk": true,
+            "zGrowth": 0,
+            "thickness": 9.337600005361438
+          },
+          "sapphire": {
+            "description": "subtle raised/inset outer caps — not a boxed crystal",
+            "frontMax": 7.181600000116229,
+            "frontAchieved": 7.101600000116229,
+            "frontAllowance": 0.3200000000000003,
+            "frontConsumed": 0.24,
+            "frontRemain": 0.08000000000000007,
+            "rearMax": -2.4960000052452087,
+            "rearAchieved": -2.4360000052452087,
+            "rearAllowance": 0.18000000000000016,
+            "rearConsumed": 0.12,
+            "rearRemain": 0.06000000000000005,
+            "frontOk": true,
+            "rearOk": true
+          },
+          "kernel": {
+            "contained": true,
+            "minBandOffset": 0.22
+          },
+          "lugs": {
+            "north": {
+              "wallY": 11.50286930167738,
+              "wallX": 9,
+              "yRoot": 11.50286930167738,
+              "yTip": 15.952869301677381,
+              "freeLength": 4.45,
+              "onLocalWall": true
+            },
+            "south": {
+              "wallY": -13.76661274798876,
+              "wallX": -9,
+              "yRoot": -13.76661274798876,
+              "yTip": -18.21661274798876,
+              "freeLength": 4.45,
+              "onLocalWall": true
+            },
+            "intendedFreeLength": 4.45,
+            "freeLengthDelta": 0,
+            "caseYCenter": 0.4820409993450099,
+            "frameYCenter": -1.1318717231556885,
+            "lugToLug": 34.16948204966614,
+            "strapWidth": 18,
+            "rootZ0": -0.95,
+            "rootZ1": 4.1,
+            "rootZSpan": 5.05,
+            "tipZ0": -2.5160000052452087,
+            "tipZ1": 1.283999994754791,
+            "tipZSpan": 3.8,
+            "rootGteTip": true,
+            "rootBandId": "ext:waist.z0 → ext:mid (named)",
+            "planRootThick": 2.42,
+            "planTipThick": 1.48,
+            "springBarDiameter": 1.8,
+            "reserveR": 1.02,
+            "surround": 0.88,
+            "minMaterialAroundBar": 0.8799999999999999,
+            "hornContainsReserve": true
+          },
+          "crown": {
+            "diameter": 5.24,
+            "projection": 2.38,
+            "caseX": 13.196762287513566,
+            "neckX0": 12.316762287513566,
+            "bodyX0": 13.016762287513567,
+            "engagement": 0.8800000000000008,
+            "pocketDepth": 0.82,
+            "pocketZ0": -0.95,
+            "pocketZ1": 0.95,
+            "pocketHeight": 1.9,
+            "pocketCoversAxis": true,
+            "pocketNotFullHeight": true,
+            "slottedBands": [
+              "ext:waist"
+            ],
+            "axisDrift": 0,
+            "nearestNorthLugY": 11.50286930167738
+          },
+          "profile": {
+            "bands": [
+              {
+                "id": "ext:bezel",
+                "offset": 1.72,
+                "z0": 6.441600000116229,
+                "z1": 6.741600000116229,
+                "height": 0.2999999999999998
+              },
+              {
+                "id": "ext:bezel-chamfer",
+                "offset": 1.38,
+                "z0": 5.951600000116229,
+                "z1": 6.441600000116229,
+                "height": 0.4900000000000002
+              },
+              {
+                "id": "ext:mid",
+                "offset": 1.12,
+                "z0": 0.95,
+                "z1": 5.951600000116229,
+                "height": 5.001600000116229
+              },
+              {
+                "id": "ext:waist",
+                "offset": 0.22,
+                "z0": -0.95,
+                "z1": 0.95,
+                "height": 1.9
+              },
+              {
+                "id": "ext:caseback",
+                "offset": 0.42,
+                "z0": -2.596000005245209,
+                "z1": -0.95,
+                "height": 1.6460000052452088
+              }
+            ],
+            "waistReentrant": true
+          },
+          "extents": {
+            "caseWidth": 31.542880783081053,
+            "caseLength": 29.548154176847092,
+            "widthWithCrown": 32.86790654410537,
+            "lengthWithLugs": 34.16948204966614,
+            "minX": -17.291144256591796,
+            "maxX": 15.576762287513567,
+            "minY": -18.21661274798876,
+            "maxY": 15.952869301677381
+          }
+        },
+        "z": {
+          "packageTop": 7.4616000001162295,
+          "packageBottom": -2.596000005245209,
+          "metalTop": 6.741600000116229,
+          "metalBottom": -2.596000005245209,
+          "frontSapphireOuter": 7.101600000116229,
+          "rearSapphireOuter": -2.4360000052452087,
+          "frontSapphireInner": 6.061600000116229,
+          "rearSapphireInner": -1.7360000052452087
+        },
+        "lugs": {
+          "strapWidth": 18,
+          "hornRootThick": 2.42,
+          "hornTipThick": 1.48,
+          "intendedFreeLength": 4.45,
+          "sides": [
+            {
+              "side": "north",
+              "xLo": 9,
+              "xHi": 11.42,
+              "wallY": 11.50286930167738,
+              "wallX": 9,
+              "wallA": {
+                "x": 9.014781902949636,
+                "y": 11.49518156420801
+              },
+              "wallB": {
+                "x": 8.84070690952972,
+                "y": 11.585714079132117
+              },
+              "yRoot": 11.50286930167738,
+              "yTip": 15.952869301677381,
+              "freeLength": 4.45,
+              "embed": 2.25
+            },
+            {
+              "side": "south",
+              "xLo": -11.42,
+              "xHi": -9,
+              "wallY": -13.76661274798876,
+              "wallX": -9,
+              "wallA": {
+                "x": -9.135770529585264,
+                "y": -13.72705020926564
+              },
+              "wallB": {
+                "x": -8.912752300661419,
+                "y": -13.792036089078536
+              },
+              "yRoot": -13.76661274798876,
+              "yTip": -18.21661274798876,
+              "freeLength": 4.45,
+              "embed": 2.25
+            }
+          ],
+          "bars": [
+            {
+              "id": "spring-bar:north",
+              "axisY": 13.95036930167738,
+              "axisZ": -0.6160000052452088,
+              "x0": -11.42,
+              "x1": 11.42,
+              "diameter": 1.8,
+              "reserveR": 1.02
+            },
+            {
+              "id": "spring-bar:south",
+              "axisY": -16.21411274798876,
+              "axisZ": -0.6160000052452088,
+              "x0": -11.42,
+              "x1": 11.42,
+              "diameter": 1.8,
+              "reserveR": 1.02
+            }
+          ],
+          "lugToLug": 34.16948204966614,
+          "caseYCenter": 0.4820409993450099,
+          "frameYCenter": -1.1318717231556885,
+          "rootZ0": -0.95,
+          "rootZ1": 4.1,
+          "tipZ0": -2.5160000052452087,
+          "tipZ1": 1.283999994754791,
+          "rootBandId": "ext:waist.z0 → ext:mid (named)",
+          "tipBandNote": "tip Z sized by spring-bar reserve + surround; must be ≤ root Z",
+          "surround": 0.88
+        },
+        "crown": {
+          "axis": {
+            "x": 12.208446736736756,
+            "y": 0,
+            "z": -0.20999999999999996
+          },
+          "dir": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "bodyR": 2.62,
+          "neckR": 1.18,
+          "caseX": 13.196762287513566,
+          "pocketDepth": 0.82,
+          "pocketYHalf": 0.46,
+          "pocketZ0": -0.95,
+          "pocketZ1": 0.95,
+          "neckX0": 12.316762287513566,
+          "bodyX0": 13.016762287513567,
+          "bodyX1": 15.576762287513567,
+          "engagement": 0.88,
+          "projection": 2.38,
+          "flutes": 18
+        },
+        "sapphire": {
+          "frontOuterZ": 7.101600000116229,
+          "rearOuterZ": -2.4360000052452087,
+          "frontAllowance": 0.3200000000000003,
+          "rearAllowance": 0.18000000000000016,
+          "frontConsumed": 0.24,
+          "rearConsumed": 0.12,
+          "frontInset": 0.38,
+          "rearInset": 0.34,
+          "description": "subtle raised/inset outer caps — not a boxed crystal"
+        },
+        "opticalOwnership": {
+          "finalProductOwner": "ext:sapphireOpticalOwnership",
+          "oneBoundaryManifoldPerSide": true,
+          "authoritativeEngineeringMeshesRetained": true,
+          "formerInternalMatingFacesContributeToProduct": false,
+          "mode": "corrected",
+          "bodies": [
+            {
+              "name": "ext:frontSapphireOpticalBody",
+              "authoritativeMeshes": [
+                "enc:frontSapphire",
+                "ext:frontSapphireOuter"
+              ],
+              "removedInternalFaces": 636,
+              "retainedSurfaceTriangles": 7036,
+              "shoulderTriangles": 640,
+              "materialSlots": [
+                "accepted-inner",
+                "accepted-outer"
+              ],
+              "interfaceZ": 6.845599973651767,
+              "analyticInterfaceZ": 6.861600000116229,
+              "renderedInterfaceDelta": -0.016000026464461747,
+              "bounds": {
+                "min": [
+                  -14.147144317626953,
+                  -10.920934677124023,
+                  6.045600021335483
+                ],
+                "max": [
+                  11.107736587524414,
+                  12.712118148803711,
+                  7.085600012990833
+                ]
+              }
+            },
+            {
+              "name": "ext:rearSapphireOpticalBody",
+              "authoritativeMeshes": [
+                "enc:rearSapphire",
+                "ext:rearSapphireOuter"
+              ],
+              "removedInternalFaces": 636,
+              "retainedSurfaceTriangles": 7036,
+              "shoulderTriangles": 640,
+              "materialSlots": [
+                "accepted-inner",
+                "accepted-outer"
+              ],
+              "interfaceZ": -2.3319999995231626,
+              "analyticInterfaceZ": -2.3160000052452085,
+              "renderedInterfaceDelta": -0.015999994277954066,
+              "bounds": {
+                "min": [
+                  -13.807144165039062,
+                  -10.580934524536133,
+                  -2.452000004291534
+                ],
+                "max": [
+                  10.767736434936523,
+                  12.37211799621582,
+                  -1.7519999566078184
+                ]
+              }
+            }
+          ]
+        },
+        "bands": [
+          {
+            "id": "ext:bezel",
+            "offset": 1.72,
+            "z0": 6.441600000116229,
+            "z1": 6.741600000116229,
+            "finish": "satin"
+          },
+          {
+            "id": "ext:bezel-chamfer",
+            "offset": 1.38,
+            "z0": 5.951600000116229,
+            "z1": 6.441600000116229,
+            "finish": "polish"
+          },
+          {
+            "id": "ext:mid",
+            "offset": 1.12,
+            "z0": 0.95,
+            "z1": 5.951600000116229,
+            "finish": "satin"
+          },
+          {
+            "id": "ext:waist",
+            "offset": 0.22,
+            "z0": -0.95,
+            "z1": 0.95,
+            "finish": "recess"
+          },
+          {
+            "id": "ext:caseback",
+            "offset": 0.42,
+            "z0": -2.596000005245209,
+            "z1": -0.95,
+            "finish": "satin"
+          }
+        ],
+        "finish": {
+          "thesis": "cool envelope, useful waist, inherited edge",
+          "answers": "warm mass, cool drawing, one blue",
+          "hierarchy": {
+            "envelope": "cool steel case, quieter than movement drawing, no gold",
+            "waist": "darker frosted re-entrant band separating upper and lower masses",
+            "edge": "polish only on accepted facets: bezel chamfer/lip/inner, waist-bevel, caseback-step, lug terminal chamfers, crown shoulders/cap"
+          },
+          "surfaces": {
+            "ext:bezel": "sunburst satin on top, vertical satin on short outer wall",
+            "ext:bezel-chamfer": "polish facet between bezel and mid",
+            "ext:bezel-lip": "polish lip at metal top",
+            "ext:bezel-inner-polish": "satin facing ring, polish inner wall",
+            "ext:mid": "vertical satin upper-case mass",
+            "ext:waist": "frosted darker steel, not a decorative stripe",
+            "ext:waist-bevel": "polish break mid → waist",
+            "ext:caseback": "circular satin lower mass",
+            "ext:caseback-step": "polish rear step",
+            "lugs": "top along-lug satin, inner/outer sides brighter satin, distal chamfers polish, bore frost",
+            "crown": "circumferential satin cylinder, restrained polish shoulders and cap, frost flutes, satin socket",
+            "sapphire": "unchanged from 5A; optics not in 5B"
+          },
+          "limitations": [
+            "Band extrusion bevels (~0.016 mm) are too small to carry visible anglage; polish lives on dedicated facet meshes already in the plan.",
+            "Lug extrude bevel (0.04 mm) is similarly too small; distal 0.36 mm profile chamfers take the terminal polish.",
+            "No inner lug-root anglage geometry exists; the case-grown join is articulated by grain direction, not a new chamfer.",
+            "Crown flutes remain applied box grooves, not cut-and-polished channels.",
+            "36-segment lathe faceting on the crown body is a frozen geometry leftover, not a finish defect.",
+            "From the front, the inner opening can pick up barrel warmth through the frozen sapphire; the bezel body is cool steel. Do not compensate with a gold case.",
+            "The low-side profile is light-starved under the existing studio. The waist is a shadow break there; 5D should reveal the sandwich without fake shadows."
+          ],
+          "renderHygiene": {
+            "roughnessSampling": "mipmapped band-limited procedural response; Phase-5B family and anisotropy ownership retained",
+            "diagnosticMode": "finished"
+          },
+          "phase5c": [
+            "Strap at the frozen 18 mm gap should not introduce warm buckle or hardware that competes with the barrel.",
+            "Lug terminals and frosted bores are the strap interface; keep them cool steel.",
+            "Typography must not add a second blue or a gold legend.",
+            "Do not start keyless works, sapphire optics, or a lighting redesign from the strap phase."
+          ]
+        },
+        "identity": {
+          "system": "Identity System 1",
+          "faceUnsigned": true,
+          "crown": {
+            "host": "ext:crown-cap",
+            "graphic": "three identical open cushion arcs at 120 degrees",
+            "symmetryOrder": 3,
+            "letters": false,
+            "nominalDiameterMm": 1.02,
+            "nominalStrokeMm": 0.068,
+            "treatment": "same-steel roughness + recessed bump map",
+            "geometryUnchanged": true,
+            "before": {
+              "mesh": "ext:crown-cap",
+              "position": {
+                "count": 38,
+                "itemSize": 3,
+                "checksum": -1164.0646475553513
+              },
+              "index": {
+                "count": 108,
+                "itemSize": 1,
+                "checksum": 73241
+              },
+              "bounds": {
+                "min": [
+                  -1.5196000337600708,
+                  -1.5196000337600708,
+                  0
+                ],
+                "max": [
+                  1.5196000337600708,
+                  1.5196000337600708,
+                  0
+                ]
+              }
+            },
+            "after": {
+              "mesh": "ext:crown-cap",
+              "position": {
+                "count": 38,
+                "itemSize": 3,
+                "checksum": -1164.0646475553513
+              },
+              "index": {
+                "count": 108,
+                "itemSize": 1,
+                "checksum": 73241
+              },
+              "bounds": {
+                "min": [
+                  -1.5196000337600708,
+                  -1.5196000337600708,
+                  0
+                ],
+                "max": [
+                  1.5196000337600708,
+                  1.5196000337600708,
+                  0
+                ]
+              }
+            }
+          },
+          "rear": {
+            "host": "ext:caseback",
+            "excludedHosts": [
+              "ext:caseback-step",
+              "enc:rearCarrier",
+              "ext:sapphireOpticalOwnership"
+            ],
+            "canonicalCopy": "2.4 Hz · 17 280 · TWO HANDS",
+            "renderedCopy": "2.4 Hz · 17 280 · TWO HANDS",
+            "letterHeightMm": 0.38,
+            "trackingEm": 0.15,
+            "placement": {
+              "region": "south / 6 o'clock cap band, bases outward, 12-up",
+              "centerY": -10.1,
+              "x0": 0.2,
+              "x1": 10.651736526489259
+            },
+            "treatment": "same-steel roughness + recessed bump map on cap material slot only",
+            "refinement": {
+              "glyphRaster": "geometric-precision canvas coverage with controlled edge shaping",
+              "decimalMinimumDiameterMm": 0.08,
+              "decimalRaster": "ASCII decimal receives a minimum circular floor in the existing same-steel maps",
+              "pathPlacement": "1025-sample cushion-contour arc-length placement",
+              "filtering": "2048-square mipmapped linear texture, anisotropy 16"
+            },
+            "noOverlayMesh": true,
+            "noDepthOverride": true,
+            "stepUnmarked": true,
+            "geometryUnchangedExceptOptionalUv": true,
+            "before": {
+              "mesh": "ext:caseback",
+              "position": {
+                "count": 32592,
+                "itemSize": 3,
+                "checksum": 3014106.02195089
+              },
+              "index": null,
+              "bounds": {
+                "min": [
+                  -16.007144927978516,
+                  -14.064281463623047,
+                  -0.8389999866485596
+                ],
+                "max": [
+                  12.96773624420166,
+                  14.572117805480957,
+                  0.8069999814033508
+                ]
+              }
+            },
+            "after": {
+              "mesh": "ext:caseback",
+              "position": {
+                "count": 32592,
+                "itemSize": 3,
+                "checksum": 3014106.02195089
+              },
+              "index": null,
+              "bounds": {
+                "min": [
+                  -16.007144927978516,
+                  -14.064281463623047,
+                  -0.8389999866485596
+                ],
+                "max": [
+                  12.96773624420166,
+                  14.572117805480957,
+                  0.8069999814033508
+                ]
+              }
+            }
+          },
+          "colorContribution": "none",
+          "proudGeometry": false
+        }
+      },
+      "presentation": {
+        "annex": "R1",
+        "presentationOnly": true,
+        "refinement": {
+          "stage": "graphite-finish",
+          "sapphireIor": 1.77,
+          "materials": [
+            {
+              "name": "exterior.bezelSatin",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.midSatin",
+              "color": "292b2d",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.72,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.casebackSatin",
+              "color": "74787a",
+              "roughness": 0.5169048820253314,
+              "mapMean": 0.580377571255553,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.68,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugTop",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugSide",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.8,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugTerm",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.88,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.lugBore",
+              "color": "292b2d",
+              "roughness": 0.5,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.45,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.waist",
+              "color": "292b2d",
+              "roughness": 0.44,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.52,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.polish",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.86,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.crown",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.76,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.crownShoulder",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.93,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.82,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.crownCap",
+              "color": "686b6c",
+              "roughness": 0.26,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.7,
+              "clearcoat": 0.12,
+              "clearcoatRoughness": 0.12
+            },
+            {
+              "name": "exterior.crownFlute",
+              "color": "292b2d",
+              "roughness": 0.48,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.38,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.sapphire",
+              "color": "f7fafb",
+              "roughness": 0.018,
+              "mapMean": 1,
+              "metalness": 0,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.98,
+              "thickness": 0.04,
+              "specularIntensity": 0.4,
+              "specularColorLinear": [
+                0.6653872982754769,
+                0.7454042095350284,
+                0.7991027380100881
+              ],
+              "reflectionEnvironment": {
+                "base": "materials",
+                "local": "crystal",
+                "strip": {
+                  "size": [
+                    3,
+                    32
+                  ],
+                  "position": [
+                    -18,
+                    0,
+                    12
+                  ],
+                  "color": "e3e7ec",
+                  "intensity": 1
+                },
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "blur": 0.04
+              },
+              "envMapIntensity": 0.82,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.plateFace",
+              "color": "5d605f",
+              "roughness": 0.7631335103039946,
+              "mapMean": 0.49794694489123775,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.72,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.plateEdge",
+              "color": "8a929e",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0.42,
+              "clearcoatRoughness": 0.08
+            },
+            {
+              "name": "finish.bridgeFace",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.cockFace",
+              "color": "a5a49f",
+              "roughness": 0.4866781569837945,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.04,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bossFace",
+              "color": "6a727c",
+              "roughness": 0.27,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeEdge",
+              "color": "c5c6c3",
+              "roughness": 0.12,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.95,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0.04
+            },
+            {
+              "name": "finish.wheelFace",
+              "color": "7a828c",
+              "roughness": 0.28,
+              "mapMean": 0.5882233563591452,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.98,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.wheelEdge",
+              "color": "c8ced6",
+              "roughness": 0.14,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.95,
+              "clearcoat": 0.58,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "finish.escapeFace",
+              "color": "6e747e",
+              "roughness": 0.32,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.9,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.pinion",
+              "color": "b8bec6",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.48,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "finish.arbor",
+              "color": "ccd2da",
+              "roughness": 0.075,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.52,
+              "clearcoatRoughness": 0.045
+            },
+            {
+              "name": "finish.barrelFace",
+              "color": "c18a38",
+              "roughness": 0.4080108120540914,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.barrelEdge",
+              "color": "e2b967",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.14,
+              "clearcoat": 0.38,
+              "clearcoatRoughness": 0.08
+            },
+            {
+              "name": "finish.barrel",
+              "color": "9c702e",
+              "roughness": 0.26,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.spring",
+              "color": "8a6a34",
+              "roughness": 0.42,
+              "mapMean": 1,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.balanceFace",
+              "color": "9aa0a8",
+              "roughness": 0.26,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.balanceEdge",
+              "color": "d0d4da",
+              "roughness": 0.09,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.42,
+              "clearcoatRoughness": 0.06
+            },
+            {
+              "name": "finish.balance",
+              "color": "b0b6be",
+              "roughness": 0.16,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.22,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.hairspring",
+              "color": "3a5878",
+              "roughness": 0.13,
+              "mapMean": 1,
+              "metalness": 0.97,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.2,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.trainScrew",
+              "color": "163056",
+              "roughness": 0.15,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.16,
+              "clearcoat": 0.32,
+              "clearcoatRoughness": 0.1
+            },
+            {
+              "name": "finish.jewel",
+              "color": "6e1226",
+              "roughness": 0.07,
+              "mapMean": 1,
+              "metalness": 0.02,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.64,
+              "thickness": 0.5,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.22,
+              "clearcoat": 0.45,
+              "clearcoatRoughness": 0.06
+            },
+            {
+              "name": "finish.jewelHero",
+              "color": "5c1022",
+              "roughness": 0.06,
+              "mapMean": 1,
+              "metalness": 0.02,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.52,
+              "thickness": 0.38,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.18,
+              "clearcoat": 0.5,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "finish.setting",
+              "color": "b8bec6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.chaton",
+              "color": "a07a38",
+              "roughness": 0.2,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bushing",
+              "color": "7a5c30",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.screw",
+              "color": "163056",
+              "roughness": 0.15,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.18,
+              "clearcoat": 0.3,
+              "clearcoatRoughness": 0.1
+            },
+            {
+              "name": "finish.screwEdge",
+              "color": "5a7aa0",
+              "roughness": 0.08,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.24,
+              "clearcoat": 0.55,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "readout.hourFace",
+              "color": "438bd7",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.48,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hourEdge",
+              "color": "6aa4e6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.minuteFace",
+              "color": "438bd7",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.48,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.minuteEdge",
+              "color": "7ab4f0",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hub",
+              "color": "a8aeb6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hubPolish",
+              "color": "d6dbe2",
+              "roughness": 0.08,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hubCap",
+              "color": "3a5a88",
+              "roughness": 0.14,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.indexFace",
+              "color": "d2d7de",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.indexEdge",
+              "color": "f0f3f7",
+              "roughness": 0.07,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.cardinalFace",
+              "color": "e4e8ee",
+              "roughness": 0.16,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.cardinalEdge",
+              "color": "f7f9fc",
+              "roughness": 0.06,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.carrier",
+              "color": "262a30",
+              "roughness": 0.46,
+              "mapMean": 1,
+              "metalness": 0.72,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.carrierEdge",
+              "color": "3e444c",
+              "roughness": 0.28,
+              "mapMean": 1,
+              "metalness": 0.76,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.attachment",
+              "color": "2a2e34",
+              "roughness": 0.44,
+              "mapMean": 1,
+              "metalness": 0.7,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.rubber",
+              "color": "1c1d1e",
+              "roughness": 0.9475694845360826,
+              "mapMean": 0.5804323682598039,
+              "metalness": 0.02,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.48,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0.5
+            },
+            {
+              "name": "strap.rubberEdge",
+              "color": "292a2b",
+              "roughness": 0.9475694845360826,
+              "mapMean": 0.5804323682598039,
+              "metalness": 0.03,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.42,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.bar",
+              "color": "8a929c",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.78,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.buckle",
+              "color": "868e98",
+              "roughness": 0.2,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "holder.pad",
+              "color": "424b57",
+              "roughness": 0.6,
+              "mapMean": 1,
+              "metalness": 0.7,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "enclosure.sapphire",
+              "color": "f6f9fa",
+              "roughness": 0.025,
+              "mapMean": 1,
+              "metalness": 0,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.97,
+              "thickness": 0.04,
+              "specularIntensity": 0.4,
+              "specularColorLinear": [
+                0.6795424696265424,
+                0.7529422167708612,
+                0.7991027380100881
+              ],
+              "reflectionEnvironment": {
+                "base": "materials",
+                "local": "crystal",
+                "strip": {
+                  "size": [
+                    3,
+                    32
+                  ],
+                  "position": [
+                    -18,
+                    0,
+                    12
+                  ],
+                  "color": "e3e7ec",
+                  "intensity": 1
+                },
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "blur": 0.04
+              },
+              "envMapIntensity": 0.78,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:centerStaff",
+              "color": "d5d9df",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:minuteDrive",
+              "color": "c5cbd4",
+              "roughness": 0.24,
+              "mapMean": 1,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeFace.rotated",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeFace.rotated",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.cockFace.rotated",
+              "color": "a5a49f",
+              "roughness": 0.4866781569837945,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.04,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "6a717c",
+              "roughness": 0.45,
+              "mapMean": 1,
+              "metalness": 0.55,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "3d424a",
+              "roughness": 0.55,
+              "mapMean": 1,
+              "metalness": 0.4,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "8a9098",
+              "roughness": 0.42,
+              "mapMean": 1,
+              "metalness": 0.45,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "4a5058",
+              "roughness": 0.5,
+              "mapMean": 1,
+              "metalness": 0.42,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "2a2a2c",
+              "roughness": 0.85,
+              "mapMean": 1,
+              "metalness": 0.05,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "3e444c",
+              "roughness": 0.52,
+              "mapMean": 1,
+              "metalness": 0.4,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "identity:caseback-cap:same-steel",
+              "color": "7e868e",
+              "roughness": 0.9,
+              "mapMean": 0.19227368878383264,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.68,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "identity:crown-cap:same-steel",
+              "color": "a8b0b8",
+              "roughness": 0.55,
+              "mapMean": 0.4082299138985428,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.7,
+              "clearcoat": 0.16,
+              "clearcoatRoughness": 0.12
+            },
+            {
+              "name": "phase4b:material:stationaryBearing",
+              "color": "5f6875",
+              "roughness": 0.34,
+              "mapMean": 1,
+              "metalness": 0.76,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:compoundWheel",
+              "color": "b99648",
+              "roughness": 0.28,
+              "mapMean": 1,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:hourDrive",
+              "color": "9fa8b5",
+              "roughness": 0.23,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            }
+          ]
+        },
+        "selectedLayer": null,
+        "views": {
+          "r1FinalHero": {
+            "position": [
+              18.35,
+              13.4,
+              74.01
+            ],
+            "target": [
+              -0.9,
+              0.55,
+              1.6
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1FrontElevation": {
+            "position": [
+              -1.2,
+              1,
+              126
+            ],
+            "target": [
+              -1.2,
+              1,
+              6.061600000116229
+            ],
+            "fov": 20,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 180
+          },
+          "r1FrontThreeQuarter": {
+            "position": [
+              32,
+              22.93,
+              68.62
+            ],
+            "target": [
+              -0.8,
+              0.5,
+              1.5
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1WearableProof": {
+            "position": [
+              95,
+              -65,
+              100
+            ],
+            "target": [
+              0,
+              0,
+              -10
+            ],
+            "fov": 48,
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "far": 300
+          },
+          "r1WearableJunction": {
+            "position": [
+              40,
+              42.950369301677384,
+              33.38399999475479
+            ],
+            "target": [
+              0,
+              11.95036930167738,
+              0
+            ],
+            "fov": 44,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1BalanceFinishMacro": {
+            "position": [
+              7,
+              12,
+              16
+            ],
+            "target": [
+              -1.45,
+              5.05,
+              2.25
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1SapphireOblique": {
+            "position": [
+              31,
+              16,
+              27
+            ],
+            "target": [
+              -0.6,
+              0.8,
+              5.811600000116229
+            ],
+            "fov": 28,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1RearExhibition": {
+            "position": [
+              10,
+              -7,
+              -64
+            ],
+            "target": [
+              -0.4,
+              -0.8,
+              -1.7360000052452087
+            ],
+            "fov": 34,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1RearIdentity": {
+            "position": [
+              4.4,
+              -8.4,
+              -40
+            ],
+            "target": [
+              4.4,
+              -8.4,
+              -1.7360000052452087
+            ],
+            "fov": 26,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1FinishRake": {
+            "position": [
+              12.4,
+              9,
+              20.8
+            ],
+            "target": [
+              -1.4,
+              1.3,
+              1.1
+            ],
+            "fov": 40,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1E1Hero": {
+            "position": [
+              50,
+              -40,
+              48
+            ],
+            "target": [
+              -0.5,
+              0.5,
+              1.5
+            ],
+            "fov": 36,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1E1Side": {
+            "position": [
+              95,
+              -10,
+              18
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "fov": 42,
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "far": 180
+          }
+        },
+        "profiles": {
+          "r1FrontRead": {
+            "exposure": 1.34,
+            "environment": 1.18,
+            "hemisphere": 0.8,
+            "fill": 0.72,
+            "key": 0.3,
+            "rim": 0.16,
+            "under": 0.14,
+            "rake": 0,
+            "frontRead": 0.25,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Wearable": {
+            "exposure": 1.34,
+            "environment": 1.24,
+            "hemisphere": 0.82,
+            "fill": 0.8,
+            "key": 0.42,
+            "rim": 0.42,
+            "under": 0.22,
+            "rake": 0,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1382429
+          },
+          "r1Sapphire": {
+            "exposure": 1.29,
+            "environment": 1.24,
+            "hemisphere": 0.52,
+            "fill": 0.34,
+            "key": 0.56,
+            "rim": 0.38,
+            "under": 0.14,
+            "rake": 0.28,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Rear": {
+            "exposure": 1.32,
+            "environment": 1.18,
+            "hemisphere": 0.48,
+            "fill": 0.38,
+            "key": 0.36,
+            "rim": 0.16,
+            "under": 0.15,
+            "rake": 0,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Raking": {
+            "exposure": 1.36,
+            "environment": 0.78,
+            "hemisphere": 0.16,
+            "fill": 0.1,
+            "key": 0.12,
+            "rim": 0.08,
+            "under": 0.06,
+            "rake": 1.8,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1119000
+          }
+        },
+        "accepted5dCCamerasRetained": true,
+        "accepted5dCProfilesRetained": true,
+        "runtime": {
+          "renderer": {
+            "render": {
+              "calls": 636,
+              "triangles": 519568,
+              "lines": 0,
+              "points": 0,
+              "frame": 173
+            },
+            "memory": {
+              "geometries": 315,
+              "textures": 19
+            },
+            "pixelRatio": 1,
+            "canvas": {
+              "pixelWidth": 960,
+              "pixelHeight": 760,
+              "cssWidth": 960,
+              "cssHeight": 760
+            }
+          },
+          "scene": {
+            "objects": 677,
+            "meshes": 420,
+            "visibleObjects": 623,
+            "visibleMeshes": 397
+          }
+        },
+        "current": {
+          "view": "r1SapphireOblique",
+          "profile": "r1Sapphire",
+          "camera": {
+            "position": [
+              30.296762287513566,
+              -14.000000000000002,
+              9.79
+            ],
+            "target": [
+              14.296762287513566,
+              0,
+              -0.20999999999999996
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "fov": 28
+          },
+          "exploded": 0,
+          "playbackPaused": true,
+          "reducedMotion": false,
+          "shellEnabled": false,
+          "publicView": "hero"
+        }
+      }
+    },
+    {
+      "part": "lug",
+      "exterior": {
+        "concept": "tensioned-cushion",
+        "rejected": [
+          {
+            "id": "stepped-flank",
+            "reason": "Heavier bezel and vertical mid-flank read as a packaging block; weaker movement visibility and less cushion kinship."
+          },
+          {
+            "id": "soft-pillow",
+            "reason": "Near-uniform offsets soften the movement-derived cushion into a generic rounded tablet."
+          }
+        ],
+        "hornMesh": [
+          {
+            "name": "ext:lug-north-east",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.6747776279953062,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-north-west",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.2493405224539273,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-south-east",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 1.1750838338035732,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          },
+          {
+            "name": "ext:lug-south-west",
+            "components": 1,
+            "boundaryEdges": 0,
+            "nonManifoldEdges": 0,
+            "triangles": 792,
+            "weldedVertices": 396,
+            "outwardOk": true,
+            "profileSelfIntersects": false,
+            "minCenterToOuter": 1.9,
+            "holeClearance": 0.8799999999999999,
+            "rootJoin": {
+              "minEmbedMid": 2.25,
+              "minEmbedWaist": 2.093865850026967,
+              "maxAirGap": 0,
+              "samples": 9
+            }
+          }
+        ],
+        "crownJoin": {
+          "socketX0": 11.34427255893076,
+          "socketX1": 12.216762287513566,
+          "socketMaxR": 1.3,
+          "socketMouthR": 1.22,
+          "operatingGap": 0.1,
+          "caseEmbedWaist": 0.33999999999999986,
+          "caseEmbedMid": 1.0932675595137447,
+          "caseAirGap": 0,
+          "crownPenetration": 0,
+          "axisDrift": 0,
+          "bodyR": 2.62,
+          "projection": 2.38
+        },
+        "crownRootCollar": {
+          "mesh": "ext:crown-root-collar",
+          "fixed": true,
+          "worldBounds": {
+            "min": [
+              11.10427255893076,
+              -1.2999999523162842,
+              -1.5099999523162841
+            ],
+            "max": [
+              11.56427256727541,
+              1.2999999523162842,
+              1.0899999523162842
+            ]
+          },
+          "radialMax": 1.3,
+          "socketAxialOverlap": 0.22000000000000064,
+          "waistAxialEmbed": 0.5800000000000001,
+          "midAxialEmbed": 1.3332675595137449,
+          "bandZOverlap": {
+            "mid": 0.13999995231628426,
+            "waist": 1.9,
+            "caseback": 0.5599999523162842,
+            "waistBevel": 0.21999995231628422
+          },
+          "reserveToSocketMouth": 0.6524897285828057,
+          "reserveToRotatingNeck": 0.7524897285828054,
+          "operatingGapUnchanged": 0.09999999999999964,
+          "socketSegments": 32,
+          "collarSegments": 32
+        },
+        "crownCapClosure": {
+          "bodyMesh": "ext:crown-body",
+          "capMesh": "ext:crown-cap",
+          "capIsSoleEndClosure": true,
+          "bodySegments": 36,
+          "capSegments": 36,
+          "segmentMatch": true,
+          "capRadius": 1.5196,
+          "bodyBoundaryRadius": 1.5196,
+          "boundaryRadialDelta": 0,
+          "boundaryAxialDelta": 0,
+          "projectedFaceOverlapArea": 0,
+          "polishedShoulderOuterRadius": 1.6244,
+          "polishedShoulderAnnulusWidth": 0.1048,
+          "bodyX1": 15.576762287513567,
+          "crownBodyRadius": 2.62
+        },
+        "crownKeepout": {
+          "hits": [
+            {
+              "mesh": "ext:crown-socket",
+              "minClearance": 0.0999999781975216,
+              "intersects": false,
+              "at": {
+                "x": 12.216762309316044,
+                "y": 5.3424588136092815e-17,
+                "z": -0.1900000004470348
+              }
+            },
+            {
+              "mesh": "ext:caseback",
+              "minClearance": 0.12000020255262811,
+              "intersects": false,
+              "at": {
+                "x": 12.196762084960938,
+                "y": 0.517840564250946,
+                "z": -0.9660000212192537
+              }
+            },
+            {
+              "mesh": "ext:waist-bevel",
+              "minClearance": 0.12002393317511882,
+              "intersects": false,
+              "at": {
+                "x": 12.225526173909506,
+                "y": 0.3519578774770101,
+                "z": 0.7242906272411348
+              }
+            },
+            {
+              "mesh": "ext:caseback-step",
+              "minClearance": 0.12399991263563592,
+              "intersects": false,
+              "at": {
+                "x": 12.19276237487793,
+                "y": -0.4563661515712738,
+                "z": -0.991999997496605
+              }
+            },
+            {
+              "mesh": "ext:mid",
+              "minClearance": 0.14248573335726622,
+              "intersects": false,
+              "at": {
+                "x": 13.44674301147461,
+                "y": 2.4682116508483887,
+                "z": 0.9424574955567717
+              }
+            },
+            {
+              "mesh": "ext:waist",
+              "minClearance": 0.5958023062310129,
+              "intersects": false,
+              "at": {
+                "x": 11.720959981282553,
+                "y": 0.8514979084332784,
+                "z": -0.32733331123987836
+              }
+            },
+            {
+              "mesh": "ext:crown-root-collar",
+              "minClearance": 0.752489720238156,
+              "intersects": false,
+              "at": {
+                "x": 11.56427256727541,
+                "y": 2.816687628596988e-17,
+                "z": -0.1900000004470348
+              }
+            },
+            {
+              "mesh": "ext:bezel-chamfer",
+              "minClearance": 3.5268747366793116,
+              "intersects": false,
+              "at": {
+                "x": 13.509102821350098,
+                "y": 0.12517890334129333,
+                "z": 5.935599992725253
+              }
+            },
+            {
+              "mesh": "ext:bezel-lip",
+              "minClearance": 4.125616434167276,
+              "intersects": false,
+              "at": {
+                "x": 13.872770309448242,
+                "y": 0.014891971834003925,
+                "z": 6.5355999960035085
+              }
+            }
+          ],
+          "minClearance": 0.0999999781975216,
+          "minPair": "ext:crown-body ↔ ext:crown-socket",
+          "anyIntersection": false,
+          "envelopeR": 2.62,
+          "bodyX0": 13.016762287513567,
+          "bodyX1": 15.576762287513567
+        },
+        "crownBodyMesh": {
+          "components": 1,
+          "boundaryEdges": 76,
+          "nonManifoldEdges": 0,
+          "triangles": 576,
+          "weldedVertices": 326,
+          "outwardOk": true,
+          "fluteRhoMax": 2.6031395759082425,
+          "fluteProud": false
+        },
+        "fluteNote": "Flutes are applied box grooves seated inside the cylindrical band. Crown body is a 36-segment lathe. Remaining edge ragging is low-segment lathe faceting plus square groove ends; boxes stay inside bodyR. Not a topology defect.",
+        "thesis": "Tensioned cushion: restrained bezel-proud lip, re-entrant mid→waist shadow break, local-root case-grown horns, localized crown pocket. Subtle raised/inset outer sapphire caps — not a boxed crystal.",
+        "audit": {
+          "accepted": true,
+          "residual": {
+            "before": 0.23,
+            "after": 0.2299999999999999,
+            "rearAfter": 0.569999999999999,
+            "ok": true
+          },
+          "fasteners": {
+            "before": 0.385,
+            "after": 0.38559999999999806,
+            "axes": [
+              {
+                "id": "enc:fastener:north",
+                "xy": {
+                  "x": 0.21705676094303178,
+                  "y": 12.537830465116448
+                },
+                "minMaterialMargin": 0.38559999999999817
+              },
+              {
+                "id": "enc:fastener:south",
+                "xy": {
+                  "x": -0.6267486078506656,
+                  "y": -10.273969919786628
+                },
+                "minMaterialMargin": 0.3855999999999989
+              },
+              {
+                "id": "enc:fastener:west",
+                "xy": {
+                  "x": -13.190253238612861,
+                  "y": 2.61964921614047
+                },
+                "minMaterialMargin": 0.38559999999999933
+              },
+              {
+                "id": "enc:fastener:northeast",
+                "xy": {
+                  "x": 6.055075826166161,
+                  "y": 10.131354959957049
+                },
+                "minMaterialMargin": 0.38559999999999806
+              }
+            ],
+            "ok": true
+          },
+          "identity": {
+            "carrierGasket": true,
+            "frontInnerDrift": 0,
+            "rearInnerDrift": 0,
+            "crownAxisDrift": 0
+          },
+          "package": {
+            "top": 7.4616000001162295,
+            "bottom": -2.596000005245209,
+            "metalTop": 6.741600000116229,
+            "metalBottom": -2.596000005245209,
+            "metalTopOk": true,
+            "metalBotOk": true,
+            "zGrowth": 0,
+            "thickness": 9.337600005361438
+          },
+          "sapphire": {
+            "description": "subtle raised/inset outer caps — not a boxed crystal",
+            "frontMax": 7.181600000116229,
+            "frontAchieved": 7.101600000116229,
+            "frontAllowance": 0.3200000000000003,
+            "frontConsumed": 0.24,
+            "frontRemain": 0.08000000000000007,
+            "rearMax": -2.4960000052452087,
+            "rearAchieved": -2.4360000052452087,
+            "rearAllowance": 0.18000000000000016,
+            "rearConsumed": 0.12,
+            "rearRemain": 0.06000000000000005,
+            "frontOk": true,
+            "rearOk": true
+          },
+          "kernel": {
+            "contained": true,
+            "minBandOffset": 0.22
+          },
+          "lugs": {
+            "north": {
+              "wallY": 11.50286930167738,
+              "wallX": 9,
+              "yRoot": 11.50286930167738,
+              "yTip": 15.952869301677381,
+              "freeLength": 4.45,
+              "onLocalWall": true
+            },
+            "south": {
+              "wallY": -13.76661274798876,
+              "wallX": -9,
+              "yRoot": -13.76661274798876,
+              "yTip": -18.21661274798876,
+              "freeLength": 4.45,
+              "onLocalWall": true
+            },
+            "intendedFreeLength": 4.45,
+            "freeLengthDelta": 0,
+            "caseYCenter": 0.4820409993450099,
+            "frameYCenter": -1.1318717231556885,
+            "lugToLug": 34.16948204966614,
+            "strapWidth": 18,
+            "rootZ0": -0.95,
+            "rootZ1": 4.1,
+            "rootZSpan": 5.05,
+            "tipZ0": -2.5160000052452087,
+            "tipZ1": 1.283999994754791,
+            "tipZSpan": 3.8,
+            "rootGteTip": true,
+            "rootBandId": "ext:waist.z0 → ext:mid (named)",
+            "planRootThick": 2.42,
+            "planTipThick": 1.48,
+            "springBarDiameter": 1.8,
+            "reserveR": 1.02,
+            "surround": 0.88,
+            "minMaterialAroundBar": 0.8799999999999999,
+            "hornContainsReserve": true
+          },
+          "crown": {
+            "diameter": 5.24,
+            "projection": 2.38,
+            "caseX": 13.196762287513566,
+            "neckX0": 12.316762287513566,
+            "bodyX0": 13.016762287513567,
+            "engagement": 0.8800000000000008,
+            "pocketDepth": 0.82,
+            "pocketZ0": -0.95,
+            "pocketZ1": 0.95,
+            "pocketHeight": 1.9,
+            "pocketCoversAxis": true,
+            "pocketNotFullHeight": true,
+            "slottedBands": [
+              "ext:waist"
+            ],
+            "axisDrift": 0,
+            "nearestNorthLugY": 11.50286930167738
+          },
+          "profile": {
+            "bands": [
+              {
+                "id": "ext:bezel",
+                "offset": 1.72,
+                "z0": 6.441600000116229,
+                "z1": 6.741600000116229,
+                "height": 0.2999999999999998
+              },
+              {
+                "id": "ext:bezel-chamfer",
+                "offset": 1.38,
+                "z0": 5.951600000116229,
+                "z1": 6.441600000116229,
+                "height": 0.4900000000000002
+              },
+              {
+                "id": "ext:mid",
+                "offset": 1.12,
+                "z0": 0.95,
+                "z1": 5.951600000116229,
+                "height": 5.001600000116229
+              },
+              {
+                "id": "ext:waist",
+                "offset": 0.22,
+                "z0": -0.95,
+                "z1": 0.95,
+                "height": 1.9
+              },
+              {
+                "id": "ext:caseback",
+                "offset": 0.42,
+                "z0": -2.596000005245209,
+                "z1": -0.95,
+                "height": 1.6460000052452088
+              }
+            ],
+            "waistReentrant": true
+          },
+          "extents": {
+            "caseWidth": 31.542880783081053,
+            "caseLength": 29.548154176847092,
+            "widthWithCrown": 32.86790654410537,
+            "lengthWithLugs": 34.16948204966614,
+            "minX": -17.291144256591796,
+            "maxX": 15.576762287513567,
+            "minY": -18.21661274798876,
+            "maxY": 15.952869301677381
+          }
+        },
+        "z": {
+          "packageTop": 7.4616000001162295,
+          "packageBottom": -2.596000005245209,
+          "metalTop": 6.741600000116229,
+          "metalBottom": -2.596000005245209,
+          "frontSapphireOuter": 7.101600000116229,
+          "rearSapphireOuter": -2.4360000052452087,
+          "frontSapphireInner": 6.061600000116229,
+          "rearSapphireInner": -1.7360000052452087
+        },
+        "lugs": {
+          "strapWidth": 18,
+          "hornRootThick": 2.42,
+          "hornTipThick": 1.48,
+          "intendedFreeLength": 4.45,
+          "sides": [
+            {
+              "side": "north",
+              "xLo": 9,
+              "xHi": 11.42,
+              "wallY": 11.50286930167738,
+              "wallX": 9,
+              "wallA": {
+                "x": 9.014781902949636,
+                "y": 11.49518156420801
+              },
+              "wallB": {
+                "x": 8.84070690952972,
+                "y": 11.585714079132117
+              },
+              "yRoot": 11.50286930167738,
+              "yTip": 15.952869301677381,
+              "freeLength": 4.45,
+              "embed": 2.25
+            },
+            {
+              "side": "south",
+              "xLo": -11.42,
+              "xHi": -9,
+              "wallY": -13.76661274798876,
+              "wallX": -9,
+              "wallA": {
+                "x": -9.135770529585264,
+                "y": -13.72705020926564
+              },
+              "wallB": {
+                "x": -8.912752300661419,
+                "y": -13.792036089078536
+              },
+              "yRoot": -13.76661274798876,
+              "yTip": -18.21661274798876,
+              "freeLength": 4.45,
+              "embed": 2.25
+            }
+          ],
+          "bars": [
+            {
+              "id": "spring-bar:north",
+              "axisY": 13.95036930167738,
+              "axisZ": -0.6160000052452088,
+              "x0": -11.42,
+              "x1": 11.42,
+              "diameter": 1.8,
+              "reserveR": 1.02
+            },
+            {
+              "id": "spring-bar:south",
+              "axisY": -16.21411274798876,
+              "axisZ": -0.6160000052452088,
+              "x0": -11.42,
+              "x1": 11.42,
+              "diameter": 1.8,
+              "reserveR": 1.02
+            }
+          ],
+          "lugToLug": 34.16948204966614,
+          "caseYCenter": 0.4820409993450099,
+          "frameYCenter": -1.1318717231556885,
+          "rootZ0": -0.95,
+          "rootZ1": 4.1,
+          "tipZ0": -2.5160000052452087,
+          "tipZ1": 1.283999994754791,
+          "rootBandId": "ext:waist.z0 → ext:mid (named)",
+          "tipBandNote": "tip Z sized by spring-bar reserve + surround; must be ≤ root Z",
+          "surround": 0.88
+        },
+        "crown": {
+          "axis": {
+            "x": 12.208446736736756,
+            "y": 0,
+            "z": -0.20999999999999996
+          },
+          "dir": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "bodyR": 2.62,
+          "neckR": 1.18,
+          "caseX": 13.196762287513566,
+          "pocketDepth": 0.82,
+          "pocketYHalf": 0.46,
+          "pocketZ0": -0.95,
+          "pocketZ1": 0.95,
+          "neckX0": 12.316762287513566,
+          "bodyX0": 13.016762287513567,
+          "bodyX1": 15.576762287513567,
+          "engagement": 0.88,
+          "projection": 2.38,
+          "flutes": 18
+        },
+        "sapphire": {
+          "frontOuterZ": 7.101600000116229,
+          "rearOuterZ": -2.4360000052452087,
+          "frontAllowance": 0.3200000000000003,
+          "rearAllowance": 0.18000000000000016,
+          "frontConsumed": 0.24,
+          "rearConsumed": 0.12,
+          "frontInset": 0.38,
+          "rearInset": 0.34,
+          "description": "subtle raised/inset outer caps — not a boxed crystal"
+        },
+        "opticalOwnership": {
+          "finalProductOwner": "ext:sapphireOpticalOwnership",
+          "oneBoundaryManifoldPerSide": true,
+          "authoritativeEngineeringMeshesRetained": true,
+          "formerInternalMatingFacesContributeToProduct": false,
+          "mode": "corrected",
+          "bodies": [
+            {
+              "name": "ext:frontSapphireOpticalBody",
+              "authoritativeMeshes": [
+                "enc:frontSapphire",
+                "ext:frontSapphireOuter"
+              ],
+              "removedInternalFaces": 636,
+              "retainedSurfaceTriangles": 7036,
+              "shoulderTriangles": 640,
+              "materialSlots": [
+                "accepted-inner",
+                "accepted-outer"
+              ],
+              "interfaceZ": 6.845599973651767,
+              "analyticInterfaceZ": 6.861600000116229,
+              "renderedInterfaceDelta": -0.016000026464461747,
+              "bounds": {
+                "min": [
+                  -14.147144317626953,
+                  -10.920934677124023,
+                  6.045600021335483
+                ],
+                "max": [
+                  11.107736587524414,
+                  12.712118148803711,
+                  7.085600012990833
+                ]
+              }
+            },
+            {
+              "name": "ext:rearSapphireOpticalBody",
+              "authoritativeMeshes": [
+                "enc:rearSapphire",
+                "ext:rearSapphireOuter"
+              ],
+              "removedInternalFaces": 636,
+              "retainedSurfaceTriangles": 7036,
+              "shoulderTriangles": 640,
+              "materialSlots": [
+                "accepted-inner",
+                "accepted-outer"
+              ],
+              "interfaceZ": -2.3319999995231626,
+              "analyticInterfaceZ": -2.3160000052452085,
+              "renderedInterfaceDelta": -0.015999994277954066,
+              "bounds": {
+                "min": [
+                  -13.807144165039062,
+                  -10.580934524536133,
+                  -2.452000004291534
+                ],
+                "max": [
+                  10.767736434936523,
+                  12.37211799621582,
+                  -1.7519999566078184
+                ]
+              }
+            }
+          ]
+        },
+        "bands": [
+          {
+            "id": "ext:bezel",
+            "offset": 1.72,
+            "z0": 6.441600000116229,
+            "z1": 6.741600000116229,
+            "finish": "satin"
+          },
+          {
+            "id": "ext:bezel-chamfer",
+            "offset": 1.38,
+            "z0": 5.951600000116229,
+            "z1": 6.441600000116229,
+            "finish": "polish"
+          },
+          {
+            "id": "ext:mid",
+            "offset": 1.12,
+            "z0": 0.95,
+            "z1": 5.951600000116229,
+            "finish": "satin"
+          },
+          {
+            "id": "ext:waist",
+            "offset": 0.22,
+            "z0": -0.95,
+            "z1": 0.95,
+            "finish": "recess"
+          },
+          {
+            "id": "ext:caseback",
+            "offset": 0.42,
+            "z0": -2.596000005245209,
+            "z1": -0.95,
+            "finish": "satin"
+          }
+        ],
+        "finish": {
+          "thesis": "cool envelope, useful waist, inherited edge",
+          "answers": "warm mass, cool drawing, one blue",
+          "hierarchy": {
+            "envelope": "cool steel case, quieter than movement drawing, no gold",
+            "waist": "darker frosted re-entrant band separating upper and lower masses",
+            "edge": "polish only on accepted facets: bezel chamfer/lip/inner, waist-bevel, caseback-step, lug terminal chamfers, crown shoulders/cap"
+          },
+          "surfaces": {
+            "ext:bezel": "sunburst satin on top, vertical satin on short outer wall",
+            "ext:bezel-chamfer": "polish facet between bezel and mid",
+            "ext:bezel-lip": "polish lip at metal top",
+            "ext:bezel-inner-polish": "satin facing ring, polish inner wall",
+            "ext:mid": "vertical satin upper-case mass",
+            "ext:waist": "frosted darker steel, not a decorative stripe",
+            "ext:waist-bevel": "polish break mid → waist",
+            "ext:caseback": "circular satin lower mass",
+            "ext:caseback-step": "polish rear step",
+            "lugs": "top along-lug satin, inner/outer sides brighter satin, distal chamfers polish, bore frost",
+            "crown": "circumferential satin cylinder, restrained polish shoulders and cap, frost flutes, satin socket",
+            "sapphire": "unchanged from 5A; optics not in 5B"
+          },
+          "limitations": [
+            "Band extrusion bevels (~0.016 mm) are too small to carry visible anglage; polish lives on dedicated facet meshes already in the plan.",
+            "Lug extrude bevel (0.04 mm) is similarly too small; distal 0.36 mm profile chamfers take the terminal polish.",
+            "No inner lug-root anglage geometry exists; the case-grown join is articulated by grain direction, not a new chamfer.",
+            "Crown flutes remain applied box grooves, not cut-and-polished channels.",
+            "36-segment lathe faceting on the crown body is a frozen geometry leftover, not a finish defect.",
+            "From the front, the inner opening can pick up barrel warmth through the frozen sapphire; the bezel body is cool steel. Do not compensate with a gold case.",
+            "The low-side profile is light-starved under the existing studio. The waist is a shadow break there; 5D should reveal the sandwich without fake shadows."
+          ],
+          "renderHygiene": {
+            "roughnessSampling": "mipmapped band-limited procedural response; Phase-5B family and anisotropy ownership retained",
+            "diagnosticMode": "finished"
+          },
+          "phase5c": [
+            "Strap at the frozen 18 mm gap should not introduce warm buckle or hardware that competes with the barrel.",
+            "Lug terminals and frosted bores are the strap interface; keep them cool steel.",
+            "Typography must not add a second blue or a gold legend.",
+            "Do not start keyless works, sapphire optics, or a lighting redesign from the strap phase."
+          ]
+        },
+        "identity": {
+          "system": "Identity System 1",
+          "faceUnsigned": true,
+          "crown": {
+            "host": "ext:crown-cap",
+            "graphic": "three identical open cushion arcs at 120 degrees",
+            "symmetryOrder": 3,
+            "letters": false,
+            "nominalDiameterMm": 1.02,
+            "nominalStrokeMm": 0.068,
+            "treatment": "same-steel roughness + recessed bump map",
+            "geometryUnchanged": true,
+            "before": {
+              "mesh": "ext:crown-cap",
+              "position": {
+                "count": 38,
+                "itemSize": 3,
+                "checksum": -1164.0646475553513
+              },
+              "index": {
+                "count": 108,
+                "itemSize": 1,
+                "checksum": 73241
+              },
+              "bounds": {
+                "min": [
+                  -1.5196000337600708,
+                  -1.5196000337600708,
+                  0
+                ],
+                "max": [
+                  1.5196000337600708,
+                  1.5196000337600708,
+                  0
+                ]
+              }
+            },
+            "after": {
+              "mesh": "ext:crown-cap",
+              "position": {
+                "count": 38,
+                "itemSize": 3,
+                "checksum": -1164.0646475553513
+              },
+              "index": {
+                "count": 108,
+                "itemSize": 1,
+                "checksum": 73241
+              },
+              "bounds": {
+                "min": [
+                  -1.5196000337600708,
+                  -1.5196000337600708,
+                  0
+                ],
+                "max": [
+                  1.5196000337600708,
+                  1.5196000337600708,
+                  0
+                ]
+              }
+            }
+          },
+          "rear": {
+            "host": "ext:caseback",
+            "excludedHosts": [
+              "ext:caseback-step",
+              "enc:rearCarrier",
+              "ext:sapphireOpticalOwnership"
+            ],
+            "canonicalCopy": "2.4 Hz · 17 280 · TWO HANDS",
+            "renderedCopy": "2.4 Hz · 17 280 · TWO HANDS",
+            "letterHeightMm": 0.38,
+            "trackingEm": 0.15,
+            "placement": {
+              "region": "south / 6 o'clock cap band, bases outward, 12-up",
+              "centerY": -10.1,
+              "x0": 0.2,
+              "x1": 10.651736526489259
+            },
+            "treatment": "same-steel roughness + recessed bump map on cap material slot only",
+            "refinement": {
+              "glyphRaster": "geometric-precision canvas coverage with controlled edge shaping",
+              "decimalMinimumDiameterMm": 0.08,
+              "decimalRaster": "ASCII decimal receives a minimum circular floor in the existing same-steel maps",
+              "pathPlacement": "1025-sample cushion-contour arc-length placement",
+              "filtering": "2048-square mipmapped linear texture, anisotropy 16"
+            },
+            "noOverlayMesh": true,
+            "noDepthOverride": true,
+            "stepUnmarked": true,
+            "geometryUnchangedExceptOptionalUv": true,
+            "before": {
+              "mesh": "ext:caseback",
+              "position": {
+                "count": 32592,
+                "itemSize": 3,
+                "checksum": 3014106.02195089
+              },
+              "index": null,
+              "bounds": {
+                "min": [
+                  -16.007144927978516,
+                  -14.064281463623047,
+                  -0.8389999866485596
+                ],
+                "max": [
+                  12.96773624420166,
+                  14.572117805480957,
+                  0.8069999814033508
+                ]
+              }
+            },
+            "after": {
+              "mesh": "ext:caseback",
+              "position": {
+                "count": 32592,
+                "itemSize": 3,
+                "checksum": 3014106.02195089
+              },
+              "index": null,
+              "bounds": {
+                "min": [
+                  -16.007144927978516,
+                  -14.064281463623047,
+                  -0.8389999866485596
+                ],
+                "max": [
+                  12.96773624420166,
+                  14.572117805480957,
+                  0.8069999814033508
+                ]
+              }
+            }
+          },
+          "colorContribution": "none",
+          "proudGeometry": false
+        }
+      },
+      "presentation": {
+        "annex": "R1",
+        "presentationOnly": true,
+        "refinement": {
+          "stage": "graphite-finish",
+          "sapphireIor": 1.77,
+          "materials": [
+            {
+              "name": "exterior.bezelSatin",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.midSatin",
+              "color": "292b2d",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.72,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.casebackSatin",
+              "color": "74787a",
+              "roughness": 0.5169048820253314,
+              "mapMean": 0.580377571255553,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.68,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugTop",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugSide",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.8,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.lugTerm",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.88,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.lugBore",
+              "color": "292b2d",
+              "roughness": 0.5,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.45,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.waist",
+              "color": "292b2d",
+              "roughness": 0.44,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.52,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.polish",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.86,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.crown",
+              "color": "74787a",
+              "roughness": 0.5168926512971085,
+              "mapMean": 0.5803913041657093,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.76,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.crownShoulder",
+              "color": "929596",
+              "roughness": 0.085,
+              "mapMean": 1,
+              "metalness": 0.93,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.82,
+              "clearcoat": 0.1,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "exterior.crownCap",
+              "color": "686b6c",
+              "roughness": 0.26,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.7,
+              "clearcoat": 0.12,
+              "clearcoatRoughness": 0.12
+            },
+            {
+              "name": "exterior.crownFlute",
+              "color": "292b2d",
+              "roughness": 0.48,
+              "mapMean": 0.5803921568627451,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.38,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "exterior.sapphire",
+              "color": "f7fafb",
+              "roughness": 0.018,
+              "mapMean": 1,
+              "metalness": 0,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.98,
+              "thickness": 0.04,
+              "specularIntensity": 0.4,
+              "specularColorLinear": [
+                0.6653872982754769,
+                0.7454042095350284,
+                0.7991027380100881
+              ],
+              "reflectionEnvironment": {
+                "base": "materials",
+                "local": "crystal",
+                "strip": {
+                  "size": [
+                    3,
+                    32
+                  ],
+                  "position": [
+                    -18,
+                    0,
+                    12
+                  ],
+                  "color": "e3e7ec",
+                  "intensity": 1
+                },
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "blur": 0.04
+              },
+              "envMapIntensity": 0.82,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.plateFace",
+              "color": "5d605f",
+              "roughness": 0.7631335103039946,
+              "mapMean": 0.49794694489123775,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.72,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.plateEdge",
+              "color": "8a929e",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0.42,
+              "clearcoatRoughness": 0.08
+            },
+            {
+              "name": "finish.bridgeFace",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.cockFace",
+              "color": "a5a49f",
+              "roughness": 0.4866781569837945,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.04,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bossFace",
+              "color": "6a727c",
+              "roughness": 0.27,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeEdge",
+              "color": "c5c6c3",
+              "roughness": 0.12,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.95,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0.04
+            },
+            {
+              "name": "finish.wheelFace",
+              "color": "7a828c",
+              "roughness": 0.28,
+              "mapMean": 0.5882233563591452,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.98,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.wheelEdge",
+              "color": "c8ced6",
+              "roughness": 0.14,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.95,
+              "clearcoat": 0.58,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "finish.escapeFace",
+              "color": "6e747e",
+              "roughness": 0.32,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.9,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.pinion",
+              "color": "b8bec6",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.48,
+              "clearcoatRoughness": 0.055
+            },
+            {
+              "name": "finish.arbor",
+              "color": "ccd2da",
+              "roughness": 0.075,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.52,
+              "clearcoatRoughness": 0.045
+            },
+            {
+              "name": "finish.barrelFace",
+              "color": "c18a38",
+              "roughness": 0.4080108120540914,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.barrelEdge",
+              "color": "e2b967",
+              "roughness": 0.1,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.14,
+              "clearcoat": 0.38,
+              "clearcoatRoughness": 0.08
+            },
+            {
+              "name": "finish.barrel",
+              "color": "9c702e",
+              "roughness": 0.26,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.spring",
+              "color": "8a6a34",
+              "roughness": 0.42,
+              "mapMean": 1,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.balanceFace",
+              "color": "9aa0a8",
+              "roughness": 0.26,
+              "mapMean": 0.5882197062174479,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.balanceEdge",
+              "color": "d0d4da",
+              "roughness": 0.09,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.42,
+              "clearcoatRoughness": 0.06
+            },
+            {
+              "name": "finish.balance",
+              "color": "b0b6be",
+              "roughness": 0.16,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0.22,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.hairspring",
+              "color": "3a5878",
+              "roughness": 0.13,
+              "mapMean": 1,
+              "metalness": 0.97,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.2,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.trainScrew",
+              "color": "163056",
+              "roughness": 0.15,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.16,
+              "clearcoat": 0.32,
+              "clearcoatRoughness": 0.1
+            },
+            {
+              "name": "finish.jewel",
+              "color": "6e1226",
+              "roughness": 0.07,
+              "mapMean": 1,
+              "metalness": 0.02,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.64,
+              "thickness": 0.5,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.22,
+              "clearcoat": 0.45,
+              "clearcoatRoughness": 0.06
+            },
+            {
+              "name": "finish.jewelHero",
+              "color": "5c1022",
+              "roughness": 0.06,
+              "mapMean": 1,
+              "metalness": 0.02,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.52,
+              "thickness": 0.38,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.18,
+              "clearcoat": 0.5,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "finish.setting",
+              "color": "b8bec6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.chaton",
+              "color": "a07a38",
+              "roughness": 0.2,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bushing",
+              "color": "7a5c30",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.02,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.screw",
+              "color": "163056",
+              "roughness": 0.15,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.18,
+              "clearcoat": 0.3,
+              "clearcoatRoughness": 0.1
+            },
+            {
+              "name": "finish.screwEdge",
+              "color": "5a7aa0",
+              "roughness": 0.08,
+              "mapMean": 1,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.24,
+              "clearcoat": 0.55,
+              "clearcoatRoughness": 0.05
+            },
+            {
+              "name": "readout.hourFace",
+              "color": "438bd7",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.48,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hourEdge",
+              "color": "6aa4e6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.minuteFace",
+              "color": "438bd7",
+              "roughness": 0.3,
+              "mapMean": 1,
+              "metalness": 0.48,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.minuteEdge",
+              "color": "7ab4f0",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hub",
+              "color": "a8aeb6",
+              "roughness": 0.18,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hubPolish",
+              "color": "d6dbe2",
+              "roughness": 0.08,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.hubCap",
+              "color": "3a5a88",
+              "roughness": 0.14,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.indexFace",
+              "color": "d2d7de",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.indexEdge",
+              "color": "f0f3f7",
+              "roughness": 0.07,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.cardinalFace",
+              "color": "e4e8ee",
+              "roughness": 0.16,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.cardinalEdge",
+              "color": "f7f9fc",
+              "roughness": 0.06,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.carrier",
+              "color": "262a30",
+              "roughness": 0.46,
+              "mapMean": 1,
+              "metalness": 0.72,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.carrierEdge",
+              "color": "3e444c",
+              "roughness": 0.28,
+              "mapMean": 1,
+              "metalness": 0.76,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "readout.attachment",
+              "color": "2a2e34",
+              "roughness": 0.44,
+              "mapMean": 1,
+              "metalness": 0.7,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.08,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.rubber",
+              "color": "1c1d1e",
+              "roughness": 0.9475694845360826,
+              "mapMean": 0.5804323682598039,
+              "metalness": 0.02,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.48,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0.5
+            },
+            {
+              "name": "strap.rubberEdge",
+              "color": "292a2b",
+              "roughness": 0.9475694845360826,
+              "mapMean": 0.5804323682598039,
+              "metalness": 0.03,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.42,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.bar",
+              "color": "8a929c",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.94,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.78,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "strap.buckle",
+              "color": "868e98",
+              "roughness": 0.2,
+              "mapMean": 1,
+              "metalness": 0.92,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.74,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "holder.pad",
+              "color": "424b57",
+              "roughness": 0.6,
+              "mapMean": 1,
+              "metalness": 0.7,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "enclosure.sapphire",
+              "color": "f6f9fa",
+              "roughness": 0.025,
+              "mapMean": 1,
+              "metalness": 0,
+              "ior": 1.77,
+              "opacity": 1,
+              "transmission": 0.97,
+              "thickness": 0.04,
+              "specularIntensity": 0.4,
+              "specularColorLinear": [
+                0.6795424696265424,
+                0.7529422167708612,
+                0.7991027380100881
+              ],
+              "reflectionEnvironment": {
+                "base": "materials",
+                "local": "crystal",
+                "strip": {
+                  "size": [
+                    3,
+                    32
+                  ],
+                  "position": [
+                    -18,
+                    0,
+                    12
+                  ],
+                  "color": "e3e7ec",
+                  "intensity": 1
+                },
+                "target": [
+                  0,
+                  0,
+                  0
+                ],
+                "blur": 0.04
+              },
+              "envMapIntensity": 0.78,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:centerStaff",
+              "color": "d5d9df",
+              "roughness": 0.22,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:minuteDrive",
+              "color": "c5cbd4",
+              "roughness": 0.24,
+              "mapMean": 1,
+              "metalness": 0.88,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeFace.rotated",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.bridgeFace.rotated",
+              "color": "929593",
+              "roughness": 0.5370241732234974,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.96,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "finish.cockFace.rotated",
+              "color": "a5a49f",
+              "roughness": 0.4866781569837945,
+              "mapMean": 0.5958763421750536,
+              "metalness": 1,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1.04,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "6a717c",
+              "roughness": 0.45,
+              "mapMean": 1,
+              "metalness": 0.55,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "3d424a",
+              "roughness": 0.55,
+              "mapMean": 1,
+              "metalness": 0.4,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "8a9098",
+              "roughness": 0.42,
+              "mapMean": 1,
+              "metalness": 0.45,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "4a5058",
+              "roughness": 0.5,
+              "mapMean": 1,
+              "metalness": 0.42,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "2a2a2c",
+              "roughness": 0.85,
+              "mapMean": 1,
+              "metalness": 0.05,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "unclassified",
+              "color": "3e444c",
+              "roughness": 0.52,
+              "mapMean": 1,
+              "metalness": 0.4,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "identity:caseback-cap:same-steel",
+              "color": "7e868e",
+              "roughness": 0.9,
+              "mapMean": 0.19227368878383264,
+              "metalness": 0.96,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.68,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "identity:crown-cap:same-steel",
+              "color": "a8b0b8",
+              "roughness": 0.55,
+              "mapMean": 0.4082299138985428,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 0.7,
+              "clearcoat": 0.16,
+              "clearcoatRoughness": 0.12
+            },
+            {
+              "name": "phase4b:material:stationaryBearing",
+              "color": "5f6875",
+              "roughness": 0.34,
+              "mapMean": 1,
+              "metalness": 0.76,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:compoundWheel",
+              "color": "b99648",
+              "roughness": 0.28,
+              "mapMean": 1,
+              "metalness": 0.86,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            },
+            {
+              "name": "phase4b:material:hourDrive",
+              "color": "9fa8b5",
+              "roughness": 0.23,
+              "mapMean": 1,
+              "metalness": 0.9,
+              "ior": 1.5,
+              "opacity": 1,
+              "transmission": 0,
+              "thickness": 0,
+              "specularIntensity": 1,
+              "specularColorLinear": [
+                1,
+                1,
+                1
+              ],
+              "reflectionEnvironment": null,
+              "envMapIntensity": 1,
+              "clearcoat": 0,
+              "clearcoatRoughness": 0
+            }
+          ]
+        },
+        "selectedLayer": null,
+        "views": {
+          "r1FinalHero": {
+            "position": [
+              18.35,
+              13.4,
+              74.01
+            ],
+            "target": [
+              -0.9,
+              0.55,
+              1.6
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1FrontElevation": {
+            "position": [
+              -1.2,
+              1,
+              126
+            ],
+            "target": [
+              -1.2,
+              1,
+              6.061600000116229
+            ],
+            "fov": 20,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 180
+          },
+          "r1FrontThreeQuarter": {
+            "position": [
+              32,
+              22.93,
+              68.62
+            ],
+            "target": [
+              -0.8,
+              0.5,
+              1.5
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1WearableProof": {
+            "position": [
+              95,
+              -65,
+              100
+            ],
+            "target": [
+              0,
+              0,
+              -10
+            ],
+            "fov": 48,
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "far": 300
+          },
+          "r1WearableJunction": {
+            "position": [
+              40,
+              42.950369301677384,
+              33.38399999475479
+            ],
+            "target": [
+              0,
+              11.95036930167738,
+              0
+            ],
+            "fov": 44,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1BalanceFinishMacro": {
+            "position": [
+              7,
+              12,
+              16
+            ],
+            "target": [
+              -1.45,
+              5.05,
+              2.25
+            ],
+            "fov": 32,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1SapphireOblique": {
+            "position": [
+              31,
+              16,
+              27
+            ],
+            "target": [
+              -0.6,
+              0.8,
+              5.811600000116229
+            ],
+            "fov": 28,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1RearExhibition": {
+            "position": [
+              10,
+              -7,
+              -64
+            ],
+            "target": [
+              -0.4,
+              -0.8,
+              -1.7360000052452087
+            ],
+            "fov": 34,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1RearIdentity": {
+            "position": [
+              4.4,
+              -8.4,
+              -40
+            ],
+            "target": [
+              4.4,
+              -8.4,
+              -1.7360000052452087
+            ],
+            "fov": 26,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1FinishRake": {
+            "position": [
+              12.4,
+              9,
+              20.8
+            ],
+            "target": [
+              -1.4,
+              1.3,
+              1.1
+            ],
+            "fov": 40,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1E1Hero": {
+            "position": [
+              50,
+              -40,
+              48
+            ],
+            "target": [
+              -0.5,
+              0.5,
+              1.5
+            ],
+            "fov": 36,
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "far": 160
+          },
+          "r1E1Side": {
+            "position": [
+              95,
+              -10,
+              18
+            ],
+            "target": [
+              0,
+              0,
+              0
+            ],
+            "fov": 42,
+            "up": [
+              0,
+              0,
+              1
+            ],
+            "far": 180
+          }
+        },
+        "profiles": {
+          "r1FrontRead": {
+            "exposure": 1.34,
+            "environment": 1.18,
+            "hemisphere": 0.8,
+            "fill": 0.72,
+            "key": 0.3,
+            "rim": 0.16,
+            "under": 0.14,
+            "rake": 0,
+            "frontRead": 0.25,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Wearable": {
+            "exposure": 1.34,
+            "environment": 1.24,
+            "hemisphere": 0.82,
+            "fill": 0.8,
+            "key": 0.42,
+            "rim": 0.42,
+            "under": 0.22,
+            "rake": 0,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1382429
+          },
+          "r1Sapphire": {
+            "exposure": 1.29,
+            "environment": 1.24,
+            "hemisphere": 0.52,
+            "fill": 0.34,
+            "key": 0.56,
+            "rim": 0.38,
+            "under": 0.14,
+            "rake": 0.28,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Rear": {
+            "exposure": 1.32,
+            "environment": 1.18,
+            "hemisphere": 0.48,
+            "fill": 0.38,
+            "key": 0.36,
+            "rim": 0.16,
+            "under": 0.15,
+            "rake": 0,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1513757
+          },
+          "r1Raking": {
+            "exposure": 1.36,
+            "environment": 0.78,
+            "hemisphere": 0.16,
+            "fill": 0.1,
+            "key": 0.12,
+            "rim": 0.08,
+            "under": 0.06,
+            "rake": 1.8,
+            "frontRead": 0,
+            "rearRake": 0,
+            "background": 1119000
+          }
+        },
+        "accepted5dCCamerasRetained": true,
+        "accepted5dCProfilesRetained": true,
+        "runtime": {
+          "renderer": {
+            "render": {
+              "calls": 479,
+              "triangles": 499532,
+              "lines": 0,
+              "points": 0,
+              "frame": 180
+            },
+            "memory": {
+              "geometries": 315,
+              "textures": 19
+            },
+            "pixelRatio": 1,
+            "canvas": {
+              "pixelWidth": 960,
+              "pixelHeight": 760,
+              "cssWidth": 960,
+              "cssHeight": 760
+            }
+          },
+          "scene": {
+            "objects": 677,
+            "meshes": 420,
+            "visibleObjects": 623,
+            "visibleMeshes": 397
+          }
+        },
+        "current": {
+          "view": "r1SapphireOblique",
+          "profile": "r1Sapphire",
+          "camera": {
+            "position": [
+              21.700000000000003,
+              20.85286930167738,
+              11.099999999999998
+            ],
+            "target": [
+              9.7,
+              11.852869301677378,
+              1.0999999999999999
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "fov": 28
+          },
+          "exploded": 0,
+          "playbackPaused": true,
+          "reducedMotion": false,
+          "shellEnabled": false,
+          "publicView": "hero"
+        }
+      }
+    }
+  ],
+  "errors": []
+}
