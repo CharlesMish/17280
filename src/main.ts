@@ -62,6 +62,7 @@ import { createEscapementRepairReport } from "./escapementAudit";
 import { createExplodedStudy, type ExplodedLayerSpec } from "./explodedStudy";
 import { createReleaseShell, type ReleaseShell, type ReleaseViewId } from "./releaseShell";
 import { createRefinement, REFINEMENT_STAGES, type RefinementStage, type RefinementOptics } from "./refinement";
+import { createTrainDesignExperiments, TRAIN_EXPERIMENTS, type TrainExperiment } from "./trainDesignExperiments";
 
 const params = new URLSearchParams(window.location.search);
 const requestedExplode = params.has("explode");
@@ -301,6 +302,9 @@ const strap = showStrap && exterior ? createStrap({ exteriorPlan: exterior.plan 
 if (strap) {
   studio.scene.add(strap.root);
 }
+
+const trainExperiments = createTrainDesignExperiments(movement, structure);
+trainExperiments.apply(TRAIN_EXPERIMENTS.find(name => name === params.get("experiment")) ?? "none");
 
 const requiredObject = (root: THREE.Object3D, name: string): THREE.Object3D => {
   const object = root.getObjectByName(name);
@@ -4698,6 +4702,8 @@ declare global {
     __WATCH__: {
       setView: (name: string) => void;
       setRefinement: (stage: RefinementStage, optics?: RefinementOptics) => void;
+      setExperiment: (name: TrainExperiment) => void;
+      experimentReport: typeof trainExperiments.report;
       selectLayer: (id: string | null) => void;
       setCaptureCamera: (position: [number, number, number], target: [number, number, number]) => void;
       physicalPresentationSnapshot: typeof physicalPresentationSnapshot;
@@ -4819,6 +4825,14 @@ window.__WATCH__ = {
     resizePresentation();
     applyAnyView(currentViewName);
   },
+  setExperiment: (name) => {
+    const view = currentViewName;
+    explodedStudy?.select(null);
+    if (explodedStudy) setExplode(0);
+    trainExperiments.apply(name);
+    applyAnyView(view);
+  },
+  experimentReport: trainExperiments.report,
   selectLayer: (id) => {
     explodedStudy?.select(id);
     releaseShell?.setSelectedLayer(explodedStudy?.selection() ?? null);

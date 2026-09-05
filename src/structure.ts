@@ -976,6 +976,7 @@ function buildTrainBridge(
   mats: StructureMaterials,
   rendered: { id: string; xy: Vec2 }[],
   engineeringOwners: Map<string, THREE.Object3D>,
+  study = false,
 ): THREE.Group {
   const g = new THREE.Group();
   g.name = "trainBridge";
@@ -997,11 +998,19 @@ function buildTrainBridge(
   const centerPathIndex = viaCenter.findIndex(
     (point) => Math.hypot(point.x - p.center.x, point.y - p.center.y) < 1e-9,
   );
-  const baseBodyWidth = widthForSeats(
+  const authoredBodyWidth = widthForSeats(
     viaCenter,
     seats,
     (_i, u) => 0.3 + Math.sin(u * Math.PI) * 0.06,
   );
+  // Study only: give the stationary ribbon a modest spindle-shaped section.
+  // Retain every accepted bearing land and never narrow the authored load path.
+  const baseBodyWidth = study ? (i: number, u: number): number => {
+    const point = viaCenter[i];
+    const protectedLand = seats.some(seat => Math.hypot(point.x - seat.xy.x, point.y - seat.xy.y) < seat.r + 0.32);
+    return protectedLand ? authoredBodyWidth(i, u)
+      : Math.max(authoredBodyWidth(i, u), 0.3 + 0.15 * Math.sin(u * Math.PI) ** 2);
+  } : authoredBodyWidth;
   const centerRootRightWidth = (i: number, u: number): number => {
     const base = baseBodyWidth(i, u);
     if (centerPathIndex < 0 || i !== centerPathIndex + 1) return base;
@@ -1152,6 +1161,18 @@ function buildTrainBridge(
   markFoot(discB, footB.id, footB.xy, rendered);
   g.add(discA, discB);
   return g;
+}
+
+/** Build only the opt-in product ribbon; off-scene engineering proxies stay baseline. */
+export function createTrainBridgeStudyGeometry(layout: Layout, plan: StructuralPlan, materials: StructureMaterials): THREE.BufferGeometry {
+  const owners = new Map<string, THREE.Object3D>();
+  const group = buildTrainBridge(layout, plan, materials, [], owners, true);
+  const body = group.getObjectByName("struct:trainBridge:body") as THREE.Mesh;
+  const geometry = body.geometry;
+  for (const root of [group, ...owners.values()]) root.traverse(object => {
+    if (object instanceof THREE.Mesh && object.geometry !== geometry) object.geometry.dispose();
+  });
+  return geometry;
 }
 
 function buildEscapeFinger(
