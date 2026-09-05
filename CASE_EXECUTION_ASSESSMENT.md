@@ -1,5 +1,9 @@
 # Case execution assessment — diagnosis only
 
+Historical diagnosis: the targeted crown normal correction described below is
+now implemented. See [CROWN_REFINEMENT.md](CROWN_REFINEMENT.md) for its scope,
+verification, and saved before/after views.
+
 The cushion case concept, proportions, lugs and graphite treatment remain intact.
 No case vertices, indices, normals, UVs, material assignments or cameras were
 changed. Diagnostic close-up cameras exist only in the capture harness.

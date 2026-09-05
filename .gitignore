@@ -11,6 +11,7 @@ review-packets/*.zip
 handoff
 watch_src.zip
 *.png
+!public/films/crown/*.png
 *:Zone.Identifier
 .env
 .vite

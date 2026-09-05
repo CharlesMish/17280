@@ -72,7 +72,8 @@ const startView = params.get("view") ?? (requestedExplode
   : params.get("exterior") === "0" ? "threeQuarter" : "r1FinalHero");
 const startDebug = params.has("debug");
 const frozen = params.has("static");
-const publicShellRequested = !frozen && params.get("shell") !== "0" && !startDebug;
+const filmingRequested = params.has("film");
+const publicShellRequested = !frozen && !filmingRequested && params.get("shell") !== "0" && !startDebug;
 const startTime = params.has("t") ? Number(params.get("t")) : null;
 const showStructure = params.get("structure") !== "0";
 const showAssembly = showStructure && params.get("assembly") !== "0";
@@ -3744,7 +3745,7 @@ if (frozen || reducedMotion) {
   studio.controls.autoRotate = false;
 }
 
-if (!frozen && params.get("shell") !== "0" && explodedStudy) {
+if (!frozen && !filmingRequested && params.get("shell") !== "0" && explodedStudy) {
   releaseShell = createReleaseShell({
     canvas: renderer.domElement,
     initialExploded: explodedStudy.value() > 0,
@@ -3987,8 +3988,19 @@ const renderAt = (time: number): void => {
 
 function frame(): void {
   renderAt(currentKinematicTime());
-  requestAnimationFrame(frame);
+  if (!filmingRequested) requestAnimationFrame(frame);
 }
+
+let filmRenderPending = false;
+const requestFilmRender = (): void => {
+  // A paused film is a still frame. Coalesce camera/time changes into one draw;
+  // offline film frames are rendered explicitly by capture().
+  if (!filmingRequested || frozen || filmRenderPending) return;
+  filmRenderPending = true;
+  requestAnimationFrame(() => {
+    try { frame(); } finally { filmRenderPending = false; }
+  });
+};
 
 type SurfaceArtifactAuditMode =
   | "off"
@@ -4691,7 +4703,7 @@ const setPhase5dB2FamilyId = (on: boolean): void => {
 // Publish the inspection/runtime API before the first potentially expensive
 // WebGL shader compile. The scheduled callback enters the same frame loop and
 // uses the same kinematic time source as the former synchronous first call.
-requestAnimationFrame(frame);
+if (!filmingRequested) requestAnimationFrame(frame);
 
 declare global {
   interface Window {
@@ -4793,6 +4805,7 @@ window.__WATCH__ = {
   },
   setTime: (time: number | null) => {
     timeOverride = time;
+    requestFilmRender();
   },
   setPlaybackPaused,
   releasePresentationReport,
@@ -4946,3 +4959,12 @@ window.__WATCH__ = {
     if (pose && readout) readout.setPose(pose.hours, pose.minutes, pose.id);
   },
 };
+
+if (filmingRequested) {
+  void import("./filming").then(({ createFilming }) => {
+    studio.controls.addEventListener("change", requestFilmRender);
+    window.addEventListener("resize", requestFilmRender);
+    createFilming(window.__WATCH__, params.get("film") || "balance", frozen);
+    requestFilmRender();
+  });
+}

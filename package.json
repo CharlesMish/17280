@@ -10,6 +10,8 @@
     "dev": "vite --host 127.0.0.1 --port 5173",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5173",
+    "capture:film": "node scripts/capture-filming.mjs",
+    "verify:crown": "node scripts/verify-crown-seam.mjs",
     "package": "node scripts/package-release.mjs",
     "package:train-core": "node scripts/package-going-train-core.mjs",
     "package:review": "node scripts/package-review-packets.mjs",
