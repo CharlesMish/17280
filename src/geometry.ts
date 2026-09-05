@@ -5,6 +5,7 @@ import { PALLET_CONTACT } from "./escapementContact";
 
 export type WheelStyle = "wheel" | "pinion";
 export type ToothProfile = "legacy" | "involute";
+export type TrainWheelWebStyle = "tapered-five-spoke";
 type RenderedZInterval = { min: number; max: number };
 
 function polarV(radius: number, angle: number): THREE.Vector2 {
@@ -346,6 +347,56 @@ export function addCrossingHoles(
   }
 }
 
+/** Optional web study: the working outline and the bore are never rebuilt here. */
+function addTaperedFiveSpokeHoles(
+  shape: THREE.Shape,
+  opts: { spokeCount: number; hubRadius: number; innerRim: number; spokeWidth: number },
+): void {
+  if (opts.spokeCount !== 5) throw new Error("tapered web requires five spokes");
+  const sector = Math.PI * 2 / opts.spokeCount;
+  const inner = opts.hubRadius + 0.14;
+  const outer = opts.innerRim - 0.1;
+  const clamp = (t: number) => Math.max(0, Math.min(1, t));
+  // The .02 mm throat allowance keeps the actual shortest cross-spoke distance
+  // above spokeWidth after accounting for the small inherited sweep.
+  const width = (t: number) => opts.spokeWidth + 0.02
+    + 0.32 * (1 - smooth(clamp(t / 0.35)))
+    + 0.22 * smooth(clamp((t - 0.67) / 0.33));
+  const edge = (spoke: number, t: number, side: number) => {
+    const r = lerp(inner, outer, t);
+    const angle = spoke * sector + 0.055 * smooth(t)
+      + side * Math.asin(width(t) / (2 * r));
+    return polarV(r, angle);
+  };
+  for (let spoke = 0; spoke < opts.spokeCount; spoke++) {
+    const samples: THREE.Vector2[] = [];
+    const steps = 32;
+    for (let i = 0; i <= steps; i++) samples.push(edge(spoke, i / steps, 1));
+    const outerA = spoke * sector + 0.055 + Math.asin(width(1) / (2 * outer));
+    const outerB = (spoke + 1) * sector + 0.055 - Math.asin(width(1) / (2 * outer));
+    for (let i = 1; i < 16; i++) samples.push(polarV(outer, lerp(outerA, outerB, i / 16)));
+    for (let i = steps; i >= 0; i--) samples.push(edge(spoke + 1, i / steps, -1));
+    const innerA = (spoke + 1) * sector - Math.asin(width(0) / (2 * inner));
+    const innerB = spoke * sector + Math.asin(width(0) / (2 * inner));
+    for (let i = 1; i < 16; i++) samples.push(polarV(inner, lerp(innerA, innerB, i / 16)));
+    const path = new THREE.Path();
+    // Corner rounding removes a little window area: it strengthens the hub/rim
+    // junctions without cutting outside the defined web envelope or adding bevels.
+    for (let i = 0; i < samples.length; i++) {
+      const p = samples[i];
+      const previous = samples[(i + samples.length - 1) % samples.length];
+      const next = samples[(i + 1) % samples.length];
+      const before = p.clone().lerp(previous, Math.min(0.25, 0.07 / p.distanceTo(previous)));
+      const after = p.clone().lerp(next, Math.min(0.25, 0.07 / p.distanceTo(next)));
+      if (i === 0) path.moveTo(before.x, before.y);
+      else path.lineTo(before.x, before.y);
+      path.quadraticCurveTo(p.x, p.y, after.x, after.y);
+    }
+    path.closePath();
+    shape.holes.push(path);
+  }
+}
+
 function waistedWindow(opts: {
   inner: number;
   outer: number;
@@ -471,6 +522,8 @@ export function createTrainWheel(opts: {
   toothProfile?: ToothProfile;
   meshBacklash?: number;
   renderedZInterval?: RenderedZInterval;
+  /** Explicit experiment only; omitted preserves the authored wheel byte-for-byte. */
+  webStyle?: TrainWheelWebStyle;
 }): THREE.Mesh {
   const pitchR = (opts.module * opts.teeth) / 2;
   const rootR = pitchR - opts.module * 1.12;
@@ -488,13 +541,15 @@ export function createTrainWheel(opts: {
         style: "wheel",
         bore: opts.bore,
       });
-  addCrossingHoles(shape, {
+  const crossingOptions = {
     spokeCount: opts.spokeCount,
     hubRadius: opts.hubRadius,
     innerRim: rootR - 0.04,
     spokeWidth: opts.spokeWidth,
     sweep: opts.spokeCount === 5 ? 0.055 : 0.03,
-  });
+  };
+  if (opts.webStyle === "tapered-five-spoke") addTaperedFiveSpokeHoles(shape, crossingOptions);
+  else addCrossingHoles(shape, crossingOptions);
   return finishedMesh(
     conformRenderedZInterval(
       extrudeCentered(shape, opts.thickness, opts.bevel ?? true),
