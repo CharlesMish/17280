@@ -1,0 +1,112 @@
+{
+  "defaultGeometryByteIdenticalToCheckpoint": true,
+  "defaultAllAttributesGroupsIndexSha256": "16164365d1654b0bb40a1bbed176853dfd438061bf242de90da84cb32d51c284",
+  "baselinePositionIndexSha256": "6f7fec20958f53325dff6759329b1bf6c4a9aae7f709e564875dbd2bae74124d",
+  "candidatePositionIndexSha256": "27b6aab84f031321e569f1b21a2bf38fa5eed570d69f51b1a157230a76292e47",
+  "minimumSpokeWidthMm": 0.35917878406447373,
+  "closestSamples": [
+    [
+      1.005665209301222,
+      2.8907257954867744
+    ],
+    [
+      0.6564774334034231,
+      2.9755269180912327
+    ]
+  ],
+  "triangleMinimumAreaMm2": 3.8007890168501035e-9,
+  "zeroAreaTriangles": 0,
+  "restoration": true,
+  "report": {
+    "id": "center-web",
+    "enabled": false,
+    "changedMesh": "center:wheel",
+    "dimensions": {
+      "mesh": "center:wheel",
+      "style": "tapered-five-spoke",
+      "spokes": 5,
+      "minimumSpokeWidthMm": 0.34,
+      "designedThroatWidthMm": 0.36,
+      "hubAttachmentWidthMm": 0.68,
+      "rimAttachmentWidthMm": 0.58,
+      "hubRadiusMm": 0.72,
+      "boreRadiusMm": 0.14,
+      "sweepRad": 0.055
+    },
+    "baseline": {
+      "geometryHash": {
+        "algorithm": "fnv1a32-attribute-bytes",
+        "value": "482a2f19"
+      },
+      "vertices": 23556,
+      "triangles": 7852,
+      "boundsMm": {
+        "min": [
+          -4.770500183105469,
+          -4.770500183105469,
+          -0.0885000005364418
+        ],
+        "max": [
+          4.770500183105469,
+          4.770500183105469,
+          0.056499991565942764
+        ]
+      }
+    },
+    "candidate": {
+      "geometryHash": {
+        "algorithm": "fnv1a32-attribute-bytes",
+        "value": "b4407c19"
+      },
+      "vertices": 73596,
+      "triangles": 24532,
+      "boundsMm": {
+        "min": [
+          -4.770500183105469,
+          -4.770500183105469,
+          -0.0885000005364418
+        ],
+        "max": [
+          4.770500183105469,
+          4.770500183105469,
+          0.056499991565942764
+        ]
+      }
+    },
+    "active": {
+      "geometryHash": {
+        "algorithm": "fnv1a32-attribute-bytes",
+        "value": "482a2f19"
+      },
+      "vertices": 23556,
+      "triangles": 7852,
+      "boundsMm": {
+        "min": [
+          -4.770500183105469,
+          -4.770500183105469,
+          -0.0885000005364418
+        ],
+        "max": [
+          4.770500183105469,
+          4.770500183105469,
+          0.056499991565942764
+        ]
+      }
+    },
+    "invariants": {
+      "frozenSourceMatched": true,
+      "workingToothContourPreserved": true,
+      "borePreserved": true,
+      "exactBoundsAndZSlabPreserved": true,
+      "materialIdentityPreserved": true,
+      "parentIdentityPreserved": true,
+      "localTransformPreserved": true,
+      "expectedGeometryAttached": true
+    }
+  },
+  "fullMovementBaselineMeshCount": 85,
+  "fullMovementBaselineAttributesTransformsIdentical": true,
+  "experimentChangedMeshes": [
+    "center:wheel"
+  ]
+}

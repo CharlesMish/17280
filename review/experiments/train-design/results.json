@@ -1,0 +1,86 @@
+{
+  "schema": "watch.train-design-review-results.v1",
+  "complete": true,
+  "frozenDefaultUnchanged": true,
+  "checkpointCommit": "e58144b4cbe5d4b8ce584763891e001fbf260bbf",
+  "default": "none",
+  "studies": {
+    "center-web": {
+      "status": "accepted as scoped preview; not promoted",
+      "clearanceChecks": 285,
+      "minimumChangedMaterialLowerBoundMm": 0.10749900834465023,
+      "fourFreshToothPairSweepsAccepted": true,
+      "evidence": "evidence/center-web/package-evidence.json"
+    },
+    "train-bridge": {
+      "status": "held; clearance not accepted; baseline retained",
+      "testedPairs": 276,
+      "passingPairs": 274,
+      "inheritedZeroDistancePairs": [
+        [
+          "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+          "Scene/calibre/third:pose/third:motion/third:geom/third:arbor/third:arbor:upperTip"
+        ],
+        [
+          "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+          "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:arbor/fourth:arbor:upperTip"
+        ]
+      ],
+      "evidence": "evidence/train-bridge/foreign-solids-and-invariants.json"
+    }
+  },
+  "visuals": {
+    "accepted": true,
+    "authoredCameras": 12,
+    "diagnosticCameras": 3,
+    "defaultHeroPixelIdentical": true,
+    "hero200PxAndHalfLinearLuminance": "Major gold/blue/case hierarchy readable; fine interior detail compresses",
+    "heroLightingAdjustmentNeeded": false
+  },
+  "switching": {
+    "accepted": true,
+    "scope": "All assembled/exploded authority fields except currentCamera; camera presets verified by fresh-query renders"
+  },
+  "productionBuild": {
+    "passed": true,
+    "existingBundleSizeWarning": true
+  },
+  "portablePreview": {
+    "schema": "watch.train-design-package-verification.v1",
+    "accepted": true,
+    "authority": "experimental preview only",
+    "archive": {
+      "file": "watch-going-train-core-center-web-preview.zip",
+      "bytes": 1890023,
+      "sha256": "c73b5910628d4094236581925d10c93f8301a2e0a5b17c4fe9b6f045b3689fb1",
+      "checksumFile": "watch-going-train-core-center-web-preview.zip.sha256"
+    },
+    "evidence": {
+      "file": "../evidence/center-web/package-evidence.json",
+      "sha256": "34314658c6d8b12506394ba4652ca1b06cf82ddf0127d6069eadd11d3ec710c7",
+      "meshPairs": 4
+    },
+    "candidateGeometrySha256": "27b6aab84f031321e569f1b21a2bf38fa5eed570d69f51b1a157230a76292e47",
+    "validation": {
+      "accepted": true,
+      "sourceTypecheck": true,
+      "assetValidation": {
+        "accepted": true,
+        "meshes": 40,
+        "vertices": 397362,
+        "longestSideMetres": 0.024531336298941664
+      },
+      "focusedPatchAppliesToCheckpoint": true,
+      "candidateGeometryMatchesFreshEvidence": true
+    },
+    "archiveReproducibilityPassed": true,
+    "extractedInternalChecksumsPassed": true,
+    "v1ArchiveUnchanged": true,
+    "v1Sha256": "735a855e5adc0748ff617f2b6ac5a2ea5ce3bb3ec259b3b50448f8aef800c346"
+  },
+  "limitations": [
+    "No candidate promoted, no main merge or deployment.",
+    "Nominal geometry and unchanged kinematics; not torque, tolerance or fabrication certification.",
+    "Bridge is held for two inherited zero-distance shaft-tip/body conditions."
+  ]
+}

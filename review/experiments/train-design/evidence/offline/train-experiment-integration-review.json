@@ -1,0 +1,56 @@
+{
+  "meshCount": 162,
+  "switches": [
+    {
+      "name": "none",
+      "changedMeshes": [],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": true
+    },
+    {
+      "name": "center-web",
+      "changedMeshes": [
+        "center:wheel"
+      ],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": false
+    },
+    {
+      "name": "train-bridge",
+      "changedMeshes": [
+        "struct:trainBridge:body"
+      ],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": false
+    },
+    {
+      "name": "center-web",
+      "changedMeshes": [
+        "center:wheel"
+      ],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": false
+    },
+    {
+      "name": "none",
+      "changedMeshes": [],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": true
+    },
+    {
+      "name": "train-bridge",
+      "changedMeshes": [
+        "struct:trainBridge:body"
+      ],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": false
+    },
+    {
+      "name": "none",
+      "changedMeshes": [],
+      "objectMaterialTransformIdentityPreserved": true,
+      "baselineGeometryObjectsRestored": true
+    }
+  ],
+  "missingStructureRejectsWithoutChangingActiveExperiment": true
+}

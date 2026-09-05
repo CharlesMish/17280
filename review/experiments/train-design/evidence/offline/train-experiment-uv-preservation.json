@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "finished": false,
+      "maximumUvErrorFromAuthoredProjection": 3.5762786843029915e-8,
+      "positionIndexNormalsGroupsUnchanged": true,
+      "positionIndexSha256": "838a59257af91ad6252ff68f786e49e71f5a2c2e71e422ece406983c3b22e1d9",
+      "baselineObjectAndAllAttributesRestored": true,
+      "projection": {
+        "source": "frozen bridge affine UV projection",
+        "maximumAuthoredFitError": 3.543291260399428e-8,
+        "projection": [
+          [
+            0.049999997785176525,
+            -7.657701388359818e-10,
+            0.5000000009517076
+          ],
+          [
+            -2.9365708645827185e-10,
+            0.04999999907086731,
+            0.5000000044615946
+          ]
+        ]
+      }
+    },
+    {
+      "finished": true,
+      "maximumUvErrorFromAuthoredProjection": 7.757893794035908e-8,
+      "positionIndexNormalsGroupsUnchanged": true,
+      "positionIndexSha256": "838a59257af91ad6252ff68f786e49e71f5a2c2e71e422ece406983c3b22e1d9",
+      "baselineObjectAndAllAttributesRestored": true,
+      "projection": {
+        "source": "frozen bridge affine UV projection",
+        "maximumAuthoredFitError": 8.031267983987789e-8,
+        "projection": [
+          [
+            -0.17187376171812493,
+            0.08626503914654825,
+            0.7572448912584094
+          ],
+          [
+            -0.08626503790862654,
+            -0.17187376492828868,
+            0.8102959766832274
+          ]
+        ]
+      }
+    }
+  ]
+}

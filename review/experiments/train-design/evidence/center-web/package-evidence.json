@@ -1,0 +1,384 @@
+{
+  "schema": "watch.train-design-evidence.v1",
+  "experiment": "center-web",
+  "accepted": true,
+  "checkpointCommit": "e58144b4cbe5d4b8ce584763891e001fbf260bbf",
+  "sourceFiles": [
+    {
+      "file": "src/accommodation.ts",
+      "bytes": 11973,
+      "sha256": "33fe5190a9e5cd553d3a5d450bae05fc9477e6d4183b29ab10701def759c648f"
+    },
+    {
+      "file": "src/accommodationAudit.ts",
+      "bytes": 4828,
+      "sha256": "15a23a517002615b153d26b039cfa81afee4d8f83abcd68474e1afb425da4810"
+    },
+    {
+      "file": "src/accommodationGeometry.ts",
+      "bytes": 8229,
+      "sha256": "0d833500daf5ec9d61559189cb79c5233ee2d98f667950c5bbce2e74f66b1f27"
+    },
+    {
+      "file": "src/accommodationMath.ts",
+      "bytes": 6346,
+      "sha256": "341a0ff1756c4aeed70f8b7208da7d1e3c41a0fb5be2f6606fe4b92cd3ebc96e"
+    },
+    {
+      "file": "src/accommodationPlan.ts",
+      "bytes": 12713,
+      "sha256": "6ff5b54bd8f4339729aff0884964ed3a25904aaa981d86ed92b5994f0fadfb06"
+    },
+    {
+      "file": "src/accommodationSpec.ts",
+      "bytes": 1630,
+      "sha256": "6b076ec0184e6dfba977601f27d9361dd1cc2d0e51e1e9eb1d8980057209de08"
+    },
+    {
+      "file": "src/assembly.ts",
+      "bytes": 14520,
+      "sha256": "155951ea11f77ca322e769f6924c04d7a59a5044c9d533e7363ede27e5745c21"
+    },
+    {
+      "file": "src/assemblyGeometry.ts",
+      "bytes": 5307,
+      "sha256": "601d0364d6d57ade6ecc856e9fa9d7dc64891a55057ae1a2a66a40e58ea52cd1"
+    },
+    {
+      "file": "src/assemblyMaterials.ts",
+      "bytes": 2000,
+      "sha256": "97ed395c233acb7e701c0d4ed45399f34b2062d7753ed389e37c907399d67cf0"
+    },
+    {
+      "file": "src/assemblySpec.ts",
+      "bytes": 10693,
+      "sha256": "cf49da109e585587ad02fef8e3a8a591e4710e02f5ca87817462f762c8eb3301"
+    },
+    {
+      "file": "src/centerWebExperiment.ts",
+      "bytes": 6449,
+      "sha256": "bb3d81fb0a662af5999b4bd5aa81e55bcccb2d52eb2f22239fdaeba7c2187048"
+    },
+    {
+      "file": "src/debug.ts",
+      "bytes": 4092,
+      "sha256": "61aa480a2ea1172c8f7b307b60b40840e43765457a4ee2eec885711563dfcfc6"
+    },
+    {
+      "file": "src/display.ts",
+      "bytes": 7087,
+      "sha256": "7dad28acbd8552d2e6b52c364b18cfb34931e6fcf6e3d5afa1d668fa3fd931f5"
+    },
+    {
+      "file": "src/displayAudit.ts",
+      "bytes": 3509,
+      "sha256": "2449a272d6cfbd22b27bc61d36d7d1e504fceff6e8e6480baf61e4cf5c1e85cf"
+    },
+    {
+      "file": "src/displayDrive.ts",
+      "bytes": 31489,
+      "sha256": "af34f0e13dd3c96d8b662b72ae4589fd606f758c54b6116f6106f5819d9690d0"
+    },
+    {
+      "file": "src/displayDriveGeometry.ts",
+      "bytes": 12401,
+      "sha256": "f2378b442b3e434d96f79a8ce552f9648170a55684b6fddbbca1d089e3beda44"
+    },
+    {
+      "file": "src/displayDriveSpec.ts",
+      "bytes": 6620,
+      "sha256": "cf76e089a14e3a478abd3447ebf4b5dfd14ecab55be7fc078c3ec9a456f74859"
+    },
+    {
+      "file": "src/displayGeometry.ts",
+      "bytes": 5786,
+      "sha256": "29e348319e49e70fc8fe280757eea74bd6d823cfbfdddbca16035f80ce57c678"
+    },
+    {
+      "file": "src/displayPlan.ts",
+      "bytes": 7240,
+      "sha256": "a5be2c2e321808b0f9c14e3180271f6933433480777c9604d1fb09ef6ddd9122"
+    },
+    {
+      "file": "src/displaySpec.ts",
+      "bytes": 844,
+      "sha256": "5592e8ab2fdfd0dfee20a8138378fbb581959b39fbf7a882a7fc49740c6980d4"
+    },
+    {
+      "file": "src/enclosure.ts",
+      "bytes": 9299,
+      "sha256": "339c6a4e750378f7ed5766a74a62118b315e4ef22827459e60bf53ea4e91c80f"
+    },
+    {
+      "file": "src/enclosureAudit.ts",
+      "bytes": 10092,
+      "sha256": "ffea7ab42ded5c9aa3afa1a5ab17e089cbeb7cf40eb5a2c2cc49a79df82879ad"
+    },
+    {
+      "file": "src/enclosureGeometry.ts",
+      "bytes": 7324,
+      "sha256": "4043eea254ee6a38d70cefb3c8aeee4013f37240c18e1685246dbe65baa1ea49"
+    },
+    {
+      "file": "src/enclosurePlan.ts",
+      "bytes": 10153,
+      "sha256": "ea7c068412a0ad5d5f5972281a61235a54a2909b4e1da105e2cad6127a7d25f9"
+    },
+    {
+      "file": "src/enclosureSpec.ts",
+      "bytes": 767,
+      "sha256": "b577d60afb73f8f07c4e6f4d81f7768e2452b47c2c200099cc665325a516f98d"
+    },
+    {
+      "file": "src/escapementAudit.ts",
+      "bytes": 20828,
+      "sha256": "74e6e77b15a5747a036f1a9f18425a95fa19beb37fb575a4d200f111f1a58e58"
+    },
+    {
+      "file": "src/escapementContact.ts",
+      "bytes": 9236,
+      "sha256": "b916c59b9f2e0034d1522467b8187cbd16856e2cae7cd4f74f1d85f1bbef2edb"
+    },
+    {
+      "file": "src/explodedStudy.ts",
+      "bytes": 11739,
+      "sha256": "d89f4a4ba823f6a59872fd0b49ccfc724be4bb8bb5231b09cfa4c45f7aec4247"
+    },
+    {
+      "file": "src/exterior.ts",
+      "bytes": 29421,
+      "sha256": "f218d318c61e080fe58d91858daaeb496ca8dc849d244efcaf782aafaceb0f75"
+    },
+    {
+      "file": "src/exteriorAudit.ts",
+      "bytes": 8988,
+      "sha256": "6c28b402f207ad7c1b67ac3c6df552efbe162415a69b784aa4324619a76baf74"
+    },
+    {
+      "file": "src/exteriorGeometry.ts",
+      "bytes": 63235,
+      "sha256": "b803bc6df0d568c4b228ce45b6ac297165244910571809cbc7db76eac090bb84"
+    },
+    {
+      "file": "src/exteriorMaterials.ts",
+      "bytes": 11375,
+      "sha256": "e0bcf401f8d9c5b49b10c6abfaddd659997158f4c36673fd3d451e74977712a7"
+    },
+    {
+      "file": "src/exteriorPlan.ts",
+      "bytes": 19119,
+      "sha256": "349265d2b2fbdef16fa302d7eec0a8e4291d8ec94f11285150755895ee8f489a"
+    },
+    {
+      "file": "src/exteriorSpec.ts",
+      "bytes": 2421,
+      "sha256": "e8ac5ec5c3e1f2b68469648c8c09e34453a288a352517e6c555ce903862a2561"
+    },
+    {
+      "file": "src/finish.ts",
+      "bytes": 19060,
+      "sha256": "d5da764e16ae6c4200c77b3cd2fdafbda6bbf3ff5db10f5f7c6d83cbca0eea57"
+    },
+    {
+      "file": "src/finishMaps.ts",
+      "bytes": 4662,
+      "sha256": "9a4b6597ca4457572a35964747937bdfbf56a2b66ba8b055ac9f1e75400f6e8c"
+    },
+    {
+      "file": "src/finishMaterials.ts",
+      "bytes": 6806,
+      "sha256": "fbb2dc655fa29dab6b46b69077ffb653c4b2a1d2f7faca5e0b6dd13cfcfaf598"
+    },
+    {
+      "file": "src/finishSpec.ts",
+      "bytes": 1610,
+      "sha256": "42ce423d8ee92da282cdb3cd03ca0020b358f27c9458f28ee14d1513eb4176a3"
+    },
+    {
+      "file": "src/finishStudio.ts",
+      "bytes": 5408,
+      "sha256": "044408dc43b79ce7876178d020c614dbf5bf7e2b1497ef730afdb7b5930f5210"
+    },
+    {
+      "file": "src/frozenGate0Authority.ts",
+      "bytes": 32460,
+      "sha256": "91dfc5307e11faf27f2e8807279c78998d9570cc06ca188ee9d57ace6054045b"
+    },
+    {
+      "file": "src/geometry.ts",
+      "bytes": 43477,
+      "sha256": "6dbef1955c340292a39bf3d1572f83748c47ab5c30a96278a8683201d3a3e93e"
+    },
+    {
+      "file": "src/identity.ts",
+      "bytes": 15824,
+      "sha256": "18301e3d1da1ddc45e6ea358cf91ea0f28ba2b45664edc45dce920de7b87f875"
+    },
+    {
+      "file": "src/main.ts",
+      "bytes": 188460,
+      "sha256": "bf981e8861153cb9a610abfe185dc75b61eadb60a50b4bb059c6717e1ec1b06c"
+    },
+    {
+      "file": "src/materials.ts",
+      "bytes": 4701,
+      "sha256": "c48a8b46bf7b07bb3f8cc9e058cb82a000410af9ce7fd346652bf4fc9b168b1d"
+    },
+    {
+      "file": "src/movement.ts",
+      "bytes": 10546,
+      "sha256": "9f2e49aaff2505fb4e3c93c55e6728c91454f1923401eb3f44acef0d4dc9a188"
+    },
+    {
+      "file": "src/readout.ts",
+      "bytes": 9901,
+      "sha256": "775dec277991bb5a137ca1bc200d12c5bfa3ab43208a5bd403a537068eb7b2bc"
+    },
+    {
+      "file": "src/readoutAudit.ts",
+      "bytes": 10457,
+      "sha256": "7e0c2a9fde9109e7540f2d8304b9835586b51c23e0d2c8682a2eadaf3ae02d62"
+    },
+    {
+      "file": "src/readoutGeometry.ts",
+      "bytes": 17024,
+      "sha256": "e36bb300a1436733fbd841945e163f3a051a01bbe4008aba458597f95646dc53"
+    },
+    {
+      "file": "src/readoutMaterials.ts",
+      "bytes": 4667,
+      "sha256": "62da08f7a4ba37b787888942da6f1068cf8eb2ffc3d0534ab9372e53e1bc8f60"
+    },
+    {
+      "file": "src/readoutPlan.ts",
+      "bytes": 15347,
+      "sha256": "ed4487a325f2cf3e6eb134ba1dc608234560cf57827ccd9bfcb7adbf577057c2"
+    },
+    {
+      "file": "src/readoutSpec.ts",
+      "bytes": 6980,
+      "sha256": "458809ee86050d9541363e2c00f21f6425481019aebafd884fca7200bff03741"
+    },
+    {
+      "file": "src/refinement.ts",
+      "bytes": 11513,
+      "sha256": "26e1903a60a16325d913256232ec7f40e1f4f23047bcee4fb765e07ac7c1ed15"
+    },
+    {
+      "file": "src/releaseShell.ts",
+      "bytes": 9651,
+      "sha256": "0373e2a7f8a302ca1e2a298939bd7f2ac47b553546deada625db4f6d990cb806"
+    },
+    {
+      "file": "src/spec.ts",
+      "bytes": 6240,
+      "sha256": "af79512a7e192ea77d502035f43429f78418f01a537e32eec128b2fa580e0c62"
+    },
+    {
+      "file": "src/strap.ts",
+      "bytes": 11348,
+      "sha256": "cdb85c9b0d42eb452631bc85b0657109b3f0357d15ecfc96c282329c0d0c4104"
+    },
+    {
+      "file": "src/strapGeometry.ts",
+      "bytes": 15222,
+      "sha256": "17e14a0be1198c63ea860c611e24ff27ca9ba5b386596a4b557e5af45470115e"
+    },
+    {
+      "file": "src/strapMaterials.ts",
+      "bytes": 2715,
+      "sha256": "ecab358868df4261843db895de9613cab2e6e1d1d83047c868d2f721bec0cefc"
+    },
+    {
+      "file": "src/strapPlan.ts",
+      "bytes": 3691,
+      "sha256": "ee972bd51725c96f1db78ebbed2658128e493f7047c65888ee72b7820f0a3e39"
+    },
+    {
+      "file": "src/strapSpec.ts",
+      "bytes": 1879,
+      "sha256": "33f3a7284b688a226bccd17911591b31a3a92209b44642e7e874e060054a2c3c"
+    },
+    {
+      "file": "src/structure.ts",
+      "bytes": 51380,
+      "sha256": "26ca81c37edf13146ff6691a7b4ac33cd657a859bc0534f1a39721a6e83ba836"
+    },
+    {
+      "file": "src/structureGeometry.ts",
+      "bytes": 22626,
+      "sha256": "5a2c2090705b9687bec102fadd198b1b7beeedb9b368f51da2069abb86aec64c"
+    },
+    {
+      "file": "src/structureMaterials.ts",
+      "bytes": 1243,
+      "sha256": "cee06480bfa67476d008c57eb33355760e4fcfcbd3b0112733f714545bbfdaee"
+    },
+    {
+      "file": "src/structureSpec.ts",
+      "bytes": 10956,
+      "sha256": "568e29ca8021ad7b559a7c896e9a3db0abac2e6776ecaa0528ae63567d7e3c5d"
+    },
+    {
+      "file": "src/studio.ts",
+      "bytes": 4242,
+      "sha256": "d2df2d9b138780f818a07e9812950c736e254cfacee4f1484ba2e2020d7478ff"
+    },
+    {
+      "file": "src/trainDesignExperiments.ts",
+      "bytes": 4436,
+      "sha256": "a91ba2bd31f07ef388c05766dda4d1c40c471a56ed77c25fb43d4bd724178982"
+    },
+    {
+      "file": "src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    }
+  ],
+  "candidateGeometrySha256": "27b6aab84f031321e569f1b21a2bf38fa5eed570d69f51b1a157230a76292e47",
+  "checks": {
+    "requestedExperimentActive": true,
+    "meshMembershipOrderUnchanged": true,
+    "onlyExpectedGeometryChanged": true,
+    "onlyCenterWheelGeometryChanged": true,
+    "pivotsUnchanged": true,
+    "kinematicsUnchanged": true,
+    "displayDriveUnchanged": true,
+    "depthIntervalsUnchanged": true,
+    "baselineRestored": true,
+    "browserErrorsClean": true,
+    "changedWebClearsThirdPinion": true,
+    "sweptClearanceAccepted": true,
+    "changedMaterialMarginAccepted": true,
+    "allFourTrainPairsAccepted": true
+  },
+  "meshReports": [
+    {
+      "file": "barrel80-center12.json",
+      "bytes": 85453,
+      "sha256": "0dc8453f4d3692129bf3264774c39436fc04edb799df77873bb1ab3afcf94d72"
+    },
+    {
+      "file": "center64-third10.json",
+      "bytes": 85458,
+      "sha256": "ccb4d8e0457305b7ed2742d7f3b171f75d277ab5f588c54e4bf3c5dec69a352d"
+    },
+    {
+      "file": "third60-fourth8.json",
+      "bytes": 85485,
+      "sha256": "bc6f6ee2afea2ded0523e3dbc4c9da0146ded58470026c610ee6bae2acb0fcd5"
+    },
+    {
+      "file": "fourth56-escape7.json",
+      "bytes": 85475,
+      "sha256": "58cb5745fab8a9aa6858a17710562b2bce2d03ca98cfe5e529a586a8e9dd9a99"
+    }
+  ],
+  "supportingReports": [
+    {
+      "file": "foreign-solids-and-invariants.json",
+      "bytes": 744049,
+      "sha256": "5ec3d9a75cb04c2b901f29574fb9343b0c026ed9d7592da5cd37470b1ab19cd8"
+    }
+  ]
+}

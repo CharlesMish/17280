@@ -1,0 +1,184 @@
+{
+  "accepted": true,
+  "authoredCameraCount": 12,
+  "diagnosticCameraCount": 3,
+  "frozenHeroPixelIdentical": true,
+  "browserErrors": [],
+  "sources": [
+    {
+      "file": "/tmp/train-design-visuals/report.json",
+      "sha256": "6ee9ee0d9f4b0a260ea66c4238f5744a28b0795f986d2ecacb945c69699f3172"
+    },
+    {
+      "file": "/tmp/train-design-bridge-final/report.json",
+      "sha256": "77d26a7e6035f095954035650b3e273cae358ba67074da6b7bed3880ff57863b"
+    }
+  ],
+  "checks": [
+    {
+      "file": "hero-none.png",
+      "experiment": "none",
+      "view": "hero",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.842170943040401e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "front-none.png",
+      "experiment": "none",
+      "view": "front",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 7.327471962526033e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "rear-none.png",
+      "experiment": "none",
+      "view": "rear",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 5.329070518200751e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "exploded-none.png",
+      "experiment": "none",
+      "view": "exploded",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.1316282072803006e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "close-none.png",
+      "experiment": "none",
+      "view": "close",
+      "diagnosticCamera": true,
+      "maximumCameraCoordinateError": 1.7763568394002505e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "hero-center-web.png",
+      "experiment": "center-web",
+      "view": "hero",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.842170943040401e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "front-center-web.png",
+      "experiment": "center-web",
+      "view": "front",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 7.327471962526033e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "rear-center-web.png",
+      "experiment": "center-web",
+      "view": "rear",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 5.329070518200751e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "exploded-center-web.png",
+      "experiment": "center-web",
+      "view": "exploded",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.1316282072803006e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "close-center-web.png",
+      "experiment": "center-web",
+      "view": "close",
+      "diagnosticCamera": true,
+      "maximumCameraCoordinateError": 1.7763568394002505e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "hero-train-bridge.png",
+      "experiment": "train-bridge",
+      "view": "hero",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.842170943040401e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "front-train-bridge.png",
+      "experiment": "train-bridge",
+      "view": "front",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 7.327471962526033e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "rear-train-bridge.png",
+      "experiment": "train-bridge",
+      "view": "rear",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 5.329070518200751e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "exploded-train-bridge.png",
+      "experiment": "train-bridge",
+      "view": "exploded",
+      "diagnosticCamera": false,
+      "maximumCameraCoordinateError": 2.1316282072803006e-14,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    },
+    {
+      "file": "close-train-bridge.png",
+      "experiment": "train-bridge",
+      "view": "close",
+      "diagnosticCamera": true,
+      "maximumCameraCoordinateError": 1.7763568394002505e-15,
+      "cameraAccepted": true,
+      "geometryAuthorityUnchanged": true,
+      "zeroStateAccepted": true,
+      "refinementReportUnchanged": true
+    }
+  ]
+}

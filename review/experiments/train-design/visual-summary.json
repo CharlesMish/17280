@@ -1,0 +1,246 @@
+{
+  "schema": "watch.train-design-visual-review.v1",
+  "status": "provisional; no experiment promoted",
+  "frozenBase": "graphite-finish",
+  "sapphireStageUnchanged": true,
+  "authoredCamerasUnchanged": true,
+  "diagnosticCamera": {
+    "position": [
+      7,
+      -5,
+      21
+    ],
+    "target": [
+      0,
+      0,
+      1.8
+    ],
+    "onlyFor": "Movement detail"
+  },
+  "capture": {
+    "timeSeconds": 0.104,
+    "readoutPose": "10:10",
+    "viewport": [
+      960,
+      760
+    ],
+    "browser": "151.0.7922.34",
+    "softwareRendering": true,
+    "errors": [],
+    "reportSource": "/tmp/train-design-visuals/report.json",
+    "reportSha256": "6ee9ee0d9f4b0a260ea66c4238f5744a28b0795f986d2ecacb945c69699f3172"
+  },
+  "brightnessPreview": {
+    "widthPx": 200,
+    "method": "provided half-linear-luminance simulation; see study results for method",
+    "sourceDirectory": "/tmp/train-design-review"
+  },
+  "bridgeImages": "final local refinement; camera alignment and original geometry restoration verified",
+  "visualAssessment": {
+    "centerWeb": "More noticeable in the movement detail and promising; Hero difference remains subtle.",
+    "trainBridge": "Held: small close-view benefit, but clearance is not accepted. The baseline bridge is retained.",
+    "readability": "Gold mass, blue hands, and case boundary remain identifiable at 200 px; fine movement detail compresses."
+  },
+  "mechanicalAcceptance": "Consult separately published fresh audit reports; images alone do not establish clearance.",
+  "images": [
+    {
+      "file": "images/hero-none.png",
+      "source": "/tmp/train-design-visuals/hero-none.png",
+      "bytes": 320777,
+      "sha256": "d5535d0eb72a5b1fc23b38f230d2bd5742b8eafe4b3e892617820aa6a25c9c5b",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/front-none.png",
+      "source": "/tmp/train-design-visuals/front-none.png",
+      "bytes": 353522,
+      "sha256": "9f0db964ac7eed3b44d5b39b7a235afac56f745cf72aae49ac6416d4fd237a3f",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/rear-none.png",
+      "source": "/tmp/train-design-visuals/rear-none.png",
+      "bytes": 342355,
+      "sha256": "496311002efb2329bbe008df7e7d02511c87882b71ec07637b00863cae2f89e4",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/exploded-none.png",
+      "source": "/tmp/train-design-visuals/exploded-none.png",
+      "bytes": 355028,
+      "sha256": "c0fb7f9f27a12fcc6fc009e7fe81fd9610fef3f43db9447d227d897a4cd8c7a1",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/close-none.png",
+      "source": "/tmp/train-design-visuals/close-none.png",
+      "bytes": 741767,
+      "sha256": "6666a8409108de91d1160f6be47a233dbf517f32d6b7d8c0324cb9df5b1feb05",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/hero-none-200.png",
+      "source": "/tmp/train-design-review/hero-none-200.png",
+      "bytes": 20888,
+      "sha256": "5300a2bd2119ac815039011dcad3b0257f8a4f4aecc12b65212ba7c79050983c",
+      "width": 200,
+      "height": 158
+    },
+    {
+      "file": "images/hero-none-200-dim.png",
+      "source": "/tmp/train-design-review/hero-none-200-dim.png",
+      "bytes": 19209,
+      "sha256": "b6e7cb90336441b9f052966e52f81dc8706a3daeead2f2ba6959852d946c5416",
+      "width": 200,
+      "height": 158
+    },
+    {
+      "file": "images/hero-train-bridge.png",
+      "source": "/tmp/train-design-bridge-final/hero-train-bridge.png",
+      "bytes": 320822,
+      "sha256": "0f08e5a48affc4289461e834bd454be86cdf64e7149297fe16afb787bc198050",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/front-train-bridge.png",
+      "source": "/tmp/train-design-bridge-final/front-train-bridge.png",
+      "bytes": 353581,
+      "sha256": "acfdbde6792e12969eb5e41ee8854675b7e695e649a71013bbf9edf9f361cffb",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/rear-train-bridge.png",
+      "source": "/tmp/train-design-bridge-final/rear-train-bridge.png",
+      "bytes": 342213,
+      "sha256": "8b340b515fcb2be26e9e47a83ab77b758ce9c80e468c679441d4fbd36d6277dc",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/exploded-train-bridge.png",
+      "source": "/tmp/train-design-bridge-final/exploded-train-bridge.png",
+      "bytes": 355098,
+      "sha256": "d6c21dcecf786cc8a97be0bcc802d2c05417fd6b91ce9bd178fb4d8663f76cf8",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/close-train-bridge.png",
+      "source": "/tmp/train-design-bridge-final/close-train-bridge.png",
+      "bytes": 741739,
+      "sha256": "bd5f600c8a6c4ce4127b95b107f742692b5feeb1bbdf4a8cdf39d7c9432dc2fd",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/hero-train-bridge-200.png",
+      "source": "/tmp/train-design-bridge-final/hero-train-bridge-200.png",
+      "bytes": 20892,
+      "sha256": "87dbacb27acd4cc40e0aab84f29300ddb061b6208dd29dcdad0aa8d9430a9534",
+      "width": 200,
+      "height": 158
+    },
+    {
+      "file": "images/hero-train-bridge-200-dim.png",
+      "source": "/tmp/train-design-bridge-final/hero-train-bridge-200-dim.png",
+      "bytes": 19203,
+      "sha256": "84bd244d7741124fd2d29232074e866e5ded8c70dd530125e7f23ee876ca253c",
+      "width": 200,
+      "height": 158
+    },
+    {
+      "file": "images/hero-center-web.png",
+      "source": "/tmp/train-design-visuals/hero-center-web.png",
+      "bytes": 320699,
+      "sha256": "aff6793df4557a775209b5cc04653f819252d30b3d619e306d32f3a3739ef4d8",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/front-center-web.png",
+      "source": "/tmp/train-design-visuals/front-center-web.png",
+      "bytes": 353338,
+      "sha256": "82c8151e784c39d12259d1efb451bd74a0500bce42fe1a19f36d62e9c1fa5874",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/rear-center-web.png",
+      "source": "/tmp/train-design-visuals/rear-center-web.png",
+      "bytes": 342035,
+      "sha256": "5912372e3874955134abc1cc527f2aa14c500aaa25ba113088758c537f6406ec",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/exploded-center-web.png",
+      "source": "/tmp/train-design-visuals/exploded-center-web.png",
+      "bytes": 355066,
+      "sha256": "ead892df00b50f9377eddd691d163dd8175cf141122ad12cffa5f38da74be812",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/close-center-web.png",
+      "source": "/tmp/train-design-visuals/close-center-web.png",
+      "bytes": 738866,
+      "sha256": "120f6d30eb078f88dbd7a7c5587c4ae2b14d5c9a13c70ca0ff92e5741117bb51",
+      "width": 960,
+      "height": 760
+    },
+    {
+      "file": "images/hero-center-web-200.png",
+      "source": "/tmp/train-design-review/hero-center-web-200.png",
+      "bytes": 20866,
+      "sha256": "0450de1576f2d44d1ea70ce8d19cccff4d00992c2fd0e609bd3e772fd80f2d6d",
+      "width": 200,
+      "height": 158
+    },
+    {
+      "file": "images/hero-center-web-200-dim.png",
+      "source": "/tmp/train-design-review/hero-center-web-200-dim.png",
+      "bytes": 19195,
+      "sha256": "5b3786e285eeb23c398a9d797f8daa39778ac097fb0a5c17e4ff653db8e63376",
+      "width": 200,
+      "height": 158
+    }
+  ],
+  "bridgeFinalCapture": {
+    "reportSource": "/tmp/train-design-bridge-final/report.json",
+    "reportSha256": "77d26a7e6035f095954035650b3e273cae358ba67074da6b7bed3880ff57863b",
+    "authoredCameraMaximumError": 1e-09,
+    "diagnosticCameraMaximumError": 1e-09,
+    "geometryAuthorityPreserved": true,
+    "fourZeroExplosionStatesRestored": true,
+    "explodedState": 1,
+    "errors": []
+  },
+  "centerWebMechanicalAcceptance": {
+    "accepted": true,
+    "manifest": "evidence/center-web/package-evidence.json",
+    "meshPairs": 4,
+    "fullCycleSamplesPerPair": 8193,
+    "localRefinementSamplesPerPair": 2049,
+    "foreignEnvelopeRows": 285,
+    "portablePreview": "deliverables/watch-going-train-core-center-web-preview.zip",
+    "packageVerification": "deliverables/verification.json",
+    "designPromoted": false
+  },
+  "bridgeMechanicalAcceptance": {
+    "accepted": false,
+    "disposition": "held",
+    "baselineRetained": true,
+    "newInterferenceIdentified": false,
+    "reason": "Inherited zero-distance third/fourth upper arbor-tip to bridge-body conditions occur in both baseline and candidate at time zero. Full bridge clearance cannot be claimed.",
+    "otherChecks": "The four pallet parts clear their finite 0\u201311 degree range; other foreign clearances are unchanged.",
+    "followupScope": "No geometry correction or journal work performed in this bounded study.",
+    "report": "evidence/train-bridge/foreign-solids-and-invariants.json"
+  }
+}

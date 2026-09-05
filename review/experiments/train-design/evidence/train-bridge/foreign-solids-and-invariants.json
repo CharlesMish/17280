@@ -1,0 +1,5443 @@
+{
+  "schema": "watch.train-design-clearance.v1",
+  "experiment": "train-bridge",
+  "accepted": false,
+  "checkpointCommit": "e58144b4cbe5d4b8ce584763891e001fbf260bbf",
+  "sourceFiles": [
+    {
+      "file": "src/accommodation.ts",
+      "bytes": 11973,
+      "sha256": "33fe5190a9e5cd553d3a5d450bae05fc9477e6d4183b29ab10701def759c648f"
+    },
+    {
+      "file": "src/accommodationAudit.ts",
+      "bytes": 4828,
+      "sha256": "15a23a517002615b153d26b039cfa81afee4d8f83abcd68474e1afb425da4810"
+    },
+    {
+      "file": "src/accommodationGeometry.ts",
+      "bytes": 8229,
+      "sha256": "0d833500daf5ec9d61559189cb79c5233ee2d98f667950c5bbce2e74f66b1f27"
+    },
+    {
+      "file": "src/accommodationMath.ts",
+      "bytes": 6346,
+      "sha256": "341a0ff1756c4aeed70f8b7208da7d1e3c41a0fb5be2f6606fe4b92cd3ebc96e"
+    },
+    {
+      "file": "src/accommodationPlan.ts",
+      "bytes": 12713,
+      "sha256": "6ff5b54bd8f4339729aff0884964ed3a25904aaa981d86ed92b5994f0fadfb06"
+    },
+    {
+      "file": "src/accommodationSpec.ts",
+      "bytes": 1630,
+      "sha256": "6b076ec0184e6dfba977601f27d9361dd1cc2d0e51e1e9eb1d8980057209de08"
+    },
+    {
+      "file": "src/assembly.ts",
+      "bytes": 14520,
+      "sha256": "155951ea11f77ca322e769f6924c04d7a59a5044c9d533e7363ede27e5745c21"
+    },
+    {
+      "file": "src/assemblyGeometry.ts",
+      "bytes": 5307,
+      "sha256": "601d0364d6d57ade6ecc856e9fa9d7dc64891a55057ae1a2a66a40e58ea52cd1"
+    },
+    {
+      "file": "src/assemblyMaterials.ts",
+      "bytes": 2000,
+      "sha256": "97ed395c233acb7e701c0d4ed45399f34b2062d7753ed389e37c907399d67cf0"
+    },
+    {
+      "file": "src/assemblySpec.ts",
+      "bytes": 10693,
+      "sha256": "cf49da109e585587ad02fef8e3a8a591e4710e02f5ca87817462f762c8eb3301"
+    },
+    {
+      "file": "src/centerWebExperiment.ts",
+      "bytes": 6449,
+      "sha256": "bb3d81fb0a662af5999b4bd5aa81e55bcccb2d52eb2f22239fdaeba7c2187048"
+    },
+    {
+      "file": "src/debug.ts",
+      "bytes": 4092,
+      "sha256": "61aa480a2ea1172c8f7b307b60b40840e43765457a4ee2eec885711563dfcfc6"
+    },
+    {
+      "file": "src/display.ts",
+      "bytes": 7087,
+      "sha256": "7dad28acbd8552d2e6b52c364b18cfb34931e6fcf6e3d5afa1d668fa3fd931f5"
+    },
+    {
+      "file": "src/displayAudit.ts",
+      "bytes": 3509,
+      "sha256": "2449a272d6cfbd22b27bc61d36d7d1e504fceff6e8e6480baf61e4cf5c1e85cf"
+    },
+    {
+      "file": "src/displayDrive.ts",
+      "bytes": 31489,
+      "sha256": "af34f0e13dd3c96d8b662b72ae4589fd606f758c54b6116f6106f5819d9690d0"
+    },
+    {
+      "file": "src/displayDriveGeometry.ts",
+      "bytes": 12401,
+      "sha256": "f2378b442b3e434d96f79a8ce552f9648170a55684b6fddbbca1d089e3beda44"
+    },
+    {
+      "file": "src/displayDriveSpec.ts",
+      "bytes": 6620,
+      "sha256": "cf76e089a14e3a478abd3447ebf4b5dfd14ecab55be7fc078c3ec9a456f74859"
+    },
+    {
+      "file": "src/displayGeometry.ts",
+      "bytes": 5786,
+      "sha256": "29e348319e49e70fc8fe280757eea74bd6d823cfbfdddbca16035f80ce57c678"
+    },
+    {
+      "file": "src/displayPlan.ts",
+      "bytes": 7240,
+      "sha256": "a5be2c2e321808b0f9c14e3180271f6933433480777c9604d1fb09ef6ddd9122"
+    },
+    {
+      "file": "src/displaySpec.ts",
+      "bytes": 844,
+      "sha256": "5592e8ab2fdfd0dfee20a8138378fbb581959b39fbf7a882a7fc49740c6980d4"
+    },
+    {
+      "file": "src/enclosure.ts",
+      "bytes": 9299,
+      "sha256": "339c6a4e750378f7ed5766a74a62118b315e4ef22827459e60bf53ea4e91c80f"
+    },
+    {
+      "file": "src/enclosureAudit.ts",
+      "bytes": 10092,
+      "sha256": "ffea7ab42ded5c9aa3afa1a5ab17e089cbeb7cf40eb5a2c2cc49a79df82879ad"
+    },
+    {
+      "file": "src/enclosureGeometry.ts",
+      "bytes": 7324,
+      "sha256": "4043eea254ee6a38d70cefb3c8aeee4013f37240c18e1685246dbe65baa1ea49"
+    },
+    {
+      "file": "src/enclosurePlan.ts",
+      "bytes": 10153,
+      "sha256": "ea7c068412a0ad5d5f5972281a61235a54a2909b4e1da105e2cad6127a7d25f9"
+    },
+    {
+      "file": "src/enclosureSpec.ts",
+      "bytes": 767,
+      "sha256": "b577d60afb73f8f07c4e6f4d81f7768e2452b47c2c200099cc665325a516f98d"
+    },
+    {
+      "file": "src/escapementAudit.ts",
+      "bytes": 20828,
+      "sha256": "74e6e77b15a5747a036f1a9f18425a95fa19beb37fb575a4d200f111f1a58e58"
+    },
+    {
+      "file": "src/escapementContact.ts",
+      "bytes": 9236,
+      "sha256": "b916c59b9f2e0034d1522467b8187cbd16856e2cae7cd4f74f1d85f1bbef2edb"
+    },
+    {
+      "file": "src/explodedStudy.ts",
+      "bytes": 11739,
+      "sha256": "d89f4a4ba823f6a59872fd0b49ccfc724be4bb8bb5231b09cfa4c45f7aec4247"
+    },
+    {
+      "file": "src/exterior.ts",
+      "bytes": 29421,
+      "sha256": "f218d318c61e080fe58d91858daaeb496ca8dc849d244efcaf782aafaceb0f75"
+    },
+    {
+      "file": "src/exteriorAudit.ts",
+      "bytes": 8988,
+      "sha256": "6c28b402f207ad7c1b67ac3c6df552efbe162415a69b784aa4324619a76baf74"
+    },
+    {
+      "file": "src/exteriorGeometry.ts",
+      "bytes": 63235,
+      "sha256": "b803bc6df0d568c4b228ce45b6ac297165244910571809cbc7db76eac090bb84"
+    },
+    {
+      "file": "src/exteriorMaterials.ts",
+      "bytes": 11375,
+      "sha256": "e0bcf401f8d9c5b49b10c6abfaddd659997158f4c36673fd3d451e74977712a7"
+    },
+    {
+      "file": "src/exteriorPlan.ts",
+      "bytes": 19119,
+      "sha256": "349265d2b2fbdef16fa302d7eec0a8e4291d8ec94f11285150755895ee8f489a"
+    },
+    {
+      "file": "src/exteriorSpec.ts",
+      "bytes": 2421,
+      "sha256": "e8ac5ec5c3e1f2b68469648c8c09e34453a288a352517e6c555ce903862a2561"
+    },
+    {
+      "file": "src/finish.ts",
+      "bytes": 19060,
+      "sha256": "d5da764e16ae6c4200c77b3cd2fdafbda6bbf3ff5db10f5f7c6d83cbca0eea57"
+    },
+    {
+      "file": "src/finishMaps.ts",
+      "bytes": 4662,
+      "sha256": "9a4b6597ca4457572a35964747937bdfbf56a2b66ba8b055ac9f1e75400f6e8c"
+    },
+    {
+      "file": "src/finishMaterials.ts",
+      "bytes": 6806,
+      "sha256": "fbb2dc655fa29dab6b46b69077ffb653c4b2a1d2f7faca5e0b6dd13cfcfaf598"
+    },
+    {
+      "file": "src/finishSpec.ts",
+      "bytes": 1610,
+      "sha256": "42ce423d8ee92da282cdb3cd03ca0020b358f27c9458f28ee14d1513eb4176a3"
+    },
+    {
+      "file": "src/finishStudio.ts",
+      "bytes": 5408,
+      "sha256": "044408dc43b79ce7876178d020c614dbf5bf7e2b1497ef730afdb7b5930f5210"
+    },
+    {
+      "file": "src/frozenGate0Authority.ts",
+      "bytes": 32460,
+      "sha256": "91dfc5307e11faf27f2e8807279c78998d9570cc06ca188ee9d57ace6054045b"
+    },
+    {
+      "file": "src/geometry.ts",
+      "bytes": 43477,
+      "sha256": "6dbef1955c340292a39bf3d1572f83748c47ab5c30a96278a8683201d3a3e93e"
+    },
+    {
+      "file": "src/identity.ts",
+      "bytes": 15824,
+      "sha256": "18301e3d1da1ddc45e6ea358cf91ea0f28ba2b45664edc45dce920de7b87f875"
+    },
+    {
+      "file": "src/main.ts",
+      "bytes": 188460,
+      "sha256": "bf981e8861153cb9a610abfe185dc75b61eadb60a50b4bb059c6717e1ec1b06c"
+    },
+    {
+      "file": "src/materials.ts",
+      "bytes": 4701,
+      "sha256": "c48a8b46bf7b07bb3f8cc9e058cb82a000410af9ce7fd346652bf4fc9b168b1d"
+    },
+    {
+      "file": "src/movement.ts",
+      "bytes": 10546,
+      "sha256": "9f2e49aaff2505fb4e3c93c55e6728c91454f1923401eb3f44acef0d4dc9a188"
+    },
+    {
+      "file": "src/readout.ts",
+      "bytes": 9901,
+      "sha256": "775dec277991bb5a137ca1bc200d12c5bfa3ab43208a5bd403a537068eb7b2bc"
+    },
+    {
+      "file": "src/readoutAudit.ts",
+      "bytes": 10457,
+      "sha256": "7e0c2a9fde9109e7540f2d8304b9835586b51c23e0d2c8682a2eadaf3ae02d62"
+    },
+    {
+      "file": "src/readoutGeometry.ts",
+      "bytes": 17024,
+      "sha256": "e36bb300a1436733fbd841945e163f3a051a01bbe4008aba458597f95646dc53"
+    },
+    {
+      "file": "src/readoutMaterials.ts",
+      "bytes": 4667,
+      "sha256": "62da08f7a4ba37b787888942da6f1068cf8eb2ffc3d0534ab9372e53e1bc8f60"
+    },
+    {
+      "file": "src/readoutPlan.ts",
+      "bytes": 15347,
+      "sha256": "ed4487a325f2cf3e6eb134ba1dc608234560cf57827ccd9bfcb7adbf577057c2"
+    },
+    {
+      "file": "src/readoutSpec.ts",
+      "bytes": 6980,
+      "sha256": "458809ee86050d9541363e2c00f21f6425481019aebafd884fca7200bff03741"
+    },
+    {
+      "file": "src/refinement.ts",
+      "bytes": 11513,
+      "sha256": "26e1903a60a16325d913256232ec7f40e1f4f23047bcee4fb765e07ac7c1ed15"
+    },
+    {
+      "file": "src/releaseShell.ts",
+      "bytes": 9651,
+      "sha256": "0373e2a7f8a302ca1e2a298939bd7f2ac47b553546deada625db4f6d990cb806"
+    },
+    {
+      "file": "src/spec.ts",
+      "bytes": 6240,
+      "sha256": "af79512a7e192ea77d502035f43429f78418f01a537e32eec128b2fa580e0c62"
+    },
+    {
+      "file": "src/strap.ts",
+      "bytes": 11348,
+      "sha256": "cdb85c9b0d42eb452631bc85b0657109b3f0357d15ecfc96c282329c0d0c4104"
+    },
+    {
+      "file": "src/strapGeometry.ts",
+      "bytes": 15222,
+      "sha256": "17e14a0be1198c63ea860c611e24ff27ca9ba5b386596a4b557e5af45470115e"
+    },
+    {
+      "file": "src/strapMaterials.ts",
+      "bytes": 2715,
+      "sha256": "ecab358868df4261843db895de9613cab2e6e1d1d83047c868d2f721bec0cefc"
+    },
+    {
+      "file": "src/strapPlan.ts",
+      "bytes": 3691,
+      "sha256": "ee972bd51725c96f1db78ebbed2658128e493f7047c65888ee72b7820f0a3e39"
+    },
+    {
+      "file": "src/strapSpec.ts",
+      "bytes": 1879,
+      "sha256": "33f3a7284b688a226bccd17911591b31a3a92209b44642e7e874e060054a2c3c"
+    },
+    {
+      "file": "src/structure.ts",
+      "bytes": 51380,
+      "sha256": "26ca81c37edf13146ff6691a7b4ac33cd657a859bc0534f1a39721a6e83ba836"
+    },
+    {
+      "file": "src/structureGeometry.ts",
+      "bytes": 22626,
+      "sha256": "5a2c2090705b9687bec102fadd198b1b7beeedb9b368f51da2069abb86aec64c"
+    },
+    {
+      "file": "src/structureMaterials.ts",
+      "bytes": 1243,
+      "sha256": "cee06480bfa67476d008c57eb33355760e4fcfcbd3b0112733f714545bbfdaee"
+    },
+    {
+      "file": "src/structureSpec.ts",
+      "bytes": 10956,
+      "sha256": "568e29ca8021ad7b559a7c896e9a3db0abac2e6776ecaa0528ae63567d7e3c5d"
+    },
+    {
+      "file": "src/studio.ts",
+      "bytes": 4242,
+      "sha256": "d2df2d9b138780f818a07e9812950c736e254cfacee4f1484ba2e2020d7478ff"
+    },
+    {
+      "file": "src/trainDesignExperiments.ts",
+      "bytes": 4436,
+      "sha256": "a91ba2bd31f07ef388c05766dda4d1c40c471a56ed77c25fb43d4bd724178982"
+    },
+    {
+      "file": "src/vite-env.d.ts",
+      "bytes": 38,
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5"
+    }
+  ],
+  "checks": {
+    "requestedExperimentActive": true,
+    "meshMembershipOrderUnchanged": true,
+    "onlyExpectedGeometryChanged": true,
+    "pivotsUnchanged": true,
+    "kinematicsUnchanged": true,
+    "displayDriveUnchanged": true,
+    "depthIntervalsUnchanged": true,
+    "baselineRestored": true,
+    "browserErrorsClean": true,
+    "sweptClearanceAccepted": false
+  },
+  "browserErrors": [],
+  "baselineExperiment": {
+    "name": "none",
+    "default": "none",
+    "comparisonBase": "graphite-finish",
+    "changedMeshes": [],
+    "centerWeb": {
+      "id": "center-web",
+      "enabled": false,
+      "changedMesh": "center:wheel",
+      "dimensions": {
+        "mesh": "center:wheel",
+        "style": "tapered-five-spoke",
+        "spokes": 5,
+        "minimumSpokeWidthMm": 0.34,
+        "designedThroatWidthMm": 0.36,
+        "hubAttachmentWidthMm": 0.68,
+        "rimAttachmentWidthMm": 0.58,
+        "hubRadiusMm": 0.72,
+        "boreRadiusMm": 0.14,
+        "sweepRad": 0.055
+      },
+      "baseline": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "482a2f19"
+        },
+        "vertices": 23556,
+        "triangles": 7852,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "candidate": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "b4407c19"
+        },
+        "vertices": 73596,
+        "triangles": 24532,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "active": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "482a2f19"
+        },
+        "vertices": 23556,
+        "triangles": 7852,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "invariants": {
+        "frozenSourceMatched": true,
+        "workingToothContourPreserved": true,
+        "borePreserved": true,
+        "exactBoundsAndZSlabPreserved": true,
+        "materialIdentityPreserved": true,
+        "parentIdentityPreserved": true,
+        "localTransformPreserved": true,
+        "expectedGeometryAttached": true
+      }
+    },
+    "bridge": {
+      "maxAddedHalfWidth": 0.09,
+      "protectedBearingLandMargin": 0.32,
+      "boreAndStubUnionPreserved": true,
+      "uvProjection": null
+    },
+    "geometryAuthority": "Page-initial variant; use fresh pages for exploded equivalence after diagnostic switching"
+  },
+  "candidateExperiment": {
+    "name": "train-bridge",
+    "default": "none",
+    "comparisonBase": "graphite-finish",
+    "changedMeshes": [
+      {
+        "name": "struct:trainBridge:body"
+      }
+    ],
+    "centerWeb": {
+      "id": "center-web",
+      "enabled": false,
+      "changedMesh": "center:wheel",
+      "dimensions": {
+        "mesh": "center:wheel",
+        "style": "tapered-five-spoke",
+        "spokes": 5,
+        "minimumSpokeWidthMm": 0.34,
+        "designedThroatWidthMm": 0.36,
+        "hubAttachmentWidthMm": 0.68,
+        "rimAttachmentWidthMm": 0.58,
+        "hubRadiusMm": 0.72,
+        "boreRadiusMm": 0.14,
+        "sweepRad": 0.055
+      },
+      "baseline": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "482a2f19"
+        },
+        "vertices": 23556,
+        "triangles": 7852,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "candidate": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "b4407c19"
+        },
+        "vertices": 73596,
+        "triangles": 24532,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "active": {
+        "geometryHash": {
+          "algorithm": "fnv1a32-attribute-bytes",
+          "value": "482a2f19"
+        },
+        "vertices": 23556,
+        "triangles": 7852,
+        "boundsMm": {
+          "min": [
+            -4.770500183105469,
+            -4.770500183105469,
+            -0.0885000005364418
+          ],
+          "max": [
+            4.770500183105469,
+            4.770500183105469,
+            0.056499991565942764
+          ]
+        }
+      },
+      "invariants": {
+        "frozenSourceMatched": true,
+        "workingToothContourPreserved": true,
+        "borePreserved": true,
+        "exactBoundsAndZSlabPreserved": true,
+        "materialIdentityPreserved": true,
+        "parentIdentityPreserved": true,
+        "localTransformPreserved": true,
+        "expectedGeometryAttached": true
+      }
+    },
+    "bridge": {
+      "maxAddedHalfWidth": 0.09,
+      "protectedBearingLandMargin": 0.32,
+      "boreAndStubUnionPreserved": true,
+      "uvProjection": {
+        "source": "frozen bridge affine UV projection",
+        "maximumAuthoredFitError": 8.031267983987789e-8,
+        "projection": [
+          [
+            -0.17187376171812493,
+            0.08626503914654825,
+            0.7572448912584094
+          ],
+          [
+            -0.08626503790862654,
+            -0.17187376492828868,
+            0.8102959766832274
+          ]
+        ]
+      }
+    },
+    "geometryAuthority": "Page-initial variant; use fresh pages for exploded equivalence after diagnostic switching"
+  },
+  "changedMeshes": [
+    {
+      "name": "struct:trainBridge:body",
+      "path": "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+      "owner": null,
+      "axis": null,
+      "sweepRange": [
+        0,
+        6.283185307179586
+      ],
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2.3600000000000003,
+        1
+      ],
+      "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        2.3600000000000003,
+        1
+      ],
+      "geometrySha256": "838a59257af91ad6252ff68f786e49e71f5a2c2e71e422ece406983c3b22e1d9",
+      "normalsSha256": "06c3115ab56b045ba38e6a3eadeb255853919b2698a963ac60fe235fbeb3d77d",
+      "positionCount": 3456,
+      "bounds": {
+        "min": [
+          -0.3335999846458435,
+          -4.398916721343994,
+          2.1640000051259998
+        ],
+        "max": [
+          7.151249885559082,
+          5.459681034088135,
+          2.5240000045299533
+        ]
+      }
+    }
+  ],
+  "candidateGeometrySha256": "838a59257af91ad6252ff68f786e49e71f5a2c2e71e422ece406983c3b22e1d9",
+  "baselineGeometrySha256": "4dd83e90ff172389465d63f128f744da724edfb9ff8da20fee7e5044b366f926",
+  "centerWebRegionProof": null,
+  "inheritedZeroDistanceFindings": [
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:arbor/third:arbor:upperTip"
+      ],
+      "baselineWitnessDegrees": 0,
+      "candidateWitnessDegrees": 0,
+      "classification": "zero-distance condition exists in both frozen baseline and candidate; positive clearance is not established and a new penetration is not inferred"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:arbor/fourth:arbor:upperTip"
+      ],
+      "baselineWitnessDegrees": 0,
+      "candidateWitnessDegrees": 0,
+      "classification": "zero-distance condition exists in both frozen baseline and candidate; positive clearance is not established and a new penetration is not inferred"
+    }
+  ],
+  "newlyFailedPreviouslyClearPairs": [],
+  "rows": [
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:wheel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.050000005066395,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.050000005066395,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:drum"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2640000170469274,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.2640000170469274,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:floor"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.0830000035464766,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.0830000035464766,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:cover"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.3135000060945752,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.3135000060945752,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:mainspring"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.699000001549721,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.699000001549721,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:motion/barrel:geom/barrel:hub"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4980000077486042,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.4980000077486042,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:arbor/barrel:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.647852454958362,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.647852454958362,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:arbor/barrel:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.246185742207471,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.246185742207471,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/barrel:pose/barrel:arbor/barrel:arbor:upperTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.684122826267188,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.684122826267188,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:wheel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.867500013560057,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.867500013560057,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:hub"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.840000006258488,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.840000006258488,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:pinion"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.0300000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.0300000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:arbor/center:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.44399999082088515,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.44399999082088515,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:arbor/center:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.6530000057220464,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.6530000057220464,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/center:geom/center:arbor/center:arbor:upperTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.23500000572204627,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.23500000572204627,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:centerStaff:stepped/phase4b:centerStaff:lowerCoupling"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.22400000646710438,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.22400000646710438,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:centerStaff:stepped/phase4b:centerStaff:runningJournal"
+      ],
+      "accepted": true,
+      "gateMm": 0.006607134577112692,
+      "baseline": {
+        "minimumMm": 0.006607134577112692,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.006607134577112692,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:centerStaff:stepped/phase4b:centerStaff:upperCore"
+      ],
+      "accepted": true,
+      "gateMm": 0.07599999368190735,
+      "baseline": {
+        "minimumMm": 0.07599999368190735,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.07599999368190735,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:minuteDrive:continuousTubeStem"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.35999996571540827,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.35999996571540827,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:minuteDrive:rigidShoulder"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.3599999966919416,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.3599999966919416,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:owner:minuteDrive/phase4b:gear:cannonPinion:16T"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4159999968111512,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.4159999968111512,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:claims:minute/MinuteHandMount/MinuteHand"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.519599992606043,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.519599992606043,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:claims:minute/readout:hub:minuteCollar"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.5395999958246938,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.5395999958246938,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/center:pose/center:motion/phase4b:centerOutput/phase4b:claims:minute/readout:hub:cap"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.6275999953776585,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.6275999953776585,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:wheel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4475000135600571,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.4475000135600571,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:hub"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4200000062584881,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.4200000062584881,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:pinion"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7900000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.7900000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:arbor/third:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.02400001704692878,
+      "baseline": {
+        "minimumMm": 0.02400001704692878,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.02400001704692878,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:arbor/third:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4130000057220462,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.4130000057220462,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/third:pose/third:motion/third:geom/third:arbor/third:arbor:upperTip"
+      ],
+      "gateMm": 0,
+      "baseline": {
+        "minimumMm": 0,
+        "continuousLowerBoundMm": 0,
+        "collisionSamples": 1,
+        "accepted": false,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          360
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": true,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0,
+        "continuousLowerBoundMm": 0,
+        "collisionSamples": 1,
+        "accepted": false,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          360
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": true,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": false
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:wheel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.1270000070035462,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.1270000070035462,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:hub"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.0770000062584881,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.0770000062584881,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:pinion"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.37000000178813974,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.37000000178813974,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:arbor/fourth:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.02400000035762817,
+      "baseline": {
+        "minimumMm": 0.02400000035762817,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.02400000035762817,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:arbor/fourth:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.253000005722046,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.253000005722046,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/fourth:pose/fourth:motion/fourth:geom/fourth:arbor/fourth:arbor:upperTip"
+      ],
+      "gateMm": 0,
+      "baseline": {
+        "minimumMm": 0,
+        "continuousLowerBoundMm": 0,
+        "collisionSamples": 1,
+        "accepted": false,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          360
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": true,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0,
+        "continuousLowerBoundMm": 0,
+        "collisionSamples": 1,
+        "accepted": false,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          360
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": true,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": false
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:wheel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.0937292394368978,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 1.0714505530423382,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:hub"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.3498931174029756,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.3276115193589315,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:pinion"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.0600000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 1.0600000017881397,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:arbor/escape:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.845901711596849,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.823620113552805,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:arbor/escape:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.2330000057220465,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 2.2330000057220465,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/escape:pose/escape:motion/escape:geom/escape:arbor/escape:arbor:upperTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.8909049288896362,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.868623349348874,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:lowerBoss"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.2952529779379987,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.2952529779379987,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:lowerArm:entry"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.740160816670395,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 1.740160816670395,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:stone:entry"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.6339388725854238,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 1.6339388725854238,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:lowerArm:exit"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.740160816670395,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 1.740160816670395,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:stone:exit"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.6339388725854236,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 1.6339388725854236,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:lowerLever"
+      ],
+      "accepted": true,
+      "gateMm": 0.02400000691413906,
+      "baseline": {
+        "minimumMm": 0.02400000691413906,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.02400000691413906,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:verticalRiser"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2028485278864442,
+        "continuousLowerBoundMm": 0.20257758444476534,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0.2028485278864442,
+        "continuousLowerBoundMm": 0.20257758444476534,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:forkHorn:left"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.15735983519252353,
+        "continuousLowerBoundMm": 0.15706158752383545,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0.15735983519252353,
+        "continuousLowerBoundMm": 0.15706158752383545,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:forkHorn:right"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.41266127394580304,
+        "continuousLowerBoundMm": 0.41236302627512833,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0.41266127394580304,
+        "continuousLowerBoundMm": 0.41236302627512833,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:forkBridge"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.21107166589392523,
+        "continuousLowerBoundMm": 0.2107954338857622,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0.21107166589392523,
+        "continuousLowerBoundMm": 0.2107954338857622,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          10.999999999999998
+        ],
+        "sampleCount": 1441,
+        "refinementSamples": 514,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:bankingLug"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.0352604752467163,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.0352604752467163,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:arbor/pallet:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.4901655863819574,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.4901655863819574,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:arbor/pallet:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.6230000057220462,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.6230000057220462,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/pallet:pose/pallet:motion/pallet:geom/pallet:arbor/pallet:arbor:upperTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.5296942572743077,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 3.5296942572743077,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.06999999344348895,
+      "baseline": {
+        "minimumMm": 0.06999999344348895,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.06999999344348895,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1149999952316283,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Mesh/same-path-mesh[4]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2897795893387848,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.2897795893387848,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[4]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[5]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[6]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[7]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[8]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[9]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[10]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[11]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[12]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[13]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[14]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[15]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[16]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[17]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[18]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[19]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[20]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.2809999936819074,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[21]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.36599999580532305,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[22]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.38349999539554114,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/Group/Mesh/same-path-mesh[23]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.1559999968111514,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:roller:seatLayer"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.16144194356844066,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.16144194356844066,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:roller:roof"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.16144194356844066,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.16144194356844066,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:impulseJewel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.2914602177494794,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.2914602177494794,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:arbor/balance:arbor:shaft"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7914419686023911,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      },
+      "candidate": {
+        "minimumMm": 0.7914419686023911,
+        "method": "actual triangle projection against full rotational radius and Z slabs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:arbor/balance:arbor:lowerTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.28300000572204587,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.28300000572204587,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/balance:pose/balance:motion/balance:geom/balance:arbor/balance:arbor:upperTip"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7349999960660933,
+        "method": "actual component Z slabs, valid for every rotation"
+      },
+      "candidate": {
+        "minimumMm": 0.7349999960660933,
+        "method": "actual component Z slabs, valid for every rotation"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/hairspring:pose/Group/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.516055622398853,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.516055622398853,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/hairspring:pose/Group/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.5772795857022449,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.5772795857022449,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/calibre/hairspring:pose/Group/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.3397838818041115,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.3397838818041115,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:hoop"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.940000002384186,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.940000002384186,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:hoop-barrel-a"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.940000002384186,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.940000002384186,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:hoop-barrel-b"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.100741887469128,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.100741887469128,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:hoop-third"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:hoop-fourth"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:hoop-balance"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.980886039627865,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.980886039627865,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:spoke:center-network"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.9452000010013584,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:plate:junction:barrel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.687098311748796,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.687098311748796,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:barrel:junctionJoin"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.757495920861237,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.757495920861237,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:barrel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.714972280495712,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.714972280495712,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:barrel:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.622268496094401,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.622268496094401,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:center"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.79400000218153,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.79400000218153,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:center:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.750000007003546,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.750000007003546,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:third"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.554000002741814,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.554000002741814,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:third:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.510000007003546,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.510000007003546,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:fourth"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.3940000194311146,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.3940000194311146,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:fourth:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.3500000070035463,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.3500000070035463,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:escape"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.098900112080971,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.098900112080971,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:escape:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.017304551196465,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.017304551196465,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:pallet/struct:column:pallet:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.2937790231076907,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.2937790231076907,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:pallet/struct:column:pallet:lowerLink"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.564515144662743,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.564515144662743,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:pallet/struct:column:pallet:outboardPost"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.9462861397462548,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.9462861397462548,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:pallet/struct:column:pallet:upperLink"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.437698097404812,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.437698097404812,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:pallet/struct:column:pallet:upper"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.1564742833324524,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.1564742833324524,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:pallet:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.0225771809435926,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.0225771809435926,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:column:balance"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.494800803391779,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.494800803391779,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:boss:balance:lower"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4171378632780661,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.4171378632780661,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:bankingStop:negative"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.829952711095851,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.829952711095851,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/mainplate/struct:bankingStop:positive"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.8050405748910454,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.8050405748910454,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/escapeFinger/struct:escapeFinger:stemBar"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2320211043500997,
+        "continuousLowerBoundMm": 1.2320211043500997,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          0
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 1.2320211043500997,
+        "continuousLowerBoundMm": 1.2320211043500997,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          0
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/escapeFinger/struct:boss:escape:upper"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.246188461780548,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.246188461780548,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/escapeFinger/struct:boss:pallet:upper"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.9069929064151516,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.9069929064151516,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7780533897937361,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.7780533897937361,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.074954832108736,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.074954832108736,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/struct:boss:balance:upper"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7725308912832523,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.7725308912832523,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/struct:foot:anchor:cock:a"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.914243214369962,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.914243214369962,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/struct:foot:anchor:cock:b"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.635010403287038,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.635010403287038,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/balanceCock/struct:foot:anchor:cock:heel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.186410015447456,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.186410015447456,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:a/anchor:train:a:root"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.0043001274952177,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.0043001274952177,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:a/anchor:train:a:body"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.5132232563976622,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.5132232563976622,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:a/anchor:train:a:shoulder"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.5985193252563477,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.5985193252563477,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:b/anchor:train:b:root"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.660000007152558,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.660000007152558,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:b/anchor:train:b:body"
+      ],
+      "accepted": true,
+      "gateMm": 0.0420000423192981,
+      "baseline": {
+        "minimumMm": 0.0420000423192981,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.0420000423192981,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:escape/anchor:escape:root"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.0864767719886235,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.0864767719886235,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:escape/anchor:escape:body"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.2183459857922934,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.2183459857922934,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:escape/anchor:escape:shoulder"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.304225444793701,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.304225444793701,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/Group/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.444705919113131,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.444705919113131,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/Group/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.881136166631834,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.881136166631834,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/Group/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.914148830023662,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.914148830023662,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:escape:upper/assembly:bearing:escape:upper:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.3695728836718817,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.3695728836718817,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:escape:upper/assembly:bearing:escape:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.4439202554022903,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.4439202554022903,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:escape:upper/assembly:bearing:escape:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.4970421537635796,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.4970421537635796,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:escape:upper/assembly:bearing:escape:upper:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.597089416026057,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.597089416026057,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:pallet:upper/assembly:bearing:pallet:upper:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.0271065452076993,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.0271065452076993,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:pallet:upper/assembly:bearing:pallet:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.1130944171591377,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.1130944171591377,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:pallet:upper/assembly:bearing:pallet:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.1750015923707675,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.1750015923707675,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:pallet:upper/assembly:bearing:pallet:upper:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.2934657067189272,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.2934657067189272,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:chaton"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.1575327693577553,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.1575327693577553,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.1908415434479234,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.1908415434479234,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2586908904847616,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.2586908904847616,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.3114021263245539,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.3114021263245539,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:endstone"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2733584568222192,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.2733584568222192,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:retainer/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2544474773637295,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.2544474773637295,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:retainer/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4784861691725408,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.4784861691725408,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:retainer/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.5390091023070527,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.5390091023070527,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:balance:upper/assembly:bearing:balance:upper:retainer/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.2679517972972376,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.2679517972972376,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:barrel:lower/assembly:bearing:barrel:lower:bushing/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.974963926270263,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.974963926270263,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:barrel:lower/assembly:bearing:barrel:lower:bushing/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.213138184556323,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.213138184556323,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:center:lower/assembly:bearing:center:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.7240000055730347,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.7240000055730347,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:center:lower/assembly:bearing:center:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.7160000023990873,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.7160000023990873,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:center:lower/assembly:bearing:center:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.714291205059886,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.714291205059886,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:center:lower/assembly:bearing:center:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.744000005126,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.744000005126,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:third:lower/assembly:bearing:third:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4840000055730345,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.4840000055730345,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:third:lower/assembly:bearing:third:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4760000023990871,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.4760000023990871,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:third:lower/assembly:bearing:third:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.4742912050598864,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.4742912050598864,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:third:lower/assembly:bearing:third:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.5040000051259996,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.5040000051259996,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:fourth:lower/assembly:bearing:fourth:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.3240000055730348,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.3240000055730348,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:fourth:lower/assembly:bearing:fourth:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.3160000023990874,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.3160000023990874,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:fourth:lower/assembly:bearing:fourth:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.3142912050598863,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.3142912050598863,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:fourth:lower/assembly:bearing:fourth:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.344000005126,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.344000005126,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:escape:lower/assembly:bearing:escape:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.077540612502282,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.077540612502282,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:escape:lower/assembly:bearing:escape:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.1340806398443775,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.1340806398443775,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:escape:lower/assembly:bearing:escape:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.175569609835192,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.175569609835192,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:escape:lower/assembly:bearing:escape:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.276558463620001,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.276558463620001,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:pallet:lower/assembly:bearing:pallet:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.0998241960347945,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.0998241960347945,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:pallet:lower/assembly:bearing:pallet:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.182265365214511,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.182265365214511,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:pallet:lower/assembly:bearing:pallet:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.239389992707418,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.239389992707418,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:pallet:lower/assembly:bearing:pallet:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.3623855178579793,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.3623855178579793,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:balance:lower/assembly:bearing:balance:lower:setting"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4975312899467725,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.4975312899467725,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:balance:lower/assembly:bearing:balance:lower:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.5516111175798555,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.5516111175798555,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:balance:lower/assembly:bearing:balance:lower:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.5935365473684449,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.5935365473684449,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:balance:lower/assembly:bearing:balance:lower:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7104615058597765,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.7104615058597765,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:lowerHardware/assembly:bearing:balance:lower/assembly:bearing:balance:lower:endstone"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.638598733983006,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.638598733983006,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:a:screw/assembly:anchor:train:a:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.8603472206840792,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.8603472206840792,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:a:screw/assembly:anchor:train:a:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.8930629040934135,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.8930629040934135,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:a:screw/assembly:anchor:train:a:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.902883017231846,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.902883017231846,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:a:screw/assembly:anchor:train:a:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.012640266245656,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.012640266245656,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:a:screw/assembly:anchor:train:a:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.9499496549224502,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.9499496549224502,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:b:screw/assembly:anchor:train:b:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.011679995998739923,
+      "baseline": {
+        "minimumMm": 0.011679995998739923,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.011679995998739923,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:b:screw/assembly:anchor:train:b:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.039999993622302554,
+      "baseline": {
+        "minimumMm": 0.039999993622302554,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.039999993622302554,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:b:screw/assembly:anchor:train:b:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.09235999532431327,
+      "baseline": {
+        "minimumMm": 0.09235999532431327,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.09235999532431327,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:b:screw/assembly:anchor:train:b:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.3100483479681072,
+        "continuousLowerBoundMm": 0.3100483479681072,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          0
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "candidate": {
+        "minimumMm": 0.3100483479681072,
+        "continuousLowerBoundMm": 0.3100483479681072,
+        "collisionSamples": 0,
+        "accepted": true,
+        "witnessDegrees": 0,
+        "rangeDegrees": [
+          0,
+          0
+        ],
+        "sampleCount": 1,
+        "refinementSamples": 0,
+        "stoppedOnFirstCollision": false,
+        "zeroDistanceInterpretation": "surface contact, intersection, or containment; zero distance alone is not a penetration-depth claim",
+        "method": "actual triangle distance/intersection and solid containment; complete rotation or specified oscillation; nearest-sample rotation bound certifies positive separation; a first collision stops a failed sweep early"
+      },
+      "accepted": true
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:train:b:screw/assembly:anchor:train:b:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.08419999581098514,
+      "baseline": {
+        "minimumMm": 0.08419999581098514,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.08419999581098514,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:escape:screw/assembly:anchor:escape:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.551016330718994,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.551016330718994,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:escape:screw/assembly:anchor:escape:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.5833460102301977,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.5833460102301977,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:escape:screw/assembly:anchor:escape:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.590346009514942,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.590346009514942,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:escape:screw/assembly:anchor:escape:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.678346009038105,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.678346009038105,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:escape:screw/assembly:anchor:escape:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.674653486234405,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.674653486234405,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:a:screw/assembly:anchor:cock:a:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.206662843999833,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.206662843999833,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:a:screw/assembly:anchor:cock:a:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.246757736410743,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.246757736410743,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:a:screw/assembly:anchor:cock:a:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.265628033423016,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.265628033423016,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:a:screw/assembly:anchor:cock:a:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.214651238763133,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.214651238763133,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:a:screw/assembly:anchor:cock:a:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.367695656010698,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.367695656010698,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:b:screw/assembly:anchor:cock:b:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.959052222343838,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.959052222343838,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:b:screw/assembly:anchor:cock:b:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.004077293988994,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.004077293988994,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:b:screw/assembly:anchor:cock:b:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.02263714556236,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.02263714556236,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:b:screw/assembly:anchor:cock:b:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.003197463848844,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.003197463848844,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:b:screw/assembly:anchor:cock:b:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.1290864364711215,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.1290864364711215,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:heel:screw/assembly:anchor:cock:heel:screw:seat"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.566336330888812,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.566336330888812,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:heel:screw/assembly:anchor:cock:heel:screw:head/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.609413118541576,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.609413118541576,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:heel:screw/assembly:anchor:cock:heel:screw:head/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.628217595996203,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.628217595996203,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:heel:screw/assembly:anchor:cock:heel:screw:head/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.594565809852005,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.594565809852005,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:anchor:cock:heel:screw/assembly:anchor:cock:heel:screw:head/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.7332942211693645,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.7332942211693645,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.4942000080347064,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.4942000080347064,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/contact:hoop:barrel"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 12.185706568587431,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 12.185706568587431,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 11.952459840491878,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 11.952459840491878,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/contact:hoop:south"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.9393593162033484,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.9393593162033484,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.382601175923758,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.382601175923758,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/contact:hoop:west"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 10.940157712119264,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 10.940157712119264,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/Mesh/same-path-mesh[3]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 10.672565524908322,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 10.672565524908322,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/contact:hoop:north-flank"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 8.171723798621127,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 8.171723798621127,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/HolderPose/acc:holder/Mesh/same-path-mesh[4]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 7.894742348107275,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 7.894742348107275,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/FrontReservePose/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.821599984619021,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.821599984619021,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/FrontReservePose/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.5215999834269285,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.5215999834269285,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/RearReservePose/Mesh"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.8460000126957894,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.8460000126957894,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CrownCorridorPose/Mesh/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.5660890263318725,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.5660890263318725,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CrownCorridorPose/Mesh/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.3863304838538335,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.3863304838538335,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CrownCorridorPose/Mesh/same-path-mesh[2]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.566089070830747,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.566089070830747,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/DisplayRoot/DisplayStackPose/display:stack/display:interfaceCarrier"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.23999999681115147,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.23999999681115147,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/DisplayRoot/DisplaySweepPose/display:sweeps/sweep:hour"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.1975999920099953,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.1975999920099953,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/DisplayRoot/DisplaySweepPose/display:sweeps/sweep:minute"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.517599997374413,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.517599997374413,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/DisplayRoot/DisplayChapterPose/display:chapter/Mesh"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.9015999947518107,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.9015999947518107,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/DisplayRoot/DisplayEnvelopePose/display:envelope/Mesh"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.9015999977320428,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.9015999977320428,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:carrier/readout:carrierRing"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.9475999948412177,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.9475999948412177,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:12"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 5.365663199553535,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 5.365663199553535,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:1"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.532611040585919,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.532611040585919,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:2"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.8100984120956545,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.8100984120956545,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:3"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.7066589537223633,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.7066589537223633,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:4"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 1.931599996927381,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 1.931599996927381,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:5"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.8378642469041293,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.8378642469041293,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:6"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.010170309193908,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.010170309193908,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:7"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 7.568383271104132,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 7.568383271104132,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:8"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 11.673734705535935,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 11.673734705535935,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:9"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 12.09564664658546,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 12.09564664658546,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:10"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 9.273748670548422,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 9.273748670548422,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:indices/readout:index:11"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 7.886568828528773,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 7.886568828528773,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:supports/readout:support:north"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.0214432630375425,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.0214432630375425,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:supports/readout:support:south"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 4.872773680669005,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 4.872773680669005,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:supports/readout:support:west"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 11.680238973658618,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 11.680238973658618,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/ReadoutRoot/ChapterPose/readout:supports/readout:support:northeast"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 3.997297455071055,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 3.997297455071055,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:stationaryBearing/phase4b:compoundBearing:foot"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.33999999564886085,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.33999999564886085,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:stationaryBearing/phase4b:compoundBearing:stud"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.3600000007152553,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.3600000007152553,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:stationaryBearing/phase4b:compoundBearing:cap"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.7679999953657384,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.7679999953657384,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:compoundMotion/phase4b:compound:sleeve"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4159999936819072,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.4159999936819072,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:compoundMotion/phase4b:gear:minuteWheel:32T"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.4159999968111512,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.4159999968111512,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:fixedRoot/phase4b:offAxisPose/phase4b:owner:compoundMotion/phase4b:gear:minutePinion:8T"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.6359999968111509,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.6359999968111509,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:owner:hourMotion/phase4b:hourGeometry/phase4b:gear:hourWheel:48T"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.6359999968111509,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.6359999968111509,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:owner:hourMotion/phase4b:hourGeometry/phase4b:hourDrive:pipe"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 0.6360000105381007,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 0.6360000105381007,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:owner:hourMotion/phase4b:hourGeometry/phase4b:hourDrive:hubCoupling"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.177599997091293,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.177599997091293,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:owner:hourMotion/phase4b:claims:hour/HourHandMount/HourHand"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.197599992009997,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.197599992009997,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/Phase4BDisplayDriveRoot/phase4b:owner:hourMotion/phase4b:claims:hour/readout:hub:hourCollar"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 2.219599995943904,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 2.219599995943904,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:north/strap:head:north"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 6.854597617152823,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 6.854597617152823,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:north/strap:free:north"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 15.22222906410286,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 15.22222906410286,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:north/strap:keeper/same-path-mesh[0]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 27.859287470864825,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 27.859287470864825,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:north/strap:keeper/same-path-mesh[1]"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 38.24800303626141,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 38.24800303626141,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:south/strap:head:south"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 10.07939618445493,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 10.07939618445493,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:south/strap:free:south"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 18.311045005996593,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 18.311045005996593,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:south/strap:buckle/strap:buckle-frame"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 70.36340493123474,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 70.36340493123474,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:south/strap:buckle/strap:buckle-chape"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 72.23834827614273,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 72.23834827614273,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:south/strap:buckle/strap:buckle-tang"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 70.77484099568407,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 70.77484099568407,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:bars/strap:bar:north"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 7.820035093675115,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 7.820035093675115,
+        "method": "actual fixed component world AABBs"
+      }
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/StrapRoot/strap:visible/strap:bars/strap:bar:south"
+      ],
+      "accepted": true,
+      "gateMm": 0.1,
+      "baseline": {
+        "minimumMm": 11.07591553548509,
+        "method": "actual fixed component world AABBs"
+      },
+      "candidate": {
+        "minimumMm": 11.07591553548509,
+        "method": "actual fixed component world AABBs"
+      }
+    }
+  ],
+  "exclusions": [
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:stub:a"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:centerSupport"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:boss:center:upper"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:boss:third:upper"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:boss:fourth:upper"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:foot:anchor:train:a"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/trainBridge/struct:foot:anchor:train:b"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/structure:root/structure:pose/anchorPosts/anchor:train:b/anchor:train:b:shoulder"
+      ],
+      "reason": "explicit stationary anchor-B shoulder/bridge support joint at the unchanged stub-B endpoint (src/structure.ts); intended structural contact"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:center:upper/assembly:bearing:center:upper:setting"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:center:upper/assembly:bearing:center:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:center:upper/assembly:bearing:center:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:third:upper/assembly:bearing:third:upper:setting"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:third:upper/assembly:bearing:third:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:third:upper/assembly:bearing:third:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:third:upper/assembly:bearing:third:upper:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:fourth:upper/assembly:bearing:fourth:upper:setting"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:fourth:upper/assembly:bearing:fourth:upper:jewel/Mesh/same-path-mesh[0]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:fourth:upper/assembly:bearing:fourth:upper:jewel/Mesh/same-path-mesh[1]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/assembly:root/assembly:pose/assembly:bearing:fourth:upper/assembly:bearing:fourth:upper:jewel/Mesh/same-path-mesh[2]"
+      ],
+      "reason": "explicit stationary train-bridge construction or one of its three upper-bearing attachment assemblies; protected lands/bore and partner geometry unchanged"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CoarseMidcasePose/acc:midcase/Mesh/same-path-mesh[0]"
+      ],
+      "reason": "superseded coarse accommodation midcase; src/exterior.ts applyKernelPresentation('product') hides this owner in favor of final exterior case geometry"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CoarseMidcasePose/acc:midcase/Mesh/same-path-mesh[1]"
+      ],
+      "reason": "superseded coarse accommodation midcase; src/exterior.ts applyKernelPresentation('product') hides this owner in favor of final exterior case geometry"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CoarseMidcasePose/acc:midcase/Mesh/same-path-mesh[2]"
+      ],
+      "reason": "superseded coarse accommodation midcase; src/exterior.ts applyKernelPresentation('product') hides this owner in favor of final exterior case geometry"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CoarseMidcasePose/acc:midcase/Mesh/same-path-mesh[3]"
+      ],
+      "reason": "superseded coarse accommodation midcase; src/exterior.ts applyKernelPresentation('product') hides this owner in favor of final exterior case geometry"
+    },
+    {
+      "pair": [
+        "Scene/structure:root/structure:pose/trainBridge/struct:trainBridge:body",
+        "Scene/accommodation:root/CoarseMidcasePose/acc:midcase/Mesh/same-path-mesh[4]"
+      ],
+      "reason": "superseded coarse accommodation midcase; src/exterior.ts applyKernelPresentation('product') hides this owner in favor of final exterior case geometry"
+    }
+  ],
+  "limitations": [
+    "Explicit stationary support unions and bearing attachments are recorded separately from foreign parts.",
+    "Bounds certify positive separation; conservative-bound comparison does not prove preservation of the exact inherited gap. Center-web rows may cover changed material only; unchanged working teeth have separate full-cycle evidence.",
+    "Ambiguous moving/moving pairs require dedicated ratio-linked evidence.",
+    "No physical tolerance, torque, or fabrication certification is claimed."
+  ]
+}
