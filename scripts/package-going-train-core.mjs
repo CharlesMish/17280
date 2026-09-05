@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { build } from "esbuild";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const template = path.join(root, "handoff/going-train-core");
+const template = path.join(root, "handoff/going-train-core-v1");
 const releaseDir = path.join(root, "release");
 const packageName = "watch-going-train-core-v1";
 const archiveName = `${packageName}.zip`;

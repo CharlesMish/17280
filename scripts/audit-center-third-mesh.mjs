@@ -12,13 +12,29 @@ const pairId = process.env.MESH_PAIR || "center64-third10";
 const phaseScanSteps = Number(process.env.SCAN_PHASE_STEPS || 360);
 const phaseScanSamples = Number(process.env.SCAN_PHASE_SAMPLES || 513);
 const skipAdjacent = process.env.SKIP_ADJACENT === "1";
+const experiment = process.env.EXPERIMENT;
+if (experiment && !["none", "train-bridge", "center-web"].includes(experiment)) throw new Error(`unsupported EXPERIMENT ${experiment}`);
+if (experiment && (!process.argv[2] || OUT.includes(`${path.sep}captures${path.sep}rc1${path.sep}`))) {
+  throw new Error("experiment audits require a new explicit output path outside RC1 evidence");
+}
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 
 const browser = await chromium.launch({ headless: true, args: ["--use-gl=angle", "--use-angle=swiftshader", "--ignore-gpu-blocklist"] });
-const page = await browser.newPage({ viewport: { width: 1600, height: 1100 } });
+const page = await browser.newPage({ viewport: experiment ? { width: 320, height: 240 } : { width: 1600, height: 1100 } });
+if (experiment) await page.addInitScript(() => { window.requestAnimationFrame = () => 0; });
 page.setDefaultTimeout(300000);
-await page.goto(`${BASE}/?static=1&t=0&explode=0`, { waitUntil: "commit", timeout: 60000 });
-await page.waitForFunction(() => globalThis.__WATCH__?.sceneDump !== undefined);
+const auditUrl = new URL(BASE);
+for (const [key, value] of Object.entries({ static: "1", t: "0", explode: "0", ...(experiment ? { experiment } : {}) })) auditUrl.searchParams.set(key, value);
+await page.goto(auditUrl.href, { waitUntil: "commit", timeout: 60000 });
+await page.waitForFunction(() => globalThis.__WATCH__?.sceneDump !== undefined, null, { polling: 100 });
+if (experiment) {
+  await page.waitForFunction(() => typeof globalThis.__WATCH__?.experimentReport === "function", null, { polling: 100 });
+  await page.evaluate((name) => {
+    const W = globalThis.__WATCH__;
+    if (W.experimentReport().name !== name && typeof W.setExperiment === "function") W.setExperiment(name);
+    if (W.experimentReport().name !== name) throw new Error(`experiment not active: ${name}`);
+  }, experiment);
+}
 const cdp = await page.context().newCDPSession(page);
 await cdp.send("Runtime.evaluate", { expression: "import('/node_modules/.vite/deps/three.js').then(m=>globalThis.__T_C3=m)", awaitPromise: true });
 const proto = await cdp.send("Runtime.evaluate", { expression: "__T_C3.Scene.prototype" });
@@ -31,6 +47,7 @@ const payload = await page.evaluate(() => {
   const mesh=name=>{const o=S.getObjectByName(name),p=o.geometry.getAttribute('position'),i=o.geometry.getIndex();o.geometry.computeBoundingBox();const b=o.geometry.boundingBox,wb=b.clone().applyMatrix4(o.matrixWorld);return{name,path:opath(o),motionPath:opath(o.parent.parent),positions:Array.from(p.array),itemSize:p.itemSize,index:i?Array.from(i.array):null,localRotation:o.rotation.z,matrix:o.matrixWorld.toArray(),localBounds:{min:b.min.toArray(),max:b.max.toArray()},worldBounds:{min:wb.min.toArray(),max:wb.max.toArray()}}};
   const owner=name=>{const o=S.getObjectByName(name);return{path:opath(o),rotation:o.rotation.z,worldPosition:o.getWorldPosition(new T.Vector3()).toArray()}};
   return {
+    experiment: typeof W.experimentReport === 'function' ? W.experimentReport() : null,
     center:mesh('center:wheel'), thirdPinion:mesh('third:pinion'), thirdWheel:mesh('third:wheel'),
     barrelWheel:mesh('barrel:wheel'), centerPinion:mesh('center:pinion'),
     fourthPinion:mesh('fourth:pinion'), fourthWheel:mesh('fourth:wheel'), escapePinion:mesh('escape:pinion'),
@@ -39,6 +56,7 @@ const payload = await page.evaluate(() => {
   };
 });
 await browser.close();
+if (experiment) console.log(`geometry extracted for ${pairId}; browser closed; starting ${exactSamples}-state CPU sweep`);
 
 const pairs = {
   "barrel80-center12": {
@@ -188,5 +206,22 @@ const radialEnvelope={
   secondary:{...analytic(pair.secondaryTeeth,'pinion'),gate0RenderedMaxRadiusMm:pair.gate0RenderedOuter?.secondary??null,currentRenderedMaxRadiusMm:pinionContour.maxRadius,renderedDeltaFromGate0Mm:pair.gate0RenderedOuter?pinionContour.maxRadius-pair.gate0RenderedOuter.secondary:null,noRenderedGrowth:pair.gate0RenderedOuter?pinionContour.maxRadius<=pair.gate0RenderedOuter.secondary:true},
 };
 const report={schema:'post5d-rendered-train-mesh-v2',pairId:pair.id,classification:result.collisionSamples?`DEFECT — ${pair.label} VOLUMETRIC PENETRATION`:`VALID — ${pair.label} POSITIVE CLEARANCE`,participants:{primary:{...pair.primary,positions:undefined,index:undefined,teeth:pair.primaryTeeth},secondary:{...pair.secondary,positions:undefined,index:undefined,teeth:pair.secondaryTeeth}},geometry:{primaryContour:{points:centerContour.points.length,z:centerContour.z,maxRadius:centerContour.maxRadius},secondaryContour:{points:pinionContour.points.length,z:pinionContour.z,maxRadius:pinionContour.maxRadius},centerDistanceMm:Math.hypot(dx,dy),requiredPitchSumMm:.145*pair.primaryTeeth/2+.145*pair.secondaryTeeth/2,axialOverlapMm:zOverlap,radialEnvelope,profile:{type:pair.profileLabel,pressureAngleDeg:20,totalPitchCircleBacklashMm:.02,nominalToothThicknessMm:nominalPitchToothThickness,finishedToothThicknessEachMm:nominalPitchToothThickness-.01,primaryMotionPhaseDeg:centerRest*180/Math.PI,primaryLocalClockingDeg:pair.primary.localRotation*180/Math.PI,secondaryMotionPhaseDeg:thirdRest*180/Math.PI,secondaryLocalClockingDeg:pair.secondary.localRotation*180/Math.PI}},method:`actual rendered BufferGeometry maximum-section contours; exact star-polygon fan triangle clipping over ${exactSamples.toLocaleString('en-US')} states spanning one complete ${pair.primaryTeeth}T/${pair.secondaryTeeth}T repeating mesh cycle; ${localRefinement?.sampleCount??0}-state local refinement around the coarse minimum; boundary-segment BVH nearest points for positive clearance`,phaseOverrideDeg,result,localRefinement,phaseScan,otherPairScreens,invariance:{axes:{primary:centerAxis,secondary:thirdAxis},toothCounts:{primary:pair.primaryTeeth,secondary:pair.secondaryTeeth},moduleMm:.145,ratio:`secondaryDelta = -primaryDelta * ${pair.primaryTeeth}/${pair.secondaryTeeth}`,goingTrain:payload.goingTrain,phase4b:payload.phase4b,packageReportHashes:{structure:crypto.createHash('sha256').update(JSON.stringify(payload.package.structure)).digest('hex'),accommodation:crypto.createHash('sha256').update(JSON.stringify(payload.package.accommodation)).digest('hex'),enclosure:crypto.createHash('sha256').update(JSON.stringify(payload.package.enclosure)).digest('hex'),exterior:crypto.createHash('sha256').update(JSON.stringify(payload.package.exterior)).digest('hex')}},sourceHashes:{movement:sha('src/movement.ts'),geometry:sha('src/geometry.ts'),spec:sha('src/spec.ts')}};
+if (experiment) {
+  const digest = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
+  report.experiment = payload.experiment;
+  if (fs.existsSync('src/centerWebExperiment.ts')) report.sourceHashes.centerWebExperiment = sha('src/centerWebExperiment.ts');
+  report.candidateGeometrySha256 = digest({ positions: payload.center.positions, index: payload.center.index });
+  report.experimentEvidence = {
+    requested: experiment,
+    actual: payload.experiment,
+    url: auditUrl.href,
+    sourceFiles: fs.readdirSync('src').filter(file => file.endsWith('.ts')).sort().map(file => ({ file: `src/${file}`, sha256: sha(`src/${file}`) })),
+    renderedGeometry: Object.fromEntries(Object.entries(payload).filter(([, value]) => value?.positions).map(([id, value]) => [id, {
+      name: value.name,
+      geometrySha256: digest({ positions: value.positions, index: value.index }),
+      worldMatrixSha256: digest(value.matrix),
+    }])),
+  };
+}
 fs.writeFileSync(OUT,`${JSON.stringify(report,null,2)}\n`);
 console.log(JSON.stringify({out:path.relative(process.cwd(),OUT),classification:report.classification,result,phaseScan},null,2));
