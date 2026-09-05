@@ -61,6 +61,7 @@ import { DEPTH, MODULE, TEETH, THICK } from "./spec";
 import { createEscapementRepairReport } from "./escapementAudit";
 import { createExplodedStudy, type ExplodedLayerSpec } from "./explodedStudy";
 import { createReleaseShell, type ReleaseShell, type ReleaseViewId } from "./releaseShell";
+import { createRefinement, REFINEMENT_STAGES, type RefinementStage, type RefinementOptics } from "./refinement";
 
 const params = new URLSearchParams(window.location.search);
 const requestedExplode = params.has("explode");
@@ -86,6 +87,15 @@ let requestedReadoutPose = startReadoutPose ? parseReadoutPose(startReadoutPose)
 let viewReadoutPose: ReturnType<typeof parseReadoutPose> | null = null;
 const startReadoutConcept = params.get("readoutConcept");
 const phase5dBaselineComparison = params.has("phase5dBaseline");
+let refinementStage: RefinementStage = phase5dBaselineComparison ? "baseline"
+  : REFINEMENT_STAGES.find(stage => stage === params.get("refinement")) ?? "graphite-finish";
+let refinement: ReturnType<typeof createRefinement> | null = null;
+const refinementIor = [1, 1.46, 1.77].includes(Number(params.get("sapphireIor"))) ? Number(params.get("sapphireIor")) : undefined;
+const refinementOptics = {
+  ior: refinementIor,
+  thickness: params.has("sapphireThickness") && [0, 0.35].includes(Number(params.get("sapphireThickness"))) ? Number(params.get("sapphireThickness")) : undefined,
+  specularIntensity: params.has("sapphireSpecular") && [0.2, 0.4].includes(Number(params.get("sapphireSpecular"))) ? Number(params.get("sapphireSpecular")) : undefined,
+};
 const viewForcedPose: Record<string, string> = {
   readoutFrontHard: "105",
   readoutFront840: "840",
@@ -663,6 +673,14 @@ const applyR1Camera = (name: R1ViewName): void => {
   studio.camera.up.set(...view.up);
   studio.camera.fov = view.fov;
   studio.camera.far = view.far;
+  if (publicShellRequested && refinementStage !== "baseline") {
+    // Fit the authored horizontal composition into the actual canvas aspect.
+    // Mobile gives the watch its own space above the controls.
+    const fit = Math.max(1, (960 / 760) / studio.camera.aspect);
+    studio.camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(view.fov / 2)) * fit));
+    if (name === "r1WearableProof") studio.camera.fov *= 0.97;
+    if (name === "r1E1Hero") studio.camera.fov *= 1.12;
+  }
   studio.camera.updateProjectionMatrix();
   studio.controls.update();
 };
@@ -2862,6 +2880,9 @@ const applyJointPresentation = (name: string): void => {
 };
 
 const applyAnyView = (name: string): void => {
+  explodedStudy?.select(null);
+  releaseShell?.setSelectedLayer(null);
+  refinement?.restore();
   if (!isAnnexE1View(name) && explodedStudy?.value() !== 0) {
     if (explodeAnimation !== null) cancelAnimationFrame(explodeAnimation);
     explodeAnimation = null;
@@ -3217,6 +3238,17 @@ const applyAnyView = (name: string): void => {
   }
   if (R1_VIEWS.has(name)) {
     applyR1Camera(name as R1ViewName);
+    if (!isAnnexE1View(name)) {
+      lastPublicView = publicViewFromName(name);
+      releaseShell?.setView(lastPublicView);
+      releaseShell?.setExploded(false);
+    }
+    if (exterior && finish && readout && strap && accommodation && enclosure) {
+      refinement ??= createRefinement({ scene: studio.scene, renderer, exterior: exterior.materials,
+        finish: finish.materials, readout: readout.materials, strap: strap.materials,
+        pad: accommodation.materials.pad, sapphire: enclosure.materials.sapphire });
+      refinement.apply(refinementStage, refinementOptics, name);
+    }
     if (isAnnexE1View(name)) explodedStudy?.set(explodeAmount);
     return;
   }
@@ -3255,6 +3287,7 @@ const setExplode = (input: number): void => {
   if (!isAnnexE1View(currentViewName)) applyAnyView("presentExploded");
   else explodedStudy.set(explodeAmount);
   releaseShell?.setExploded(explodeAmount > 0);
+  if (explodeAmount === 0) releaseShell?.setSelectedLayer(null);
 };
 
 const animateExplode = (input: number, durationMs = 1100): void => {
@@ -3262,6 +3295,7 @@ const animateExplode = (input: number, durationMs = 1100): void => {
   if (explodeAnimation !== null) cancelAnimationFrame(explodeAnimation);
   if (!isAnnexE1View(currentViewName)) applyAnyView("presentExploded");
   const target = THREE.MathUtils.clamp(Number.isFinite(input) ? input : 0, 0, 1);
+  if (target === 0) { explodedStudy.select(null); releaseShell?.setSelectedLayer(null); }
   releaseShell?.setExploded(target > 0);
   if (reducedMotion || durationMs <= 0) {
     explodeAmount = target;
@@ -3687,7 +3721,20 @@ const setSilhouette = (on: boolean): void => {
   if (on) applyAnyView("silhouette");
 };
 
-resizeRenderer(renderer, studio.camera);
+const resizePresentation = () => {
+  resizeRenderer(renderer, studio.camera);
+  renderer.domElement.style.marginLeft = "0px";
+  if (publicShellRequested && refinementStage !== "baseline") {
+    const mobile = window.innerWidth <= 700;
+    const width = mobile ? window.innerWidth : window.innerWidth - 352;
+    const height = mobile ? Math.floor(window.innerHeight * 0.56) : window.innerHeight;
+    renderer.setSize(width, height);
+    renderer.domElement.style.marginLeft = mobile ? "0px" : "352px";
+    studio.camera.aspect = width / height;
+    studio.camera.updateProjectionMatrix();
+  }
+};
+resizePresentation();
 if (startSilhouette && showStructure) {
   setSilhouette(true);
 } else {
@@ -3704,6 +3751,7 @@ if (!frozen && params.get("shell") !== "0" && explodedStudy) {
     initialPaused: reducedMotion,
     initialView: lastPublicView,
     layers: explodedStudy.report().layers.map(({ id, label }) => ({ id, label })),
+    onSelectLayer: (id) => { explodedStudy.select(id); releaseShell?.setSelectedLayer(explodedStudy.selection()); },
     onSetView: (view) => {
       lastPublicView = view;
       applyAnyView(PUBLIC_VIEW_CAMERAS[view]);
@@ -3791,7 +3839,8 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("resize", () => {
-  resizeRenderer(renderer, studio.camera);
+  resizePresentation();
+  if (publicShellRequested && R1_VIEWS.has(currentViewName)) applyR1Camera(currentViewName as R1ViewName);
 });
 
 const clock = new THREE.Clock();
@@ -3820,6 +3869,8 @@ const setPlaybackPaused = (paused: boolean): void => {
 const releasePresentationReport = () => ({
   annex: "R1",
   presentationOnly: true,
+  refinement: { stage: refinementStage, sapphireIor: enclosure?.materials.sapphire.ior, materials: refinement?.report() ?? [] },
+  selectedLayer: explodedStudy?.selection() ?? null,
   views: r1CameraAuthority(),
   profiles: {
     r1FrontRead: PHASE5D_C_PROFILES.r1FrontRead,
@@ -3880,6 +3931,33 @@ const releasePresentationReport = () => ({
     publicView: lastPublicView,
   },
 });
+
+// Capture-only physical regression evidence. Materials and lighting are excluded;
+// every mesh's geometry, hierarchy and local/world transform are included.
+const physicalPresentationSnapshot = () => {
+  studio.scene.updateMatrixWorld(true);
+  const rows: unknown[] = [];
+  studio.scene.traverse(object => {
+    if (!(object instanceof THREE.Mesh)) return;
+    const checksum = (attribute: THREE.BufferAttribute | THREE.InterleavedBufferAttribute) => {
+      let sum = 0, weighted = 0;
+      for (let i = 0; i < attribute.count; i++) for (let j = 0; j < attribute.itemSize; j++) {
+        const v = attribute.getComponent(i, j);
+        sum += v;
+        weighted += v * (1 + (i * attribute.itemSize + j) % 101);
+      }
+      return { count: attribute.count, itemSize: attribute.itemSize, sum, weighted };
+    };
+    const names: string[] = [];
+    let owner: THREE.Object3D | null = object;
+    while (owner) { names.push(owner.name || owner.type); owner = owner.parent; }
+    rows.push({ path: names.reverse().join("/"), local: object.matrix.toArray(), world: object.matrixWorld.toArray(),
+      materials: (Array.isArray(object.material) ? object.material : [object.material]).map(material => material.uuid),
+      attributes: Object.fromEntries(Object.keys(object.geometry.attributes).map(name => [name, checksum(object.geometry.getAttribute(name))])),
+      index: object.geometry.index ? checksum(object.geometry.index) : null });
+  });
+  return rows;
+};
 
 const updateKinematics = (time: number): void => {
   movement.update(time);
@@ -4619,6 +4697,10 @@ declare global {
   interface Window {
     __WATCH__: {
       setView: (name: string) => void;
+      setRefinement: (stage: RefinementStage, optics?: RefinementOptics) => void;
+      selectLayer: (id: string | null) => void;
+      setCaptureCamera: (position: [number, number, number], target: [number, number, number]) => void;
+      physicalPresentationSnapshot: typeof physicalPresentationSnapshot;
       toggleDebug: () => void;
       setDebug: (on: boolean) => void;
       setTime: (time: number | null) => void;
@@ -4725,6 +4807,32 @@ window.__WATCH__ = {
     studio.controls.autoRotate = rotating;
     return renderer.domElement.toDataURL("image/png");
   },
+  setRefinement: (stage, optics) => {
+    if (!REFINEMENT_STAGES.includes(stage)) throw new Error(`Unknown refinement: ${stage}`);
+    if (optics) {
+      if (optics.ior !== undefined && ![1, 1.46, 1.77].includes(optics.ior)) throw new Error("Unsupported sapphire IOR");
+      if (optics.thickness !== undefined && ![0, 0.35].includes(optics.thickness)) throw new Error("Unsupported sapphire thickness");
+      if (optics.specularIntensity !== undefined && ![0.2, 0.4].includes(optics.specularIntensity)) throw new Error("Unsupported sapphire specular intensity");
+      Object.assign(refinementOptics, optics);
+    }
+    refinementStage = stage;
+    resizePresentation();
+    applyAnyView(currentViewName);
+  },
+  selectLayer: (id) => {
+    explodedStudy?.select(id);
+    releaseShell?.setSelectedLayer(explodedStudy?.selection() ?? null);
+  },
+  setCaptureCamera: (position, target) => {
+    studio.controls.autoRotate = false;
+    studio.controls.enableDamping = false;
+    // Drain any residual orbit delta before installing the exact proof pose.
+    studio.controls.update();
+    studio.camera.position.set(...position);
+    studio.controls.target.set(...target);
+    studio.controls.update();
+  },
+  physicalPresentationSnapshot,
   setSilhouette,
   setAudit,
   structureReport: () => (structure ? structure.report() : null),

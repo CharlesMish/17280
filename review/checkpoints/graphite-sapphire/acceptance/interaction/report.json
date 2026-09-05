@@ -1,0 +1,405 @@
+{
+  "browser": "151.0.7922.34",
+  "softwareRendering": true,
+  "errors": [],
+  "checks": [
+    {
+      "name": "Authored material values restore exactly",
+      "passed": true
+    },
+    {
+      "name": "Candidate material values repeat exactly",
+      "passed": true
+    },
+    {
+      "name": "All mesh attributes, topology, transforms and material references unchanged",
+      "passed": true
+    },
+    {
+      "name": "Display drive and sampled kinematics unchanged",
+      "passed": true
+    },
+    {
+      "name": "Eight assembly layers",
+      "passed": true
+    },
+    {
+      "name": "front-sapphire selected",
+      "passed": true
+    },
+    {
+      "name": "front-sapphire API agrees",
+      "passed": true
+    },
+    {
+      "name": "front-sapphire restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "upper-exterior selected",
+      "passed": true
+    },
+    {
+      "name": "upper-exterior API agrees",
+      "passed": true
+    },
+    {
+      "name": "upper-exterior restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "display selected",
+      "passed": true
+    },
+    {
+      "name": "display API agrees",
+      "passed": true
+    },
+    {
+      "name": "display restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "upper-works selected",
+      "passed": true
+    },
+    {
+      "name": "upper-works API agrees",
+      "passed": true
+    },
+    {
+      "name": "upper-works restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "lower-structure selected",
+      "passed": true
+    },
+    {
+      "name": "lower-structure API agrees",
+      "passed": true
+    },
+    {
+      "name": "lower-structure restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "holder-carrier selected",
+      "passed": true
+    },
+    {
+      "name": "holder-carrier API agrees",
+      "passed": true
+    },
+    {
+      "name": "holder-carrier restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "rear-exterior selected",
+      "passed": true
+    },
+    {
+      "name": "rear-exterior API agrees",
+      "passed": true
+    },
+    {
+      "name": "rear-exterior restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "rear-sapphire selected",
+      "passed": true
+    },
+    {
+      "name": "rear-sapphire API agrees",
+      "passed": true
+    },
+    {
+      "name": "rear-sapphire restores every material reference and physical transform",
+      "passed": true
+    },
+    {
+      "name": "Native Space activates layer without toggling playback",
+      "passed": true
+    },
+    {
+      "name": "Escape clears selection",
+      "passed": true
+    },
+    {
+      "name": "Enter activates layer",
+      "passed": true
+    },
+    {
+      "name": "Orbit preserves selection",
+      "passed": true
+    },
+    {
+      "name": "Assembly clears selection and restores exact hierarchy",
+      "passed": true
+    },
+    {
+      "name": "Front clears selection",
+      "passed": true
+    },
+    {
+      "name": "Reset view clears selection",
+      "passed": true
+    },
+    {
+      "name": "No unexpected browser errors",
+      "passed": true
+    }
+  ],
+  "scenarios": [
+    {
+      "size": "desktop",
+      "view": "Hero",
+      "presentation": {
+        "view": "r1FinalHero",
+        "profile": "presentHero",
+        "camera": {
+          "position": [
+            18.35000000000001,
+            13.400000000000013,
+            74.01000000000009
+          ],
+          "target": [
+            -0.8999999999999996,
+            0.5499999999999997,
+            1.6
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48.71783890758914
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "hero"
+      }
+    },
+    {
+      "size": "desktop",
+      "view": "Front",
+      "presentation": {
+        "view": "r1FrontElevation",
+        "profile": "r1FrontRead",
+        "camera": {
+          "position": [
+            -1.2,
+            1.0000000000000073,
+            126
+          ],
+          "target": [
+            -1.2,
+            1,
+            6.061600000116229
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 31.11557742146071
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "front"
+      }
+    },
+    {
+      "size": "desktop",
+      "view": "Wearable",
+      "presentation": {
+        "view": "r1WearableProof",
+        "profile": "r1Wearable",
+        "camera": {
+          "position": [
+            94.99999999999997,
+            -65,
+            99.99999999999997
+          ],
+          "target": [
+            0,
+            0,
+            -10
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "fov": 68.10745758054411
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "wearable"
+      }
+    },
+    {
+      "size": "desktop",
+      "view": "Rear",
+      "presentation": {
+        "view": "r1RearExhibition",
+        "profile": "r1Rear",
+        "camera": {
+          "position": [
+            9.999999999999995,
+            -7.0000000000000036,
+            -64
+          ],
+          "target": [
+            -0.4,
+            -0.8,
+            -1.7360000052452087
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 51.536242149140826
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "rear"
+      }
+    },
+    {
+      "size": "phone",
+      "view": "Hero",
+      "presentation": {
+        "view": "r1FinalHero",
+        "profile": "presentHero",
+        "camera": {
+          "position": [
+            18.35000000000001,
+            13.400000000000013,
+            74.01000000000009
+          ],
+          "target": [
+            -0.8999999999999996,
+            0.5499999999999997,
+            1.6
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 47.341499225126924
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "hero"
+      }
+    },
+    {
+      "size": "phone",
+      "view": "Front",
+      "presentation": {
+        "view": "r1FrontElevation",
+        "profile": "r1FrontRead",
+        "camera": {
+          "position": [
+            -1.2,
+            1.0000000000000073,
+            126
+          ],
+          "target": [
+            -1.2,
+            1,
+            6.061600000116229
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 30.1720416203625
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "front"
+      }
+    },
+    {
+      "size": "phone",
+      "view": "Wearable",
+      "presentation": {
+        "view": "r1WearableProof",
+        "profile": "r1Wearable",
+        "camera": {
+          "position": [
+            94.99999999999997,
+            -65,
+            99.99999999999997
+          ],
+          "target": [
+            0,
+            0,
+            -10
+          ],
+          "up": [
+            0,
+            0,
+            1
+          ],
+          "fov": 66.42717617571985
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "wearable"
+      }
+    },
+    {
+      "size": "phone",
+      "view": "Rear",
+      "presentation": {
+        "view": "r1RearExhibition",
+        "profile": "r1Rear",
+        "camera": {
+          "position": [
+            9.999999999999995,
+            -7.0000000000000036,
+            -64
+          ],
+          "target": [
+            -0.4,
+            -0.8,
+            -1.7360000052452087
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 50.10129050619213
+        },
+        "exploded": 0,
+        "playbackPaused": true,
+        "reducedMotion": true,
+        "shellEnabled": true,
+        "publicView": "rear"
+      }
+    }
+  ]
+}

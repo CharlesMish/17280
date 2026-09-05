@@ -30,6 +30,19 @@ The public view supports:
 - pause/resume and view reset
 - keyboard controls and reduced-motion behavior
 
+In Exploded view, open **Exploded layers** and select a layer to highlight its
+parts. Select it again or press Escape to clear the highlight. The current
+presentation uses `graphite-finish`, based on the preserved `graphite-materials`
+treatment: cool graphite casework, near-black rubber, warm gold, readable blue
+hands, and restrained sapphire reflections. See the
+[finishing acceptance notes](GRAPHITE_FINISHING.md) for this local finishing pass.
+The default is frozen. An opt-in `?refinement=graphite-sapphire` candidate adds
+stronger grazing reflection; see [sapphire comparison notes](SAPPHIRE_REFINEMENT.md).
+Dedicated space keeps the watch beside or above the controls. See
+[the graphite refinement notes](GRAPHITE_REFINEMENT.md) for parameter changes,
+comparisons and trade-offs; the [earlier refinement](WATCH_REFINEMENT.md) remains
+available with `?refinement=final`.
+
 The site is a fully static Three.js build with no account, database, server
 application, or external asset service required at runtime.
 

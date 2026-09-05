@@ -1,0 +1,12 @@
+{
+  "base": "graphite-finish",
+  "optIn": "graphite-sapphire",
+  "liveSiteUnchanged": true,
+  "coreV1Sha256": "735a855e5adc0748ff617f2b6ac5a2ea5ce3bb3ec259b3b50448f8aef800c346",
+  "validation": {
+    "build": "passed",
+    "interactionChecks": 37,
+    "sapphireChecks": 8,
+    "cameraChecks": 8
+  }
+}
