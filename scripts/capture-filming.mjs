@@ -6,7 +6,7 @@ import { chromium } from "playwright";
 const SHOT_IDS = ["balance", "hands", "crown", "sapphire", "strap", "rear"];
 const ALLOWED_CONSOLE_ERROR = "THREE.BufferGeometry: .computeTangents() failed. Missing required attributes (index, position, normal or uv)";
 const usage = `Usage: node scripts/capture-filming.mjs [base] [output] [all|balance,hands,crown,sapphire,strap,rear]
-  --preview-only  --width=960  --height=540  --fps=24  --duration=4
+  --preview-only  --width=960  --height=540  --fps=24  --duration=4  --optics=translucent
 Exports sampled PNG previews and MP4 clips. Duration is in seconds, at most 6.
 The output directory must not already exist.`;
 
@@ -19,7 +19,7 @@ function options(argv) {
       continue;
     }
     const [name, ...values] = arg.slice(2).split("=");
-    if (!["preview-only", "width", "height", "fps", "duration"].includes(name)) throw new Error(`Unknown option: ${arg}`);
+    if (!["preview-only", "width", "height", "fps", "duration", "optics"].includes(name)) throw new Error(`Unknown option: ${arg}`);
     if (flags.has(name)) throw new Error(`Repeated option: --${name}`);
     if (name === "preview-only" ? values.length !== 0 : values.length !== 1 || values[0] === "") {
       throw new Error(`Invalid option: ${arg}`);
@@ -34,6 +34,8 @@ function options(argv) {
   const height = Number(flags.get("height") ?? 540);
   const fps = Number(flags.get("fps") ?? 24);
   const duration = Number(flags.get("duration") ?? 4);
+  const optics = flags.get("optics") ?? "translucent";
+  if (!["translucent", "opaque", "hidden"].includes(optics)) throw new Error("optics must be translucent, opaque or hidden");
   for (const [name, value, max] of [["width", width, 3840], ["height", height, 2160]]) {
     if (!Number.isInteger(value) || value < 64 || value > max || value % 2) throw new Error(`${name} must be an even integer between 64 and ${max}`);
   }
@@ -54,7 +56,8 @@ function options(argv) {
   base.searchParams.set("film", shots[0]);
   base.searchParams.set("static", "1");
   base.searchParams.set("readoutPose", "1010");
-  return { url: base.href, output, shots, width, height, fps, duration, frames, previewOnly: flags.has("preview-only") };
+  base.searchParams.set("optics", optics);
+  return { url: base.href, output, shots, width, height, fps, duration, frames, optics, previewOnly: flags.has("preview-only") };
 }
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
@@ -87,7 +90,7 @@ async function run(config) {
     startedAt: new Date().toISOString(),
     status: "running",
     source: config.url,
-    parameters: { width: config.width, height: config.height, fps: config.fps, duration: config.duration, framesPerShot: config.frames, previewOnly: config.previewOnly },
+    parameters: { width: config.width, height: config.height, fps: config.fps, duration: config.duration, framesPerShot: config.frames, previewOnly: config.previewOnly, optics: config.optics },
     softwareRendering: true,
     browser: null,
     shots: [],

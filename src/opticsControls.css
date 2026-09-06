@@ -1,0 +1,4 @@
+.optics-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 14px 0; color: #c4ced9; font: 12px/1.5 system-ui, sans-serif; }
+.optics-controls select { flex: 1; min-width: 0; max-width: 100%; min-height: 40px; padding: 7px 9px; border: 1px solid #536070; border-radius: 6px; background: #17212b; color: #eef1f4; font: inherit; }
+.optics-controls select:focus-visible { outline: 2px solid #92caff; outline-offset: 2px; }
+@media (max-width: 600px) { .optics-controls select { min-height: 44px; } }

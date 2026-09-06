@@ -27,6 +27,13 @@ take. Framing is authored for landscape; a narrower window crops more closely.
 
 ## Export clips
 
+The **Crystal & rubies** selector is available in both the watch and the studio.
+**Translucent rubies** is the corrected default; **Opaque rubies** offers a simpler
+reflective gemstone treatment; **Hide crystal** removes front and rear sapphire
+from the rendered view for inspection. Switching redraws the current view without
+reloading, moving the camera or resetting the take. The URL records the choice as
+`optics=opaque` or `optics=hidden`; the default is `optics=translucent`.
+
 The export script requires the existing Playwright Chromium installation and
 `ffmpeg` with the `libx264` encoder. Start the local server first, then run:
 
@@ -45,6 +52,7 @@ To inspect framing before exporting, or request only selected subjects:
 ```sh
 npm run capture:film -- http://127.0.0.1:5173 captures/filming-check crown,strap --preview-only --duration=6
 npm run capture:film -- http://127.0.0.1:5173 captures/filming-hd balance,hands --width=1920 --height=1080 --fps=30 --duration=6
+npm run capture:film -- http://127.0.0.1:5173 captures/filming-opaque balance --optics=opaque --duration=6
 ```
 
 The default duration is four seconds. A shorter duration captures the opening
@@ -57,4 +65,7 @@ sequentially. Inspect the gallery before choosing a higher export resolution.
 For automation, `?film=balance&static=1` omits the studio controls and the
 continuous render loop. `window.__WATCH_FILM__.setFrame(id, seconds)` sets a
 deterministic camera and movement time; `window.__WATCH__.capture()` renders
-that frame. The usual watch page does not load the filming module.
+that frame. `window.__WATCH__.setOpticsMode("translucent" | "opaque" | "hidden")`
+sets the inspection mode, and the presentation report records it. The usual watch
+page does not load the filming module. Previously saved clips remain historical
+captures; switching the live mode cannot change an already encoded video.

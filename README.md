@@ -29,6 +29,7 @@ The public view supports:
 
 - **Hero / Front / Wearable / Rear** preset cameras
 - **Assembled / Exploded** views
+- **Crystal & rubies**: corrected translucent rubies, opaque rubies, or hide the crystal for inspection
 - drag to orbit and scroll or pinch to zoom
 - pause/resume and view reset
 - keyboard controls and reduced-motion behavior
@@ -41,6 +42,8 @@ hands, and restrained sapphire reflections. See the
 [finishing acceptance notes](GRAPHITE_FINISHING.md) for this local finishing pass.
 This finish remains the default. The [crown shading repair](CROWN_REFINEMENT.md)
 closes its wraparound highlight seam while preserving its profile and finish.
+The [crystal and ruby rendering](OPTICS.md) includes translucent gemstones in
+the sapphire's view of the movement, preventing their angle-dependent disappearance.
 An opt-in `?refinement=graphite-sapphire` candidate adds
 stronger grazing reflection; see [sapphire comparison notes](SAPPHIRE_REFINEMENT.md).
 Dedicated space keeps the watch beside or above the controls. See

@@ -62,6 +62,8 @@ import { createEscapementRepairReport } from "./escapementAudit";
 import { createExplodedStudy, type ExplodedLayerSpec } from "./explodedStudy";
 import { createReleaseShell, type ReleaseShell, type ReleaseViewId } from "./releaseShell";
 import { createRefinement, REFINEMENT_STAGES, type RefinementStage, type RefinementOptics } from "./refinement";
+import { createOptics, OPTICS_MODES, type OpticsMode } from "./optics";
+import { createOpticsControls } from "./opticsControls";
 
 const params = new URLSearchParams(window.location.search);
 const requestedExplode = params.has("explode");
@@ -3735,6 +3737,18 @@ const resizePresentation = () => {
     studio.camera.updateProjectionMatrix();
   }
 };
+const optics = createOptics(renderer, studio.scene,
+  [enclosure?.materials.sapphire, exterior?.materials.sapphire].filter((m): m is THREE.MeshPhysicalMaterial => Boolean(m)),
+  OPTICS_MODES.find(mode => mode === params.get("optics")) ?? "translucent");
+const setOpticsMode = (mode: OpticsMode): void => {
+  optics.setMode(mode);
+  const url = new URL(window.location.href);
+  if (mode === "translucent") url.searchParams.delete("optics");
+  else url.searchParams.set("optics", mode);
+  window.history.replaceState(null, "", url);
+  window.dispatchEvent(new Event("watch-optics-change"));
+  requestFilmRender();
+};
 resizePresentation();
 if (startSilhouette && showStructure) {
   setSilhouette(true);
@@ -3784,6 +3798,11 @@ if (!frozen && !filmingRequested && params.get("shell") !== "0" && explodedStudy
       if (reduce) setPlaybackPaused(true);
     },
   });
+}
+
+if (releaseShell) {
+  const shell = document.querySelector(".release-shell")!;
+  shell.insertBefore(createOpticsControls(optics.mode, setOpticsMode), shell.querySelector(".release-shell__instructions"));
 }
 
 const toggleDebug = (): void => {
@@ -3869,6 +3888,7 @@ const setPlaybackPaused = (paused: boolean): void => {
 
 const releasePresentationReport = () => ({
   annex: "R1",
+  optics: { mode: optics.mode() },
   presentationOnly: true,
   refinement: { stage: refinementStage, sapphireIor: enclosure?.materials.sapphire.ior, materials: refinement?.report() ?? [] },
   selectedLayer: explodedStudy?.selection() ?? null,
@@ -3982,8 +4002,8 @@ const renderAt = (time: number): void => {
   updateKinematics(time);
   const presentationToken = applyReadoutPresentationForRender(time);
   studio.controls.update();
-  renderer.render(studio.scene, studio.camera);
-  if (presentationToken) displayDrive?.restorePresentationTime(presentationToken);
+  try { optics.render(studio.camera); }
+  finally { if (presentationToken) displayDrive?.restorePresentationTime(presentationToken); }
 };
 
 function frame(): void {
@@ -4708,6 +4728,8 @@ if (!filmingRequested) requestAnimationFrame(frame);
 declare global {
   interface Window {
     __WATCH__: {
+      setOpticsMode: (mode: OpticsMode) => void;
+      getOpticsMode: () => OpticsMode;
       setView: (name: string) => void;
       setRefinement: (stage: RefinementStage, optics?: RefinementOptics) => void;
       selectLayer: (id: string | null) => void;
@@ -4785,6 +4807,8 @@ declare global {
 }
 
 window.__WATCH__ = {
+  setOpticsMode,
+  getOpticsMode: optics.mode,
   setView: (name) => {
     clearBarrelCenterAudit();
     clearSurfaceArtifactAudit();
