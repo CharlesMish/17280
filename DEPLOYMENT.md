@@ -1,4 +1,19 @@
-# RC1 packaging and deployment
+# Deployment
+
+The current site uses GitHub Pages. A push to `main` runs the
+[Pages workflow](.github/workflows/pages.yml): install dependencies, verify the
+crown geometry, build with Vite, and deploy `dist/`.
+
+For another static host, run `npm ci` and `npm run build`, then upload the contents
+of `dist/`. Preview those files locally with `npm run preview`. Assets use relative
+paths, so the site can live under a repository subpath. Images in `public/renders/`
+are copied to `dist/renders/` and can be downloaded or used on a website.
+
+## Historical RC1 packages
+
+The instructions below describe the earlier packaged RC1 handoff and its frozen
+evidence. Those ZIP files and evidence directories are not part of a normal clone;
+they are unnecessary for the current build or Pages deployment.
 
 ## Choose an artifact
 

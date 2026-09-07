@@ -70,7 +70,8 @@ try{
   check(`${mode}: no ruby disappearance across the old sort transition`,Math.max(...samples.map(c=>c.ruby.meanRed))-Math.min(...samples.map(c=>c.ruby.meanRed))<25);
  }
  for(const view of ['r1FinalHero','r1RearExhibition','r1E1Hero'])for(const mode of ['translucent','opaque','hidden']){
-  const data=await page.evaluate(({view,mode})=>{const w=window.__WATCH__;w.setView(view);w.setTime(0.104);w.setOpticsMode(mode);const image=w.capture();return {image,presentation:w.releasePresentationReport()};},{view,mode});
+  const data=await page.evaluate(({view,mode})=>{const w=window.__WATCH__;w.setView(view);if(view==='r1E1Hero')w.setExplode(1);w.setTime(0.104);w.setOpticsMode(mode);const image=w.capture();return {image,presentation:w.releasePresentationReport()};},{view,mode});
+  if(view==='r1E1Hero')check(`Exploded ${mode} comparison separates the assembly`,data.presentation.current.exploded===1);
   const file=`${view}-${mode}.png`;fs.writeFileSync(path.join(output,file),Buffer.from(data.image.split(',')[1],'base64'));delete data.image;report.captures.push({file,view,mode,...data});save();console.log(file);
  }
  await page.close();

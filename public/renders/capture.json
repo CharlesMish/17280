@@ -1,0 +1,64 @@
+{
+  "sourceCommit": "c1895d5d7bb09ad44cb55c40edb12e4a0fc6abe2",
+  "captures": [
+    {
+      "file": "17280-exploded-preview.png",
+      "width": 960,
+      "height": 540,
+      "sha256": "e07e889a6faa2b2829932575218a51c9cd67907947858877305024476ad5390c",
+      "camera": {
+        "position": [
+          61.11,
+          -48.90999999999998,
+          58.230000000000004
+        ],
+        "target": [
+          -0.5,
+          0.5,
+          1.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "fov": 36
+      },
+      "view": "r1E1Hero",
+      "exploded": 1,
+      "refinement": "graphite-finish",
+      "optics": "translucent",
+      "layers": 8
+    },
+    {
+      "file": "17280-exploded-2560.png",
+      "width": 2560,
+      "height": 1440,
+      "sha256": "55ed9f99125ee79dd8906b7c5133a9e06f0aca4edfc3dba8c3a33169357c3712",
+      "camera": {
+        "position": [
+          61.11,
+          -48.90999999999998,
+          58.230000000000004
+        ],
+        "target": [
+          -0.5,
+          0.5,
+          1.5
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "fov": 36
+      },
+      "view": "r1E1Hero",
+      "exploded": 1,
+      "refinement": "graphite-finish",
+      "optics": "translucent",
+      "layers": 8
+    }
+  ],
+  "errors": []
+}
