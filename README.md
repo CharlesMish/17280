@@ -1,16 +1,17 @@
 # 17280
 
-An interactive study of an unsigned two-hand skeleton wristwatch, built with
+An interactive study of an unsigned two-hand wristwatch with a translucent mist dial, built with
 Three.js. **17280** is the movement rate: **2.4 Hz / 17,280 vibrations per hour**.
 
 [Open the watch](https://charlesmish.github.io/17280/) ·
+[Inspect the movement](https://charlesmish.github.io/17280/?dial=hidden) ·
 [Close-up studio](https://charlesmish.github.io/17280/?film=balance) ·
 [Explore the exploded view](https://charlesmish.github.io/17280/?view=r1E1Hero&explode=1)
 
-[![Exploded view of the graphite watch, showing the separated sapphire, casework and movement](public/renders/17280-exploded-preview.png)](https://charlesmish.github.io/17280/renders/17280-exploded-2560.png)
+[![Cool-mist dial with restrained sunburst, blue hands and the visible movement beneath](public/renders/17280-mist-dial-preview.png)](https://charlesmish.github.io/17280/)
 
 [Download the 2560 × 1440 PNG](https://charlesmish.github.io/17280/renders/17280-exploded-2560.png)
-— rendered from the current graphite finish with corrected crystal and ruby optics.
+— archived exploded rendering of the earlier full-skeleton design, with corrected crystal and ruby optics.
 
 The model combines a ratio-linked going train, lever escapement, blue hands,
 a gold barrel, sapphire crystals, and a charcoal strap. It is a mechanically
@@ -21,6 +22,7 @@ boundaries of the model.
 
 - Drag to orbit; scroll or pinch to zoom. **Hero, Front, Wearable and Rear** choose preset cameras.
 - Switch between **Assembled** and **Exploded**. In Exploded, select a layer to highlight its parts.
+- **Dial** switches between the 65%-opaque cool-mist sunburst and a clear movement inspection view. The continuous dial has no viewing apertures.
 - **Crystal & rubies** offers translucent rubies, opaque rubies, or a hidden-crystal inspection view.
 - Pause motion, reset the view, or use **Space**, **Home**, and **E**. Reduced-motion preferences are respected.
 
@@ -59,6 +61,7 @@ It requires Playwright Chromium; the output directory must be new.
 
 ## Design and development notes
 
+- [Mist dial and inspection control](DIAL.md)
 - [Crystal and ruby rendering](OPTICS.md)
 - [Graphite finish](GRAPHITE_FINISHING.md)
 - [Crown shading repair](CROWN_REFINEMENT.md)

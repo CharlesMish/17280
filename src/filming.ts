@@ -1,5 +1,6 @@
 import "./filming.css";
 import { createOpticsControls } from "./opticsControls";
+import { createDialControls } from "./dialControls";
 
 type Point = [number, number, number];
 type Watch = Window["__WATCH__"];
@@ -146,6 +147,7 @@ export function createFilming(watch: Watch, initialId: string, captureOnly: bool
   reveal.hidden = true;
   document.body.append(panel, reveal);
   panel.insertBefore(createOpticsControls(watch.getOpticsMode, watch.setOpticsMode), panel.querySelector(".film-panel__help"));
+  panel.insertBefore(createDialControls(watch.getDialMode, watch.setDialMode), panel.querySelector(".film-panel__help"));
   const playButton = panel.querySelector<HTMLButtonElement>('[data-action="play"]')!;
   const restartButton = panel.querySelector<HTMLButtonElement>('[data-action="restart"]')!;
   const hideButton = panel.querySelector<HTMLButtonElement>('[data-action="hide"]')!;

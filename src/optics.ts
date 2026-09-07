@@ -6,7 +6,8 @@ export type OpticsMode = typeof OPTICS_MODES[number];
 /** Stock WebGL transmission captures only opaque objects. Supply the sapphire
  * with the complete interior, including the translucent ruby front surfaces. */
 export function createOptics(renderer: THREE.WebGLRenderer, scene: THREE.Scene,
-  sapphireMaterials: THREE.MeshPhysicalMaterial[], initialMode: OpticsMode) {
+  sapphireMaterials: THREE.MeshPhysicalMaterial[], initialMode: OpticsMode,
+  alphaInterior: THREE.Mesh[] = []) {
   let mode = initialMode;
   const sapphire = new Set<THREE.Material>(sapphireMaterials);
   const size = new THREE.Vector2();
@@ -42,6 +43,11 @@ export function createOptics(renderer: THREE.WebGLRenderer, scene: THREE.Scene,
   }
   const opaqueMaterials = new Map<THREE.MeshPhysicalMaterial, THREE.MeshPhysicalMaterial>();
   const render = (camera: THREE.Camera): void => {
+    const hasAlphaInterior = alphaInterior.some(mesh => {
+      for (let owner: THREE.Object3D | null = mesh; owner; owner = owner.parent) if (!owner.visible) return false;
+      return (Array.isArray(mesh.material) ? mesh.material : [mesh.material]).some(m => m.transparent && m.opacity < 1);
+    });
+    const depthWrites = new Map<THREE.Material, boolean>();
     const crystals: { mesh: THREE.Mesh; visible: boolean; order: number }[] = [];
     const gemstones = new Map<THREE.MeshPhysicalMaterial, THREE.MeshPhysicalMaterial>();
     // Resolve current assignments: camera/audit modes can replace materials.
@@ -81,7 +87,7 @@ export function createOptics(renderer: THREE.WebGLRenderer, scene: THREE.Scene,
       uniforms.watchUseInterior.value = false;
       if (mode === "hidden") {
         for (const { mesh } of crystals) mesh.visible = false;
-      } else if (mode === "translucent" && crystals.some(({ mesh }) => {
+      } else if ((mode === "translucent" || hasAlphaInterior) && crystals.some(({ mesh }) => {
         for (let owner: THREE.Object3D | null = mesh; owner; owner = owner.parent) if (!owner.visible) return false;
         return (Array.isArray(mesh.material) ? mesh.material : [mesh.material]).some(m => sapphire.has(m) && (m as THREE.MeshPhysicalMaterial).transmission > 0);
       })) {
@@ -99,6 +105,15 @@ export function createOptics(renderer: THREE.WebGLRenderer, scene: THREE.Scene,
           // With the interior available, draw sapphire after the jewels so its
           // reflection also covers them. Per-pixel depth testing stays enabled.
           mesh.renderOrder = 1000;
+          // The complete interior already includes the alpha dial. Write the
+          // crystal depth so the later transparent pass cannot overlay it again.
+          // Uncovered portions in an exploded view still render normally.
+          if (hasAlphaInterior) for (const material of Array.isArray(mesh.material) ? mesh.material : [mesh.material]) {
+            if (sapphire.has(material) && !depthWrites.has(material)) {
+              depthWrites.set(material, material.depthWrite);
+              material.depthWrite = true;
+            }
+          }
         }
         uniforms.watchUseInterior.value = true;
       }
@@ -109,6 +124,7 @@ export function createOptics(renderer: THREE.WebGLRenderer, scene: THREE.Scene,
       renderer.toneMapping = toneMapping;
       for (const { mesh, visible, order } of crystals) { mesh.visible = visible; mesh.renderOrder = order; }
       for (const { mesh, material } of assignments) mesh.material = material;
+      for (const [material, depthWrite] of depthWrites) material.depthWrite = depthWrite;
     }
   };
   return {

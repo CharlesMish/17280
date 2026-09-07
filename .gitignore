@@ -14,6 +14,7 @@ watch_src.zip
 !public/films/crown/*.png
 !public/renders/17280-exploded-preview.png
 !public/renders/17280-exploded-2560.png
+!public/renders/17280-mist-dial-preview.png
 *:Zone.Identifier
 .env
 .env.*
