@@ -432,6 +432,23 @@ function buildDrivenParts(
   );
   minute.name = "MinuteHand";
 
+  // Selected mist-dial readout: fuller exposed blades, unchanged lengths and
+  // mounting bores. Apply before the readout audit and exploded geometry record.
+  if (plan.concept.id === "blade-baton") {
+    for (const [hand, factor] of [[hour, 1.09], [minute, 1.35]] as const) {
+      const position = hand.geometry.getAttribute("position");
+      for (let i = 0; i < position.count; i++) {
+        const blend = THREE.MathUtils.smoothstep(Math.abs(position.getY(i)), 0.65, 1.5);
+        position.setX(i, position.getX(i) * (1 + (factor - 1) * blend));
+      }
+      position.needsUpdate = true;
+      hand.geometry.computeVertexNormals();
+      hand.geometry.computeBoundingBox();
+      hand.geometry.computeBoundingSphere();
+      hand.userData.mistBladeWidthScale = factor;
+    }
+  }
+
   const h = plan.hub;
   const hourCollar = ring(h.hourCollarInnerR, h.hourCollarR, h.hourZ0, h.hourZ1, mats.hub);
   hourCollar.name = "readout:hub:hourCollar";

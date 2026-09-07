@@ -64,6 +64,8 @@ import { createReleaseShell, type ReleaseShell, type ReleaseViewId } from "./rel
 import { createRefinement, REFINEMENT_STAGES, type RefinementStage, type RefinementOptics } from "./refinement";
 import { createOptics, OPTICS_MODES, type OpticsMode } from "./optics";
 import { createOpticsControls } from "./opticsControls";
+import { createContinuousDial, DIAL_MODES, type DialMode } from "./continuousDial";
+import { createDialControls } from "./dialControls";
 
 const params = new URLSearchParams(window.location.search);
 const requestedExplode = params.has("explode");
@@ -273,6 +275,8 @@ const readout =
 if (readout) {
   studio.scene.add(readout.root);
 }
+const continuousDial = readout ? createContinuousDial(readout, renderer,
+  DIAL_MODES.find(mode => mode === params.get("dial")) ?? "mist") : null;
 // Establish a useful 10:10 assembly phase while leaving normal runtime driven
 // exclusively by the accepted center source. The generalized source zero is
 // only a clocking datum; source deltas and the going-train rate are untouched.
@@ -341,7 +345,7 @@ const explodedStudy =
           },
           {
             id: "display",
-            label: "chapter, hands and complete Phase-4B display drive",
+            label: "mist dial, chapter, hands and display drive",
             offsetZ: 12,
             objects: [display.root, readout.root, displayDrive.root, requiredObject(movement.root, "phase4b:centerOutput")],
             safeWhy: "all display-drive owners receive the same Z offset; local ratios, rotations, claims and motion-work mesh geometry remain untouched",
@@ -2883,6 +2887,7 @@ const applyJointPresentation = (name: string): void => {
 };
 
 const applyAnyView = (name: string): void => {
+  continuousDial?.setProduct((R1_VIEWS.has(name) && name !== "r1FinishRake") || name.startsWith("present"));
   explodedStudy?.select(null);
   releaseShell?.setSelectedLayer(null);
   refinement?.restore();
@@ -3251,6 +3256,7 @@ const applyAnyView = (name: string): void => {
         finish: finish.materials, readout: readout.materials, strap: strap.materials,
         pad: accommodation.materials.pad, sapphire: enclosure.materials.sapphire });
       refinement.apply(refinementStage, refinementOptics, name);
+      continuousDial?.applyReadoutFinish();
     }
     if (isAnnexE1View(name)) explodedStudy?.set(explodeAmount);
     return;
@@ -3739,7 +3745,18 @@ const resizePresentation = () => {
 };
 const optics = createOptics(renderer, studio.scene,
   [enclosure?.materials.sapphire, exterior?.materials.sapphire].filter((m): m is THREE.MeshPhysicalMaterial => Boolean(m)),
-  OPTICS_MODES.find(mode => mode === params.get("optics")) ?? "translucent");
+  OPTICS_MODES.find(mode => mode === params.get("optics")) ?? "translucent",
+  continuousDial ? [continuousDial.surface] : []);
+const setDialMode = (mode: DialMode): void => {
+  if (!DIAL_MODES.includes(mode)) throw new Error(`Unknown dial mode: ${mode}`);
+  continuousDial?.setMode(mode);
+  const url = new URL(window.location.href);
+  if (mode === "mist") url.searchParams.delete("dial");
+  else url.searchParams.set("dial", mode);
+  window.history.replaceState(null, "", url);
+  window.dispatchEvent(new Event("watch-dial-change"));
+  requestFilmRender();
+};
 const setOpticsMode = (mode: OpticsMode): void => {
   optics.setMode(mode);
   const url = new URL(window.location.href);
@@ -3802,6 +3819,7 @@ if (!frozen && !filmingRequested && params.get("shell") !== "0" && explodedStudy
 
 if (releaseShell) {
   const shell = document.querySelector(".release-shell")!;
+  if (continuousDial) shell.insertBefore(createDialControls(() => continuousDial.mode(), setDialMode), shell.querySelector(".release-shell__instructions"));
   shell.insertBefore(createOpticsControls(optics.mode, setOpticsMode), shell.querySelector(".release-shell__instructions"));
 }
 
@@ -3889,6 +3907,7 @@ const setPlaybackPaused = (paused: boolean): void => {
 const releasePresentationReport = () => ({
   annex: "R1",
   optics: { mode: optics.mode() },
+  dial: continuousDial?.report() ?? null,
   presentationOnly: true,
   refinement: { stage: refinementStage, sapphireIor: enclosure?.materials.sapphire.ior, materials: refinement?.report() ?? [] },
   selectedLayer: explodedStudy?.selection() ?? null,
@@ -4728,6 +4747,8 @@ if (!filmingRequested) requestAnimationFrame(frame);
 declare global {
   interface Window {
     __WATCH__: {
+      setDialMode: (mode: DialMode) => void;
+      getDialMode: () => DialMode;
       setOpticsMode: (mode: OpticsMode) => void;
       getOpticsMode: () => OpticsMode;
       setView: (name: string) => void;
@@ -4807,6 +4828,8 @@ declare global {
 }
 
 window.__WATCH__ = {
+  setDialMode,
+  getDialMode: () => continuousDial?.mode() ?? "hidden",
   setOpticsMode,
   getOpticsMode: optics.mode,
   setView: (name) => {
