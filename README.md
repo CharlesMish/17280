@@ -1,66 +1,33 @@
 # 17280
 
-**17280** is an interactive study of an unsigned two-hand skeleton wristwatch.
-The name is the movement rate: **2.4 Hz / 17,280 vph**, echoed on the caseback as
-`2.4 Hz · 17 280 · TWO HANDS`.
+An interactive study of an unsigned two-hand skeleton wristwatch, built with
+Three.js. **17280** is the movement rate: **2.4 Hz / 17,280 vibrations per hour**.
 
-[Open the live watch →](https://charlesmish.github.io/17280/)
+[Open the watch](https://charlesmish.github.io/17280/) ·
+[Close-up studio](https://charlesmish.github.io/17280/?film=balance) ·
+[Explore the exploded view](https://charlesmish.github.io/17280/?view=r1E1Hero&explode=1)
 
-[Close-up studio →](https://charlesmish.github.io/17280/?film=balance) ·
-[Crown before/after →](https://charlesmish.github.io/17280/films/crown/)
+[![Exploded view of the graphite watch, showing the separated sapphire, casework and movement](public/renders/17280-exploded-preview.png)](https://charlesmish.github.io/17280/renders/17280-exploded-2560.png)
 
-This began as a first watch-design prototype: a small workshop object for exploring
-how far a mechanically informed watch could be modeled, reviewed, repaired, and
-presented directly in Three.js.
+[Download the 2560 × 1440 PNG](https://charlesmish.github.io/17280/renders/17280-exploded-2560.png)
+— rendered from the current graphite finish with corrected crystal and ruby optics.
 
-The model includes a ratio-linked, Z-stacked going train, lever escapement,
-mechanically driven hour and minute hands, front and rear planar sapphire, horn
-lugs, spring bars, and an 18 mm charcoal FKM strap. The interaction layer adds
-preset views and an exploded assembly study.
-
-It is a **visualization**, not a fabrication package or physical qualification.
-No production-tolerance, water-resistance, shock, power-reserve, functional
-winding/setting, or jewel-count certification is claimed. See
-[KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) for the precise boundaries.
+The model combines a ratio-linked going train, lever escapement, blue hands,
+a gold barrel, sapphire crystals, and a charcoal strap. It is a mechanically
+informed visualization; see [known limitations](KNOWN_LIMITATIONS.md) for the
+boundaries of the model.
 
 ## Explore
 
-The public view supports:
+- Drag to orbit; scroll or pinch to zoom. **Hero, Front, Wearable and Rear** choose preset cameras.
+- Switch between **Assembled** and **Exploded**. In Exploded, select a layer to highlight its parts.
+- **Crystal & rubies** offers translucent rubies, opaque rubies, or a hidden-crystal inspection view.
+- Pause motion, reset the view, or use **Space**, **Home**, and **E**. Reduced-motion preferences are respected.
 
-- **Hero / Front / Wearable / Rear** preset cameras
-- **Assembled / Exploded** views
-- **Crystal & rubies**: corrected translucent rubies, opaque rubies, or hide the crystal for inspection
-- drag to orbit and scroll or pinch to zoom
-- pause/resume and view reset
-- keyboard controls and reduced-motion behavior
-
-In Exploded view, open **Exploded layers** and select a layer to highlight its
-parts. Select it again or press Escape to clear the highlight. The current
-presentation uses `graphite-finish`, based on the preserved `graphite-materials`
-treatment: cool graphite casework, near-black rubber, warm gold, readable blue
-hands, and restrained sapphire reflections. See the
-[finishing acceptance notes](GRAPHITE_FINISHING.md) for this local finishing pass.
-This finish remains the default. The [crown shading repair](CROWN_REFINEMENT.md)
-closes its wraparound highlight seam while preserving its profile and finish.
-The [crystal and ruby rendering](OPTICS.md) includes translucent gemstones in
-the sapphire's view of the movement, preventing their angle-dependent disappearance.
-An opt-in `?refinement=graphite-sapphire` candidate adds
-stronger grazing reflection; see [sapphire comparison notes](SAPPHIRE_REFINEMENT.md).
-Dedicated space keeps the watch beside or above the controls. See
-[the graphite refinement notes](GRAPHITE_REFINEMENT.md) for parameter changes,
-comparisons and trade-offs; the [earlier refinement](WATCH_REFINEMENT.md) remains
-available with `?refinement=final`.
-
-The site is a fully static Three.js build with no account, database, server
-application, or external asset service required at runtime.
-
-For filming, open `?film=balance` to use the optional **Close-up studio**: six
-camera moves covering the balance, blue hands, crown, sapphire, lug and strap,
-and caseback. Play or scrub each six-second take, or drag to compose a shot.
-See [FILMING.md](FILMING.md) for controls and deterministic MP4 export.
-The saved crown comparison is served at `films/crown/`, with matched close-ups
-and original/repaired orbits. Its [page and media](public/films/crown/) are included
-in the static build for GitHub Pages.
+The close-up studio provides six camera moves, a timeline, and controls for
+framing and filming. See [FILMING.md](FILMING.md) for deterministic PNG/MP4 export.
+The [crown comparison](https://charlesmish.github.io/17280/films/crown/) preserves
+matched before/after stills and orbits from the crown repair.
 
 ## Run locally
 
@@ -71,37 +38,39 @@ npm ci
 npm run dev
 ```
 
-Open <http://127.0.0.1:5173/>.
-
-To make a production build:
+Open <http://127.0.0.1:5173/>. To build and preview the static site:
 
 ```sh
 npm run build
+npm run preview
 ```
 
-The static site is written to `dist/`. GitHub Pages builds that directory from
-`main` using `.github/workflows/pages.yml`.
+GitHub Pages builds `dist/` from `main`. The site needs no account, database,
+backend, or external asset service at runtime. See [deployment notes](DEPLOYMENT.md).
 
-## A note on the engineering archive
+To reproduce the exploded image while the local server is running:
 
-This repository also preserves the unusually thorough development and review
-trail behind the prototype: mechanical audits, visual-review packets, closeout
-plans, regression tooling, and release scripts.
+```sh
+node scripts/capture-exploded.mjs http://127.0.0.1:5173/ captures/exploded-hd
+```
 
-Those files are useful as **development history**, but they are not all statements
-about the current public build. In particular, documents under `review/` and
-`review-packets/`, plus the `POST5D_*` closeout plans, capture earlier review
-states and may mention findings that were subsequently repaired or superseded.
-The current public description and [RC1 release notes](RELEASE_NOTES_RC1.md) take
-precedence when those historical documents disagree with later state.
+This saves a 960 × 540 preview, a native 2560 × 1440 PNG, and capture metadata.
+It requires Playwright Chromium; the output directory must be new.
 
-Some release scripts refer to local evidence/archive directories that were part
-of the closeout workspace but are intentionally not included in this public
-repository snapshot. The ordinary public build does **not** require them.
+## Design and development notes
+
+- [Crystal and ruby rendering](OPTICS.md)
+- [Graphite finish](GRAPHITE_FINISHING.md)
+- [Crown shading repair](CROWN_REFINEMENT.md)
+- [Historical engineering reviews](review/README.md)
+
+Older closeout plans, review packets and release tools document earlier project
+states. Some require local evidence that is excluded from Git. Generated checkpoint
+bundles are kept in [history](review/checkpoints/graphite-sapphire/README.md);
+the source and regression tools remain available.
 
 ## Rights and dependencies
 
-The project currently carries an all-rights-reserved notice in
-[PROJECT_LICENSE.txt](PROJECT_LICENSE.txt); third-party software keeps its own
-licenses. See [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt) and the
-timestamped [dependency audit](SECURITY_AUDIT.md).
+The project carries an all-rights-reserved notice in [PROJECT_LICENSE.txt](PROJECT_LICENSE.txt).
+Third-party software retains its own licenses; see [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
+The [dependency audit](SECURITY_AUDIT.md) records its date and scope.

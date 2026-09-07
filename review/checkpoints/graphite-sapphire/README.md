@@ -1,13 +1,9 @@
-# Graphite and sapphire checkpoint
+# Earlier sapphire comparison
 
-The public default remains `graphite-finish`. The `graphite-sapphire` stage is opt-in.
-This checkpoint does not merge to main or deploy the live site.
+The generated images, repeated material reports and interaction results from this
+checkpoint were removed from the current tree during repository cleanup. They
+remain available in the [September 6 snapshot](https://github.com/CharlesMish/17280/tree/c1895d5d7bb09ad44cb55c40edb12e4a0fc6abe2/review/checkpoints/graphite-sapphire/acceptance).
 
-- [Settings and acceptance findings](../../../SAPPHIRE_REFINEMENT.md)
-- [Frozen Hero](acceptance/comparisons/hero-graphite-finish.png) / [candidate Hero](acceptance/comparisons/hero-graphite-sapphire.png)
-- [Sapphire](acceptance/comparisons/sapphire-graphite-sapphire.png) / [Exploded](acceptance/comparisons/exploded-graphite-sapphire.png)
-- [Separate case assessment](../../../CASE_EXECUTION_ASSESSMENT.md)
-- [37 interaction checks](acceptance/interaction/report.json) / [8 sapphire checks](acceptance/sweep/report.json)
-
-Download this repository and open `acceptance/index.html` for the interactive comparison gallery. GitHub displays its source, rather than executing the HTML.
-The archive omits redundant interaction screenshots; all acceptance renders and numerical reports are included.
+For the written findings, see [sapphire refinement](../../../SAPPHIRE_REFINEMENT.md).
+For the current rendering, see [crystal and ruby optics](../../../OPTICS.md).
+The older images predate the crystal/ruby compositing fix.
