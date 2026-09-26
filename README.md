@@ -47,6 +47,13 @@ npm run build
 npm run preview
 ```
 
+To check that no moving part passes through the fixed structure or another
+moving part (no browser needed):
+
+```sh
+npm run audit:collisions
+```
+
 GitHub Pages builds `dist/` from `main`. The site needs no account, database,
 backend, or external asset service at runtime. See [deployment notes](DEPLOYMENT.md).
 

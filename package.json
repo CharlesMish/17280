@@ -17,7 +17,8 @@
     "package:review": "node scripts/package-review-packets.mjs",
     "sbom": "node scripts/generate-sbom.mjs",
     "audit:runtime": "node scripts/audit-public-runtime.mjs",
-    "verify:authority": "node scripts/verify-rc1-authority.mjs"
+    "verify:authority": "node scripts/verify-rc1-authority.mjs",
+    "audit:collisions": "node scripts/audit-collisions.mjs"
   },
   "dependencies": {
     "three": "^0.181.2"
