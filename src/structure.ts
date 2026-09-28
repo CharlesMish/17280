@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { DEPTH, ESCAPEMENT, MOTION, THICK, type Layout, type Vec2 } from "./spec";
+import { DEPTH, ESCAPEMENT, MODULE, MOTION, THICK, type Layout, type Vec2 } from "./spec";
 import {
   STRUCT,
   ESCAPE_FINGER_UNDERPASS,
@@ -868,6 +868,59 @@ function buildMainplate(
           stationary: true,
         };
         g.add(support);
+      } else if (b.pivot === "balance") {
+        // The lifted fourth wheel sweeps the old coaxial balance column 1.41 mm
+        // from its arbor, so its crossings struck the column every turn, and
+        // the third-wheel tips pass ~0.37 mm from the balance axis just below
+        // the jewel boss. Carry the lower seat instead from the escape-finger
+        // pillar, which already stands outside every wheel sweep, on one arm
+        // between the fourth-wheel and third-wheel planes (the same level as
+        // the pallet support's upper land). A slim coaxial riser then stays
+        // inside the third wheel's tip circle up to the unchanged seat.
+        const pillar = plan.anchors["anchor:escape"];
+        const support = new THREE.Group();
+        support.name = "struct:column:balance";
+        const armZ = 1.19;
+        const armThickness = 0.16;
+        const armHalfWidth = 0.16;
+        const armLength = Math.hypot(pillar.xy.x - xy.x, pillar.xy.y - xy.y);
+        const arm = finishedStructure(
+          strokeOpen([xy, pillar.xy], () => armHalfWidth),
+          armThickness,
+          mats.plateFace,
+          mats.plateEdge,
+          armLength + armHalfWidth,
+          12,
+        );
+        arm.name = "struct:column:balance:arm";
+        arm.position.z = armZ;
+        support.add(arm);
+
+        const thirdTipRadius = layout.radii.third + MODULE;
+        const thirdClearance =
+          Math.hypot(xy.x - p.third.x, xy.y - p.third.y) - thirdTipRadius;
+        const riserRadius = Math.min(env.columnTopR, thirdClearance - 0.04);
+        const riser = columnMesh(
+          xy,
+          armZ - armThickness * 0.5 + SEAT_JOIN_OVERLAP,
+          b.z - 0.04,
+          riserRadius,
+          riserRadius,
+          mats.plateFace,
+        );
+        riser.name = "struct:column:balance:riser";
+        support.add(riser);
+        support.userData.balanceSupportReroute = {
+          concept: "cantilever arm from the escape-finger pillar",
+          frozenAxis: { x: xy.x, y: xy.y },
+          pillar: pillar.id,
+          armZ,
+          riserRadius,
+          thirdTipClearance: thirdClearance - riserRadius,
+          connected: true,
+          stationary: true,
+        };
+        g.add(support);
       } else {
         const col = columnMesh(
           xy,
@@ -880,7 +933,11 @@ function buildMainplate(
         col.name = `struct:column:${b.pivot}`;
         g.add(col);
       }
-      const disc = bossDisc(xy, b.z - 0.04, env.lowerBossR, 0.1, mats.plateFace, mats.plateEdge);
+      // The balance boss keeps its seat face but is thinned from below so it
+      // no longer dips into the third wheel's plane (0.028 mm clear).
+      const disc = b.pivot === "balance"
+        ? bossDisc(xy, b.z - 0.018, env.lowerBossR, 0.04, mats.plateFace, mats.plateEdge)
+        : bossDisc(xy, b.z - 0.04, env.lowerBossR, 0.1, mats.plateFace, mats.plateEdge);
       disc.name = `struct:boss:${b.pivot}:lower`;
       g.add(disc);
     } else {
@@ -890,13 +947,13 @@ function buildMainplate(
     }
   }
 
-  const bankingRadius = 0.5;
+  const bankingRadius = ESCAPEMENT.bankingLugRadius;
   const movingLugRadius = 0.04;
   const stopRadius = 0.05;
   const contactOffset = 2 * Math.asin((movingLugRadius + stopRadius) / (2 * bankingRadius));
   for (const sign of [-1, 1]) {
     const angle =
-      ESCAPEMENT.palletNeutralReference + Math.PI +
+      ESCAPEMENT.palletNeutralReference + ESCAPEMENT.bankingLugAzimuth +
       sign * (MOTION.palletAmplitude + contactOffset);
     const xy = {
       x: p.pallet.x + Math.cos(angle) * bankingRadius,

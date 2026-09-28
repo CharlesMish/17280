@@ -1008,11 +1008,33 @@ export function createPalletFork(materials: MaterialSet): THREE.Group {
   forkBridge.name = "pallet:forkBridge";
   group.add(forkBridge);
 
+  const lugUnit = new THREE.Vector2(
+    Math.cos(ESCAPEMENT.bankingLugAzimuth),
+    Math.sin(ESCAPEMENT.bankingLugAzimuth),
+  );
   const bankingLug = new THREE.Mesh(new THREE.CylinderGeometry(0.04, 0.04, lowerThick, 20), materials.pinion);
   bankingLug.rotation.x = Math.PI / 2;
-  bankingLug.position.set(-0.5, 0, lowerMid);
+  bankingLug.position.set(
+    lugUnit.x * ESCAPEMENT.bankingLugRadius,
+    lugUnit.y * ESCAPEMENT.bankingLugRadius,
+    lowerMid,
+  );
   bankingLug.name = "pallet:bankingLug";
   group.add(bankingLug);
+
+  // The lug previously floated 0.18 mm outside the lower boss. A short tail
+  // web carries it; it stops short of the lug centre so only the round lug
+  // meets the banking stops at full ±5.5° travel.
+  const bankingTail = barBetween(
+    lugUnit.clone().multiplyScalar(0.2),
+    lugUnit.clone().multiplyScalar(ESCAPEMENT.bankingLugRadius - 0.04),
+    0.07,
+    lowerThick,
+    lowerMid,
+    materials.wheelFace,
+  );
+  bankingTail.name = "pallet:bankingTail";
+  group.add(bankingTail);
 
   group.add(
     createArbor({

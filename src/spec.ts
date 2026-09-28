@@ -47,6 +47,13 @@ export const ESCAPEMENT = {
   palletLockPhase: deg(8.5),
   activeContactSeedRadius: 2.915502824512,
   palletNeutralReference: ANGLES.palletFromEscape - Math.PI / 2,
+  /**
+   * Pallet-local azimuth of the banking lug (radius 0.5). At 180° the positive
+   * stop stood inside the exit arm; 145° keeps both stops clear of the arms
+   * and outside the fourth wheel's swept rim.
+   */
+  bankingLugAzimuth: deg(145),
+  bankingLugRadius: 0.5,
   palletLowerBodyZ: { min: 1.98, max: 2.14 },
   palletStoneZ: { min: 2.0, max: 2.16 },
   palletForkZ: { min: 2.23, max: 2.29 },
