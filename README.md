@@ -81,6 +81,10 @@ the source and regression tools remain available.
 
 ## Rights and dependencies
 
-The project carries an all-rights-reserved notice in [PROJECT_LICENSE.txt](PROJECT_LICENSE.txt).
+CharlesMish's original software, watch design, rendered assets, and documentation
+are available under the [MIT License](LICENSE), to the extent CharlesMish holds
+the rights to them. This replaces the previous owner-controlled rights notice.
+[PROJECT_LICENSE.txt](PROJECT_LICENSE.txt) contains the same MIT text for the
+existing packaging tools.
 Third-party software retains its own licenses; see [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
 The [dependency audit](SECURITY_AUDIT.md) records its date and scope.

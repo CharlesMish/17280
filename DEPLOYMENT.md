@@ -129,9 +129,12 @@ restoring those exact bytes; do not rebuild during an incident.
 
 ## Rights and truthful scope
 
-The current watch project is all-rights-reserved. Distributing a review copy
-does not grant permission to publish or modify it; see `PROJECT_LICENSE.txt`.
-The Three.js MIT notice and dependency SBOM ship in the static/source packages.
+CharlesMish's original software, watch design, rendered assets, and documentation
+are MIT-licensed to the extent CharlesMish holds the rights to them. See
+`LICENSE` and the identical `PROJECT_LICENSE.txt` used by the packaging tools.
+Third-party material retains its own terms; the Three.js MIT notice and
+dependency SBOM ship in the static/source packages. Existing historical release
+archives and their recorded checksums are unchanged.
 
 Public language should say “mechanically informed two-hand skeleton wristwatch
 visualization.” Do not claim production tolerances, water resistance, shock
