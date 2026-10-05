@@ -207,19 +207,38 @@ canvas:focus-visible {
 
 @media (max-width: 700px) {
   .release-shell {
-    inset: auto 0.65rem 0.65rem;
-    width: calc(100vw - 1.3rem);
-    max-height: 42vh;
+    inset: auto max(0.65rem, env(safe-area-inset-right)) max(0.65rem, env(safe-area-inset-bottom)) max(0.65rem, env(safe-area-inset-left));
+    width: calc(100vw - 1.3rem - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
+    max-height: min(48vh, calc(100dvh - 1.5rem - env(safe-area-inset-bottom, 0px)));
     overflow: auto;
+    padding: 0.7rem 0.75rem 0.8rem;
+    border-radius: 0.95rem;
+    background: rgb(10 12 15 / 86%);
   }
 
-  .release-shell__title,
+  .release-shell__title {
+    display: block;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
+
   .release-shell__identity {
-    display: none;
+    display: block;
+    margin-top: 0.12rem;
+    font-size: 0.62rem;
+    color: #9aa6b4;
   }
 
   .release-shell__instructions {
     display: none;
+  }
+
+  .release-shell__eyebrow {
+    margin-top: 0.45rem;
+  }
+
+  .release-shell button {
+    min-height: 42px;
   }
 }
 
