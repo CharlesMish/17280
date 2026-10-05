@@ -4,7 +4,7 @@ import type { ReadoutLayer } from "./readout";
 export const DIAL_MODES = ["mist", "hidden"] as const;
 export type DialMode = typeof DIAL_MODES[number];
 
-/** Selected continuous dial: cool mist, restrained radial brushing, 65% opacity. */
+/** Selected continuous dial: warmer mist, restrained radial brushing, 65% opacity. */
 export function createContinuousDial(readout: ReadoutLayer, renderer: T.WebGLRenderer, initialMode: DialMode) {
  const p=readout.plan;
  const root=new T.Group();root.name="dial:continuous";
@@ -15,7 +15,7 @@ export function createContinuousDial(readout: ReadoutLayer, renderer: T.WebGLRen
  for(let i=0;i<uv.count;i++)uv.setXY(i,(pos.getX(i)+16)/32,(pos.getY(i)+16)/32);
  uv.needsUpdate=true;
  const size=1024,washBytes=new Uint8Array(size*size*4),roughBytes=new Uint8Array(size*size*4),directionBytes=new Uint8Array(size*size*4);
- const center=new T.Color('#c6d2df'),edge=new T.Color('#b2c1d0'),color=new T.Color();
+ const center=new T.Color('#cfc8bc'),edge=new T.Color('#bfb6a8'),color=new T.Color();
  for(let y=0;y<size;y++)for(let x=0;x<size;x++){
   const px=(x+.5)/size*32-16,py=(y+.5)/size*32-16,r=Math.hypot(px,py),theta=Math.atan2(py,px),i=(y*size+x)*4;
   color.copy(center).lerp(edge,T.MathUtils.smoothstep(r,1,14)).convertLinearToSRGB();
@@ -32,7 +32,7 @@ export function createContinuousDial(readout: ReadoutLayer, renderer: T.WebGLRen
  };
  const wash=texture(washBytes,true),rough=texture(roughBytes),direction=texture(directionBytes);
  const face=new T.MeshPhysicalMaterial({color:0xffffff,map:wash,metalness:.6,roughness:.5,roughnessMap:rough,anisotropy:.32,anisotropyMap:direction,envMapIntensity:1.1,transparent:true,opacity:.65,depthWrite:false});
- const side=new T.MeshPhysicalMaterial({color:0xbcc9d6,metalness:.6,roughness:.48,envMapIntensity:1.1,transparent:true,opacity:.65,depthWrite:false});
+ const side=new T.MeshPhysicalMaterial({color:0xc4b9a8,metalness:.6,roughness:.48,envMapIntensity:1.1,transparent:true,opacity:.65,depthWrite:false});
  const surface=new T.Mesh(geometry,[face,side]);surface.name="dial:surface";surface.position.z=4.25;root.add(surface);
  const tickMaterial=new T.MeshPhysicalMaterial({color:0x28303c,metalness:.2,roughness:.65});
  const contour=p.chapter.carrierInner;
@@ -63,6 +63,6 @@ export function createContinuousDial(readout: ReadoutLayer, renderer: T.WebGLRen
  return {root,surface,applyReadoutFinish,mode:()=>mode,
   setMode(next:DialMode){if(!DIAL_MODES.includes(next))throw new Error(`Unknown dial mode: ${next}`);mode=next;sync();},
   setProduct(on:boolean){product=on;sync();},
-  report:()=>({mode,visible:root.visible&&readout.root.visible,opacity:.65,finish:"restrained cool-mist sunburst",viewingApertures:0,spindleBoreRadius:.55,z:[4.25,4.4],minuteGraduations:48,anisotropy:.32,assembly:"Moves with the motion-works/readout layer; dial attachment is illustrative."}),
+  report:()=>({mode,visible:root.visible&&readout.root.visible,opacity:.65,finish:"restrained warmer-mist sunburst",viewingApertures:0,spindleBoreRadius:.55,z:[4.25,4.4],minuteGraduations:48,anisotropy:.32,assembly:"Moves with the motion-works/readout layer; dial attachment is illustrative."}),
  };
 }

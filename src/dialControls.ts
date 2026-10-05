@@ -8,7 +8,7 @@ export function createDialControls(getMode: () => DialMode, setMode: (mode: Dial
   title.textContent = "Dial";
   const select = document.createElement("select");
   select.setAttribute("aria-label", "Dial");
-  const labels: Record<DialMode, string> = { mist: "Cool mist · 65%", hidden: "Hide dial · inspect movement" };
+  const labels: Record<DialMode, string> = { mist: "Warmer mist · 65%", hidden: "Hide dial · inspect movement" };
   for (const mode of DIAL_MODES) select.add(new Option(labels[mode], mode));
   select.value = getMode();
   select.addEventListener("change", () => setMode(select.value as DialMode));
