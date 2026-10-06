@@ -1,6 +1,6 @@
 # Cool-mist dial
 
-The default watch uses the selected continuous cool-mist dial: restrained sunburst,
+The default watch uses the selected continuous warmer-mist dial: restrained sunburst,
 65% opacity, no balance/barrel viewing apertures, deeper blued hands, and a complete
 minute graduation. The necessary spindle bore is beneath the hand hub.
 
