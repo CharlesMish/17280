@@ -137,6 +137,21 @@ canvas:focus-visible {
   outline-offset: 2px;
 }
 
+/* Curator 2026-10-26: give the Dial and Crystal selects the same chrome as the shell's
+   buttons (radius, border, fill, 44px target) so the panel reads as one family. */
+.release-shell .optics-controls select {
+  min-height: 44px;
+  border: 1px solid rgb(224 232 241 / 24%);
+  border-radius: 0.55rem;
+  background: rgb(33 38 44 / 82%);
+  color: inherit;
+  font-size: 0.75rem;
+}
+
+.release-shell .optics-controls select:hover {
+  background: rgb(48 55 64 / 90%);
+}
+
 .release-shell__layers {
   margin-top: 0.75rem;
   padding-top: 0.7rem;
