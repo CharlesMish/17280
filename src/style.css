@@ -92,6 +92,21 @@ canvas:focus-visible {
   text-transform: uppercase;
 }
 
+/* Curator 2026-10-26: a quiet hairline after each section eyebrow groups the
+   controls without adding boxes. */
+.release-shell__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.release-shell__eyebrow::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgb(230 236 244 / 14%);
+}
+
 .release-shell__segment,
 .release-shell__actions,
 .release-shell__views {
