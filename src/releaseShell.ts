@@ -130,8 +130,17 @@ export function createReleaseShell(options: ReleaseShellOptions): ReleaseShell {
   const instructions = document.createElement("p");
   instructions.id = "watch-instructions";
   instructions.className = "release-shell__instructions";
-  instructions.textContent =
-    "Drag to orbit, scroll or pinch to zoom. Camera buttons choose a preset view. E changes assembly; Space pauses; Home resets.";
+  // Same sentence as before; the three key names are wrapped in <kbd> so they read as keys.
+  const key = (name: string) => {
+    const k = document.createElement("kbd");
+    k.className = "release-shell__key";
+    k.textContent = name;
+    return k;
+  };
+  instructions.append(
+    "Drag to orbit, scroll or pinch to zoom. Camera buttons choose a preset view. ",
+    key("E"), " changes assembly; ", key("Space"), " pauses; ", key("Home"), " resets.",
+  );
   options.canvas.setAttribute("aria-describedby", instructions.id);
 
   const status = document.createElement("p");
