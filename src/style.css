@@ -72,16 +72,19 @@ canvas:focus-visible {
 }
 
 .release-shell__title {
-  font-size: 0.95rem;
-  font-weight: 650;
-  letter-spacing: 0.01em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 .release-shell__identity {
-  margin-top: 0.18rem;
+  margin-top: 0.22rem;
   color: #aeb8c4;
   font-size: 0.68rem;
   letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
 }
 
 .release-shell__eyebrow {
