@@ -123,6 +123,7 @@ canvas:focus-visible {
 }
 
 .release-shell button:hover {
+  border-color: rgb(224 232 241 / 46%);
   background: rgb(48 55 64 / 90%);
 }
 
