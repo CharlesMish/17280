@@ -496,8 +496,8 @@ type Phase5dCProfile =
   | "r1Rear"
   | "r1Raking";
 const PHASE5D_C_PROFILES = {
-  presentSettled: { exposure: 1.314, environment: 1.16, hemisphere: 0.61, fill: 0.514, key: 0.507, rim: 0.187, under: 0.155, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
-  presentHero: { exposure: 1.314, environment: 1.16, hemisphere: 0.62, fill: 0.53, key: 0.507, rim: 0.187, under: 0.155, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
+  presentSettled: { exposure: 1.36, environment: 1.2, hemisphere: 0.64, fill: 0.55, key: 0.53, rim: 0.2, under: 0.165, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
+  presentHero: { exposure: 1.36, environment: 1.2, hemisphere: 0.65, fill: 0.56, key: 0.53, rim: 0.2, under: 0.165, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
   middle: { exposure: 1.34, environment: 1.18, hemisphere: 0.63, fill: 0.54, key: 0.52, rim: 0.2, under: 0.165, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
   conservative: { exposure: 1.3, environment: 1.15, hemisphere: 0.6, fill: 0.5, key: 0.5, rim: 0.18, under: 0.15, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
   rear: { exposure: 1.314, environment: 1.16, hemisphere: 0.61, fill: 0.514, key: 0.507, rim: 0.187, under: 0.17, rake: 0, frontRead: 0, rearRake: 0, background: 0x17191d },
