@@ -127,9 +127,9 @@ canvas:focus-visible {
 }
 
 .release-shell button[aria-pressed="true"] {
-  border-color: #b9c8d8;
-  background: #d9e1e9;
-  color: #101318;
+  border-color: #83dce8;
+  background: rgb(131 220 232 / 16%);
+  color: #b8f3fa;
 }
 
 .release-shell button:focus-visible {
