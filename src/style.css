@@ -55,7 +55,7 @@ canvas:focus-visible {
   border: 1px solid rgb(230 236 244 / 20%);
   border-radius: 0.85rem;
   background: rgb(10 12 15 / 78%);
-  box-shadow: 0 0.6rem 2rem rgb(0 0 0 / 28%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 7%), 0 0.6rem 2rem rgb(0 0 0 / 28%);
   color: #eef1f4;
   backdrop-filter: blur(14px);
   max-height: calc(100dvh - 2rem);
